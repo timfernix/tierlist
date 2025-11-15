@@ -720,6 +720,10 @@ function setupEventListeners() {
     let images = [];
     const options = {};
 
+    const originalHTML = generateBtn.innerHTML;
+    generateBtn.disabled = true;
+    generateBtn.innerHTML = '<i class="bi bi-hourglass-split"></i> Generating...';
+
     try {
       sessionStorage.removeItem('tierlistMode');
       
@@ -797,11 +801,15 @@ function setupEventListeners() {
         window.location.href = 'tierlist.html';
       } else {
         hideLoading();
+        generateBtn.disabled = false;
+        generateBtn.innerHTML = originalHTML;
         alert('No images found for the selected options');
       }
     } catch (error) {
       console.error('Error generating tierlist:', error);
       hideLoading();
+      generateBtn.disabled = false;
+      generateBtn.innerHTML = originalHTML;
       alert('An error occurred while generating the tierlist. Please try again.');
     }
   });
