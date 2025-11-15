@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TierList Maker</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script type="module" src="main.js"></script>
+  </head>
+  <body>
+    <div class="header-nav">
+      <a href="index.html" class="back-btn">
+        <i class="bi bi-arrow-left"></i> Back to Selection
+      </a>
+      <h1>League of Legends TierList Maker</h1>
+      <button class="download-btn" id="downloadBtn">
+        <i class="bi bi-download"></i> Download Tierlist
+      </button>
+    </div>
+
+    <div
+      class="tiers container"
+      data-placeholder="Click on the title to add a new tier."
+    ></div>
+
+    <div class="cards container" id="tierlist-items"></div>
+
+    <dialog class="settings-modal">
+      <section>
+        <div class="colors"></div>
+        
+        <div class="right-section">
+          <textarea class="tier-label" placeholder="Tier label"></textarea>
+          
+          <div class="button-group">
+            <button id="prepend">Add a Row Above</button>
+            <button id="append">Add a Row Below</button>
+            <button id="clear">Clear Row</button>
+            <button id="delete">Delete Row</button>
+          </div>
+        </div>
+      </section>
+    </dialog>
+  </body>
+</html>

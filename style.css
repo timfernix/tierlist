@@ -1,0 +1,391 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #0a1428;
+  --bg-gradient: linear-gradient(135deg, #0a1428 0%, #1a2942 100%);
+  --tier-bg-color: #1e2d47;
+  --tier-control-bg-color: #15233a;
+  --border-color: #2d3f5f;
+  --card-size: 75px;
+  --primary-color: #0bc5ea;
+  --primary-hover: #0ea8c9;
+  --text-color: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --card-hover: #2a3f5f;
+}
+
+body {
+  background-image: url('https://timfernix.github.io/ezreal/assets/ezreal/skins/classic/promo/Preseason_2020_Keyart.jpg'), var(--bg-gradient);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header-nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 1rem 0;
+}
+
+.back-btn {
+  position: absolute;
+  left: 2rem;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: var(--tier-control-bg-color);
+  border: 2px solid var(--border-color);
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.back-btn:hover {
+  background: var(--card-hover);
+  border-color: var(--primary-color);
+  transform: translateX(-3px);
+  box-shadow: 0 5px 15px rgba(11, 197, 234, 0.2);
+}
+
+.download-btn {
+  position: absolute;
+  right: 2rem;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+  border: 2px solid var(--primary-color);
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(11, 197, 234, 0.4);
+}
+
+h1 {
+  background: linear-gradient(135deg, #0bc5ea 0%, #06b6d4 50%, #0891b2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
+  margin: 0;
+  user-select: none;
+  font-weight: 700;
+  text-shadow: 0 4px 20px rgba(11, 197, 234, 0.3);
+}
+
+@media (max-width: 768px) {
+  .header-nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .back-btn,
+  .download-btn {
+    position: static;
+  }
+}
+
+img {
+  width: var(--card-size);
+  height: var(--card-size);
+  object-fit: cover;
+  cursor: grab;
+  display: block;
+}
+
+/* Splash arts 16:9 based on height */
+img[data-type="splash"] {
+  height: calc(var(--card-size) * 1.2);
+  width: calc((16 / 9) * (var(--card-size) * 1.2));
+}
+
+/* Loading screens 9:16 vertical */
+img[data-type="loading"] {
+  height: calc(var(--card-size) * 1.5);
+  width: calc((9 / 16) * (var(--card-size) * 1.5));
+}
+
+/* Square defaults */
+img[data-type="icon"],
+img[data-type="item"],
+img[data-type="spell"],
+img[data-type="ability"] {
+  width: var(--card-size);
+  height: var(--card-size);
+}
+
+img.dragging {
+  opacity: 0.25;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  transition: 0.5s;
+}
+
+.container {
+  width: min(1200px, 80%);
+  margin: 0 auto;
+  border: 2px solid var(--border-color);
+}
+
+.tiers:empty::before {
+  content: attr(data-placeholder);
+  height: var(--card-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.875rem;
+  background: var(--tier-bg-color);
+}
+
+.tier {
+  background: var(--tier-bg-color);
+  display: flex;
+  gap: 2px;
+  flex-direction: row;
+}
+
+.tier:not(:last-child) {
+  border-bottom: 2px solid var(--border-color);
+}
+
+.label {
+  flex-shrink: 0;
+  width: 100px;
+  min-height: var(--card-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color, lightcoral);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1rem;
+  text-align: center;
+  overflow-wrap: break-word;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  order: 1;
+}
+
+.label span {
+  overflow: hidden;
+  padding: 0.5rem;
+}
+
+.items {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex: 1;
+  order: 2;
+}
+
+.controls {
+  width: 50px;
+  background: var(--tier-control-bg-color);
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  order: 0;
+}
+
+.controls button {
+  font-size: 1rem;
+  background: transparent;
+  color: var(--text-color);
+  opacity: 0.75;
+  transition: all 0.2s;
+}
+
+.controls button:is(:active, :hover) {
+  opacity: 1;
+  color: var(--primary-color);
+  transform: scale(1.1);
+}
+
+@media (min-width: 768px) {
+  .controls {
+    grid-template-columns: repeat(2, 1fr);
+    width: 64px;
+  }
+
+  .controls .settings {
+    grid-row: span 2;
+  }
+
+  .controls button {
+    font-size: 1.5rem;
+  }
+}
+
+.cards {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  min-height: calc(var(--card-size) * 2);
+  background: var(--tier-bg-color);
+}
+
+@media (max-width: 480px) {
+  .cards {
+    align-items: center;
+    flex-wrap: nowrap;
+    position: fixed;
+    bottom: 0;
+    margin-top: 0;
+    min-height: calc(var(--card-size) * 2);
+    width: 100%;
+    overflow-x: auto;
+  }
+}
+
+.settings-modal[open] {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  background: var(--tier-control-bg-color);
+  border: 2px solid var(--border-color);
+}
+
+.settings-modal::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.settings-modal section {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.5rem;
+  padding: 2rem;
+  width: max-content;
+  min-width: 400px;
+  background: var(--tier-control-bg-color);
+  border-radius: 1rem;
+}
+
+.colors {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.colors input {
+  appearance: none;
+}
+
+.right-section {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.colors label {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: var(--color);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+}
+
+.colors label:has(input:checked)::before {
+  content: "\F26A";
+  font-family: "bootstrap-icons";
+  background: #fff;
+  color: var(--color);
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.colors label:has(input:checked) {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--color), 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+.tier-label {
+  border: 2px solid var(--border-color);
+  border-radius: 0.5rem;
+  outline: none;
+  padding: 0.75rem;
+  resize: none;
+  background: var(--tier-bg-color);
+  color: var(--text-color);
+  font-size: 0.95rem;
+  transition: all 0.2s;
+  min-height: 60px;
+  width: 100%;
+}
+
+.tier-label:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(11, 197, 234, 0.1);
+}
+
+.settings-modal button {
+  text-wrap: nowrap;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background: var(--tier-bg-color);
+  color: var(--text-color);
+  border: 2px solid var(--border-color);
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.settings-modal button:is(:active, :hover) {
+  background: var(--card-hover);
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(11, 197, 234, 0.2);
+}

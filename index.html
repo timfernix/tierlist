@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>League of Legends Tierlist Maker</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="selector-style.css" />
+    <script type="module" src="selector.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>League of Legends Tierlist Maker</h1>
+        <p>Select a category and configure your options</p>
+      </header>
+
+      <div class="categories">
+        <div class="category-card" data-category="champions">
+          <div class="category-icon">
+            <i class="bi bi-person-fill"></i>
+          </div>
+          <h2>Champions</h2>
+          <p>Create tierlists with champion icons, loadingscreen images, or splasharts</p>
+        </div>
+
+        <div class="category-card" data-category="skins">
+          <div class="category-icon">
+            <i class="bi bi-palette-fill"></i>
+          </div>
+          <h2>Skins</h2>
+          <p>Rank your favorite skins by champion or across all skins</p>
+        </div>
+
+        <div class="category-card" data-category="abilities">
+          <div class="category-icon">
+            <i class="bi bi-lightning-charge-fill"></i>
+          </div>
+          <h2>Abilities</h2>
+          <p>Compare abilities from different champions</p>
+        </div>
+
+        <div class="category-card" data-category="items">
+          <div class="category-icon">
+            <i class="bi bi-bag-fill"></i>
+          </div>
+          <h2>Items</h2>
+          <p>Rank all items in the game</p>
+        </div>
+
+        <div class="category-card" data-category="maps">
+          <div class="category-icon">
+            <i class="bi bi-map-fill"></i>
+          </div>
+          <h2>Maps</h2>
+          <p>Create a tierlist of League of Legends maps</p>
+        </div>
+
+        <div class="category-card" data-category="spells">
+          <div class="category-icon">
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <h2>Summoner Spells</h2>
+          <p>Rank all summoner spells</p>
+        </div>
+      </div>
+
+      <dialog class="options-modal" id="optionsModal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 id="modalTitle">Configure Options</h2>
+            <button class="close-btn" id="closeModal">
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+
+          <div class="modal-body" id="modalBody">
+            <div class="options-group" data-category="champions" style="display: none;">
+              <label class="option-label">Display Type:</label>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="champions-type" value="icons" checked />
+                  <span>Icons</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="champions-type" value="loading" />
+                  <span>Loading Screens</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="champions-type" value="splash" />
+                  <span>Splash Arts</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="options-group" data-category="skins" style="display: none;">
+              <label class="option-label">Champion Scope:</label>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="skins-scope" value="all" checked />
+                  <span>All Champions</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="skins-scope" value="select" />
+                  <span>Select Champion</span>
+                </label>
+              </div>
+
+              <div class="champion-select" id="skinsChampionSelect" style="display: none;">
+                <label class="option-label">Champion:</label>
+                <input
+                  type="text"
+                  id="skinsChampionInput"
+                  placeholder="Start typing champion name..."
+                  autocomplete="off"
+                />
+                <div class="champion-suggestions" id="skinsSuggestions"></div>
+
+                            <div id="skinsTypeSelect" style="display: none;">
+                              <label class="option-label">Skin Type:</label>
+                              <div class="radio-group">
+                                <label class="radio-option">
+                                  <input type="radio" name="skins-type" value="splash" checked />
+                                  <span>Splash Art</span>
+                                </label>
+                                <label class="radio-option">
+                                  <input type="radio" name="skins-type" value="loading" />
+                                  <span>Loading Screen</span>
+                                </label>
+                              </div>
+                            </div>
+              </div>
+            </div>
+
+            <div class="options-group" data-category="abilities" style="display: none;">
+              <label class="option-label">Champion Scope:</label>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="abilities-scope" value="all" checked />
+                  <span>All Champions</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="abilities-scope" value="select" />
+                  <span>Select Champion</span>
+                </label>
+              </div>
+
+              <div class="champion-select" id="abilitiesChampionSelect" style="display: none;">
+                <label class="option-label">Champion:</label>
+                <input
+                  type="text"
+                  id="abilitiesChampionInput"
+                  placeholder="Start typing champion name..."
+                  autocomplete="off"
+                />
+                <div class="champion-suggestions" id="abilitiesSuggestions"></div>
+              </div>
+
+              <div class="spell-select" id="spellSelect" style="display: none;">
+                <label class="option-label">Spells:</label>
+                <div class="checkbox-group">
+                  <label class="checkbox-option">
+                    <input type="checkbox" name="spell" value="all" checked />
+                    <span>All</span>
+                  </label>
+                  <label class="checkbox-option">
+                    <input type="checkbox" name="spell" value="passive" />
+                    <span>Passive</span>
+                  </label>
+                  <label class="checkbox-option">
+                    <input type="checkbox" name="spell" value="q" />
+                    <span>Q</span>
+                  </label>
+                  <label class="checkbox-option">
+                    <input type="checkbox" name="spell" value="w" />
+                    <span>W</span>
+                  </label>
+                  <label class="checkbox-option">
+                    <input type="checkbox" name="spell" value="e" />
+                    <span>E</span>
+                  </label>
+                  <label class="checkbox-option">
+                    <input type="checkbox" name="spell" value="r" />
+                    <span>R</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="options-group" data-category="items" style="display: none;">
+              <label class="option-label">Item Scope (multi-select):</label>
+              <div class="checkbox-group">
+                <label class="checkbox-option">
+                  <input type="checkbox" name="items-scope" value="normal" checked />
+                  <span>Normal Items (Incl. Event Items)</span>
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" name="items-scope" value="swarm" />
+                  <span>Swarm Items</span>
+                </label>
+              </div>
+              <p class="info-text">Items are fetched from Riot API & Data Dragon. Manual sorting was applied.</p>
+            </div>
+
+            <div class="options-group" data-category="maps" style="display: none;">
+              <label class="option-label">Tierlist Type:</label>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="maps-type" value="minimap" checked />
+                  <span>Minimap (only includes available)</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="maps-type" value="full" />
+                  <span>Full Map</span>
+                </label>
+              </div>
+
+              <label class="option-label">Gamemode/Map Scope (multi-select):</label>
+              <div class="checkbox-group">
+                <label class="checkbox-option">
+                  <input type="checkbox" name="maps-scope" value="arena" />
+                  <span>Arena</span>
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" name="maps-scope" value="aram" checked />
+                  <span>ARAM</span>
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" name="maps-scope" value="sr" checked />
+                  <span>Summoner's Rift</span>
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" name="maps-scope" value="special" />
+                  <span>Special Modes</span>
+                </label>
+              </div>
+              <p class="info-text">Note: Maps are not retrieved from Riot API or Data Dragon.</p>
+            </div>
+
+            <div class="options-group" data-category="spells" style="display: none;">
+              <p class="info-text">All summoner spells will be loaded into the tierlist.</p>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-secondary" id="cancelBtn">Cancel</button>
+            <button class="btn btn-primary" id="generateBtn">
+              <i class="bi bi-arrow-right-circle-fill"></i>
+              Generate TierList
+            </button>
+          </div>
+        </div>
+      </dialog>
+
+      <div class="loading-overlay" id="loadingOverlay" style="display: none;">
+        <div class="loading-spinner">
+          <i class="bi bi-arrow-repeat"></i>
+          <p>Loading data from Riot API & Data Dragon...</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
