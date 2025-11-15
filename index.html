@@ -4,10 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>League of Legends Tierlist Maker</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
+    <meta name="description" content="Create custom League of Legends tierlists with champions, skins, items, abilities, and more." />
+    <meta name="keywords" content="League of Legends, LoL, tierlist, tier list maker, champion tierlist, skins, abilities, items, Riot Games" />
+    <meta name="author" content="timfernix" />
+    <meta name="theme-color" content="#0bc5ea" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="League of Legends Tierlist Maker" />
+    <meta property="og:description" content="Create custom League of Legends tierlists with champions, skins, items, abilities, and more." />
+    <meta property="og:site_name" content="LoL Tierlist Maker" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="League of Legends Tierlist Maker" />
+    <meta name="twitter:description" content="Create custom League of Legends tierlists with champions, skins, items, abilities, and more." />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+    <link rel="apple-touch-icon" href="favicon.png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="selector-style.css" />
     <script type="module" src="selector.js"></script>
   </head>
@@ -68,6 +79,25 @@
         </div>
       </div>
 
+      <h3 class="special-section-title">Special Tierlists</h3>
+      <div class="categories special-categories">
+        <div class="category-card special-card" data-category="buildchampion">
+          <div class="category-icon">
+            <i class="bi bi-puzzle-fill"></i>
+          </div>
+          <h2>Build Your Champion</h2>
+          <p>Create your perfect champion by picking abilities from all champions</p>
+        </div>
+
+        <div class="category-card special-card" data-category="prestige">
+          <div class="category-icon">
+            <i class="bi bi-gem"></i>
+          </div>
+          <h2>Prestige Skins</h2>
+          <p>Rank all prestige edition skins across all champions</p>
+        </div>
+      </div>
+
       <dialog class="options-modal" id="optionsModal">
         <div class="modal-content">
           <div class="modal-header">
@@ -107,6 +137,50 @@
                   <input type="radio" name="skins-scope" value="select" />
                   <span>Select Champion</span>
                 </label>
+              </div>
+
+              <div id="skinsRaritySelect" style="display: block;">
+                <label class="option-label">Rarity Filter:</label>
+                <div class="checkbox-group">
+                  <label class="checkbox-option">
+                    <input type="checkbox" name="skins-rarity" value="all" checked />
+                    <span>All</span>
+                  </label>
+                  <label class="checkbox-option">
+                    <input type="checkbox" name="skins-rarity" value="kNoRarity" />
+                    <span>Standard</span>
+                  </label>
+                  <label class="checkbox-option">
+                    <input type="checkbox" name="skins-rarity" value="kEpic" />
+                    <img src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/rarity-gem-icons/epic.png" alt="Epic" class="rarity-icon">
+                    <span>Epic</span>
+                  </label>
+                  <label class="checkbox-option">
+                    <input type="checkbox" name="skins-rarity" value="kLegendary" />
+                    <img src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/rarity-gem-icons/legendary.png" alt="Legendary" class="rarity-icon">
+                    <span>Legendary</span>
+                  </label>
+                  <label class="checkbox-option">
+                    <input type="checkbox" name="skins-rarity" value="kMythic" />
+                    <img src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/rarity-gem-icons/mythic.png" alt="Mythic" class="rarity-icon">
+                    <span>Mythic</span>
+                  </label>
+                  <label class="checkbox-option">
+                    <input type="checkbox" name="skins-rarity" value="kUltimate" />
+                    <img src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/rarity-gem-icons/ultimate.png" alt="Ultimate" class="rarity-icon">
+                    <span>Ultimate</span>
+                  </label>
+                  <label class="checkbox-option">
+                    <input type="checkbox" name="skins-rarity" value="kExalted" />
+                    <img src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/rarity-gem-icons/exalted.png" alt="Exalted" class="rarity-icon">
+                    <span>Exalted</span>
+                  </label>
+                  <label class="checkbox-option">
+                    <input type="checkbox" name="skins-rarity" value="kTranscendent" />
+                    <img src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/rarity-gem-icons/transcendent.png" alt="Transcendent" class="rarity-icon">
+                    <span>Transcendent</span>
+                  </label>
+                </div>
               </div>
 
               <div class="champion-select" id="skinsChampionSelect" style="display: none;">
@@ -243,13 +317,21 @@
             <div class="options-group" data-category="spells" style="display: none;">
               <p class="info-text">All summoner spells will be loaded into the tierlist.</p>
             </div>
+
+            <div class="options-group" data-category="buildchampion" style="display: none;">
+              <p class="info-text">All champion abilities will be loaded. Drag them into P, Q, W, E, R tiers to build your perfect champion!</p>
+            </div>
+
+            <div class="options-group" data-category="prestige" style="display: none;">
+              <p class="info-text">All prestige skins will be loaded in the tierlist.</p>
+            </div>
           </div>
 
           <div class="modal-footer">
             <button class="btn btn-secondary" id="cancelBtn">Cancel</button>
             <button class="btn btn-primary" id="generateBtn">
               <i class="bi bi-arrow-right-circle-fill"></i>
-              Generate TierList
+              Generate Tierlist
             </button>
           </div>
         </div>
@@ -266,6 +348,8 @@
     <footer class="site-footer">
       <p class="footer-text">Made with 💖 by <a href="https://timfernix.github.io" target="_blank" rel="noopener noreferrer">timfernix</a></p>
       <p class="footer-legal">This project was created under Riot Games' "Legal Jibber Jabber" policy using assets owned by Riot Games. Riot Games does not endorse or sponsor this project.</p>
+      <p class="version-info" id="versionInfo">Loading version info...</p>
     </footer>
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "872aa0053fb94ba7bf52129ad5b003ea"}'></script>
   </body>
 </html>

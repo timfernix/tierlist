@@ -83,17 +83,28 @@ const handleDragover = (event) => {
 
   const draggedImage = document.querySelector(".dragging");
   const target = event.target;
+  const mode = sessionStorage.getItem('tierlistMode');
 
   if (target.classList.contains("items")) {
+    // In buildchampion mode, only allow 1 item per tier
+    if (mode === 'buildchampion' && target.children.length >= 1 && !target.contains(draggedImage)) {
+      return;
+    }
     target.appendChild(draggedImage);
   } else if (target.tagName === "IMG" && target !== draggedImage) {
-    const { left, width } = target.getBoundingClientRect();
-    const midPoint = left + width / 2;
-
-    if (event.clientX < midPoint) {
-      target.before(draggedImage);
+    const itemsContainer = target.parentElement;
+    if (mode === 'buildchampion' && itemsContainer && itemsContainer.classList.contains('items')) {
+      cardsContainer.appendChild(target);
+      itemsContainer.appendChild(draggedImage);
     } else {
-      target.after(draggedImage);
+      const { left, width } = target.getBoundingClientRect();
+      const midPoint = left + width / 2;
+
+      if (event.clientX < midPoint) {
+        target.before(draggedImage);
+      } else {
+        target.after(draggedImage);
+      }
     }
   }
 };
@@ -143,9 +154,16 @@ const initColorOptions = () => {
 };
 
 const initDefaultTierList = () => {
-  ["S", "A", "B", "C", "D"].forEach((label) => {
-    tiersContainer.appendChild(createTier(label));
-  });
+  const mode = sessionStorage.getItem('tierlistMode');
+  if (mode === 'buildchampion') {
+    ["Passive", "Q Ability", "W Ability", "E Ability", "R Ability"].forEach((label) => {
+      tiersContainer.appendChild(createTier(label));
+    });
+  } else {
+    ["S", "A", "B", "C", "D"].forEach((label) => {
+      tiersContainer.appendChild(createTier(label));
+    });
+  }
 };
 
 const initDraggables = () => {
@@ -169,6 +187,42 @@ const initDraggables = () => {
   });
 };
 
+const showImagePopup = (imgSrc, imgName, imageType) => {
+  const existingPopup = document.querySelector('.image-popup');
+  if (existingPopup) {
+    existingPopup.remove();
+  }
+
+  // Determine size class based on image type
+  let sizeClass = '';
+  if (['item', 'icon', 'summoner'].includes(imageType)) {
+    sizeClass = 'scale-2x';
+  } else if (['splash', 'map'].includes(imageType)) {
+    sizeClass = 'scale-2x-large';
+  }
+
+  const popup = document.createElement('div');
+  popup.className = 'image-popup';
+  popup.innerHTML = `
+    <div class="image-popup-content">
+      <img src="${imgSrc}" alt="${imgName}" class="${sizeClass}">
+      <div class="image-popup-name">${imgName}</div>
+    </div>
+  `;
+
+  document.body.appendChild(popup);
+
+  setTimeout(() => {
+    const closePopup = (e) => {
+      if (!popup.querySelector('.image-popup-content').contains(e.target)) {
+        popup.remove();
+        document.removeEventListener('click', closePopup);
+      }
+    };
+    document.addEventListener('click', closePopup);
+  }, 0);
+};
+
 const loadImagesFromStorage = () => {
   const storedImages = sessionStorage.getItem('tierlistImages');
   if (storedImages) {
@@ -177,9 +231,9 @@ const loadImagesFromStorage = () => {
       const img = document.createElement('img');
       img.src = imgData.url;
       img.alt = imgData.name;
-      img.title = imgData.name;
       img.dataset.id = imgData.id;
-        img.dataset.type = imgData.type || 'icon';
+      img.dataset.name = imgData.name;
+      img.dataset.type = imgData.type || 'icon';
       img.draggable = true;
 
       img.addEventListener("dragstart", (e) => {
@@ -188,6 +242,11 @@ const loadImagesFromStorage = () => {
       });
 
       img.addEventListener("dragend", () => img.classList.remove("dragging"));
+
+      img.addEventListener("click", (e) => {
+        e.stopPropagation();
+        showImagePopup(img.src, imgData.name, imgData.type || 'icon');
+      });
 
       img.addEventListener("dblclick", () => {
         if (img.parentElement !== cardsContainer) {
@@ -267,6 +326,7 @@ document.getElementById('downloadBtn').addEventListener('click', async () => {
   downloadBtn.disabled = true;
 
   try {
+    const mode = sessionStorage.getItem('tierlistMode');
     const downloadContainer = document.createElement('div');
     downloadContainer.style.cssText = `
       position: absolute;
@@ -276,6 +336,20 @@ document.getElementById('downloadBtn').addEventListener('click', async () => {
       padding: 1rem;
     `;
 
+    if (mode === 'buildchampion') {
+      const title = document.createElement('div');
+      title.style.cssText = `
+        text-align: center;
+        color: var(--text-color);
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        padding: 1rem;
+      `;
+      title.textContent = 'I imagine my perfect champion like this:';
+      downloadContainer.appendChild(title);
+    }
+
     const tiersClone = tiersContainer.cloneNode(true);
     tiersClone.style.border = '2px solid var(--border-color)';
 
@@ -284,14 +358,13 @@ document.getElementById('downloadBtn').addEventListener('click', async () => {
 
     const footer = document.createElement('div');
     footer.style.cssText = `
-      margin-top: 0.75rem;
+      margin-top: 1rem;
       text-align: center;
       color: var(--text-secondary);
       font-size: 0.75rem;
       padding: 1rem;
-      border-top: 2px solid var(--border-color);
     `;
-    footer.innerHTML = `Create your own on League tierlist on <span style="color: var(--primary-color);">https://timfernix.github.io/tierlist</span>`;
+    footer.innerHTML = `Create your own on League tierlist on <span style="color: var(--primary-color);">timfernix.github.io/tierlist</span>`;
     downloadContainer.appendChild(footer);
 
     document.body.appendChild(downloadContainer);

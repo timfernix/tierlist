@@ -97,6 +97,17 @@ async function fetchSummonerSpells() {
   }
 }
 
+async function fetchRarityData() {
+  try {
+    const response = await fetch('rarity.json');
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching rarity data:', error);
+    return null;
+  }
+}
+
 function generateImageUrls(category, options) {
   const images = [];
 
@@ -248,16 +259,37 @@ async function loadSkins(options) {
 
   showLoading();
 
+  let rarityFilter = null;
+  if (options.championScope === 'all' && options.rarities && options.rarities.length > 0 && !options.rarities.includes('all')) {
+    rarityFilter = await fetchRarityData();
+    if (!rarityFilter) {
+      console.warn('Failed to load rarity data, showing all skins');
+    }
+  }
+
   for (const champ of champions) {
     if (!champ) continue;
     const details = await fetchChampionDetails(champ.id);
     if (details && details.skins) {
       details.skins.forEach((skin) => {
+        const skinName = `${champ.name} - ${skin.name}`;
+        
+        if (rarityFilter) {
+          let matchesRarity = false;
+          for (const rarity of options.rarities) {
+            if (rarityFilter[rarity] && rarityFilter[rarity].includes(skin.name)) {
+              matchesRarity = true;
+              break;
+            }
+          }
+          if (!matchesRarity) return;
+        }
+        
         const skinNum = skin.num;
         const urlType = options.skinType === 'splash' ? 'splash' : 'loading';
         images.push({
           url: `${API_BASE}/cdn/img/champion/${urlType}/${champ.id}_${skinNum}.jpg`,
-          name: `${champ.name} - ${skin.name}`,
+          name: skinName,
           id: `${champ.id}_${skinNum}`,
           type: options.skinType
         });
@@ -315,16 +347,13 @@ async function loadItems(options = {}) {
   const items = await fetchAllItems();
   const images = [];
 
-  // Scopes bestimmen: normal (default) und optionale Event-Gruppen (z. B. swarm)
   const scopes = Array.isArray(options.scopes) && options.scopes.length
     ? options.scopes
     : ['normal'];
 
-  // Union aller Event-IDs
   const allEventIds = new Set(Object.values(EVENT_ITEM_GROUPS).flat());
   const swarmIds = new Set(EVENT_ITEM_GROUPS.swarm || []);
 
-  // Sortiere IDs, sodass "realistische" IDs (kürzere Länge, kleinere Zahl) priorisiert werden
   const entries = Object.entries(items)
     .sort((a, b) => {
       const [idA] = a; const [idB] = b;
@@ -347,7 +376,6 @@ async function loadItems(options = {}) {
     if (scopes.includes('swarm') && swarmIds.has(id)) include = true;
     if (!include) continue;
 
-    // Dedupe
     const key = name.toLowerCase();
     if (seenNames.has(key)) continue;
     seenNames.add(key);
@@ -381,6 +409,63 @@ async function loadSpells() {
       type: 'spell'
     });
   });
+
+  return images;
+}
+
+async function loadPrestigeSkins() {
+  showLoading();
+  const images = [];
+
+  for (const champ of allChampions) {
+    const details = await fetchChampionDetails(champ.id);
+    if (details && details.skins) {
+      details.skins.forEach((skin) => {
+        if (skin.name.includes('Prestige')) {
+          const skinNum = skin.num;
+          images.push({
+            url: `${API_BASE}/cdn/img/champion/splash/${champ.id}_${skinNum}.jpg`,
+            name: `${champ.name} - ${skin.name}`,
+            id: `${champ.id}_${skinNum}`,
+            type: 'splash'
+          });
+        }
+      });
+    }
+  }
+
+  return images;
+}
+
+async function loadBuildChampion() {
+  showLoading();
+  const images = [];
+  
+  const sortedChampions = [...allChampions].sort((a, b) => a.name.localeCompare(b.name));
+
+  for (const champ of sortedChampions) {
+    const details = await fetchChampionDetails(champ.id);
+    if (!details) continue;
+
+    images.push({
+      url: `${API_BASE}/cdn/${latestVersion}/img/passive/${details.passive.image.full}`,
+      name: `${champ.name} - ${details.passive.name}`,
+      id: `${champ.id}_passive`,
+      type: 'ability',
+      championName: champ.name
+    });
+
+    const spellKeys = ['Q', 'W', 'E', 'R'];
+    details.spells.forEach((spell, index) => {
+      images.push({
+        url: `${API_BASE}/cdn/${latestVersion}/img/spell/${spell.image.full}`,
+        name: `${champ.name} - ${spell.name} (${spellKeys[index]})`,
+        id: `${champ.id}_${spellKeys[index].toLowerCase()}`,
+        type: 'ability',
+        championName: champ.name
+      });
+    });
+  }
 
   return images;
 }
@@ -458,12 +543,19 @@ function resetModalForm() {
   document.querySelector('input[name="skins-scope"][value="all"]').checked = true;
   document.getElementById('skinsChampionSelect').style.display = 'none';
   document.getElementById('skinsTypeSelect').style.display = 'block'; // Show for "All"
+  document.getElementById('skinsRaritySelect').style.display = 'block'; // Show for "All"
   document.getElementById('skinsChampionInput').value = '';
   document.getElementById('skinsChampionInput').dataset.championId = '';
   const skinsSug = document.getElementById('skinsSuggestions');
   skinsSug.classList.remove('active');
   skinsSug.innerHTML = '';
   document.querySelector('input[name="skins-type"][value="splash"]').checked = true;
+  
+  document.querySelector('input[name="skins-rarity"][value="all"]').checked = true;
+  document.querySelectorAll('input[name="skins-rarity"]:not([value="all"])').forEach(cb => {
+    cb.checked = false;
+    cb.disabled = true;
+  });
   
   document.querySelector('input[name="abilities-scope"][value="all"]').checked = true;
   document.getElementById('abilitiesChampionSelect').style.display = 'none';
@@ -494,6 +586,11 @@ async function init() {
   showLoading();
   latestVersion = await getLatestVersion();
   allChampions = await fetchAllChampions();
+  
+  const versionInfo = document.getElementById('versionInfo');
+  if (versionInfo) {
+    versionInfo.textContent = `Patch Version: ${latestVersion}`;
+  }
   
   hideLoading();
   setupEventListeners();
@@ -536,13 +633,38 @@ function setupEventListeners() {
     radio.addEventListener('change', (e) => {
       const selectDiv = document.getElementById('skinsChampionSelect');
       const typeDiv = document.getElementById('skinsTypeSelect');
+      const rarityDiv = document.getElementById('skinsRaritySelect');
       
       if (e.target.value === 'select') {
         selectDiv.style.display = 'block';
         typeDiv.style.display = 'none';
+        rarityDiv.style.display = 'none';
       } else {
         selectDiv.style.display = 'none';
         typeDiv.style.display = 'block';
+        rarityDiv.style.display = 'block';
+      }
+    });
+  });
+
+  document.querySelector('input[name="skins-rarity"][value="all"]').addEventListener('change', (e) => {
+    const otherCheckboxes = document.querySelectorAll('input[name="skins-rarity"]:not([value="all"])');
+    if (e.target.checked) {
+      otherCheckboxes.forEach(cb => {
+        cb.checked = false;
+        cb.disabled = true;
+      });
+    } else {
+      otherCheckboxes.forEach(cb => cb.disabled = false);
+    }
+  });
+
+  document.querySelectorAll('input[name="skins-rarity"]:not([value="all"])').forEach(cb => {
+    cb.addEventListener('change', () => {
+      const allCheckbox = document.querySelector('input[name="skins-rarity"][value="all"]');
+      const anyChecked = Array.from(document.querySelectorAll('input[name="skins-rarity"]:not([value="all"])')).some(c => c.checked);
+      if (anyChecked) {
+        allCheckbox.checked = false;
       }
     });
   });
@@ -599,6 +721,8 @@ function setupEventListeners() {
     const options = {};
 
     try {
+      sessionStorage.removeItem('tierlistMode');
+      
       switch (selectedCategory) {
         case 'champions':
           options.type = document.querySelector('input[name="champions-type"]:checked').value;
@@ -614,6 +738,10 @@ function setupEventListeners() {
             alert('Please select a champion');
             return;
           }
+          
+          const selectedRarities = Array.from(document.querySelectorAll('input[name="skins-rarity"]:checked'))
+            .map(cb => cb.value);
+          options.rarities = selectedRarities.length > 0 ? selectedRarities : ['all'];
           
           images = await loadSkins(options);
           break;
@@ -651,6 +779,15 @@ function setupEventListeners() {
           const selectedScopes = Array.from(document.querySelectorAll('input[name="maps-scope"]:checked')).map(cb => cb.value);
           options.scopes = selectedScopes.length ? selectedScopes : ['aram','sr'];
           images = await loadMaps(options);
+          break;
+
+        case 'buildchampion':
+          images = await loadBuildChampion();
+          sessionStorage.setItem('tierlistMode', 'buildchampion');
+          break;
+
+        case 'prestige':
+          images = await loadPrestigeSkins();
           break;
       }
 
