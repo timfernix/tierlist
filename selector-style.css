@@ -433,6 +433,81 @@ header p {
   background: var(--primary-hover);
 }
 
+/* Footer Styles */
+.site-footer {
+  width: 100%;
+  padding: 2rem 0;
+  text-align: center;
+  margin-top: 4rem;
+  position: relative;
+}
+
+.footer-text {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+  animation: subtleGlow 3s ease-in-out infinite;
+  background: linear-gradient(135deg, #94a3b8 0%, #e2e8f0 50%, #94a3b8 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: textShimmer 4s ease-in-out infinite, subtleGlow 3s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+.footer-text:hover {
+  letter-spacing: 0.1em;
+}
+
+.footer-text a {
+  background: linear-gradient(135deg, #94a3b8 0%, #e2e8f0 50%, #94a3b8 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.footer-text a:hover {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 10px rgba(11, 197, 234, 0.6));
+}
+
+@keyframes textShimmer {
+  0%, 100% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+}
+
+@keyframes subtleGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 2px rgba(148, 163, 184, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 8px rgba(226, 232, 240, 0.5));
+  }
+}
+
+.footer-legal {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-top: 1rem;
+  opacity: 0.7;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.4;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   header h1 {
@@ -459,5 +534,15 @@ header p {
   .btn {
     width: 100%;
     justify-content: center;
+  }
+
+  .footer-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-footer {
+    display: none;
   }
 }

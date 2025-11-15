@@ -206,7 +206,6 @@ initColorOptions();
 loadImagesFromStorage();
 initDraggables();
 
-
 document.querySelector("h1").addEventListener("click", () => {
   tiersContainer.appendChild(createTier());
 });
