@@ -243,6 +243,76 @@ const loadImagesFromStorage = () => {
 
       img.addEventListener("dragend", () => img.classList.remove("dragging"));
 
+      // Touch support for mobile
+      let touchStartX, touchStartY, touchMoved = false;
+      let longPressTimer;
+
+      img.addEventListener("touchstart", (e) => {
+        touchMoved = false;
+        const touch = e.touches[0];
+        touchStartX = touch.clientX;
+        touchStartY = touch.clientY;
+        
+        // Long press to start drag
+        longPressTimer = setTimeout(() => {
+          img.classList.add("dragging");
+          img.style.position = "fixed";
+          img.style.zIndex = "10000";
+          img.style.pointerEvents = "none";
+        }, 200);
+      });
+
+      img.addEventListener("touchmove", (e) => {
+        const touch = e.touches[0];
+        const moveX = Math.abs(touch.clientX - touchStartX);
+        const moveY = Math.abs(touch.clientY - touchStartY);
+        
+        if (moveX > 5 || moveY > 5) {
+          touchMoved = true;
+          clearTimeout(longPressTimer);
+        }
+
+        if (img.classList.contains("dragging")) {
+          e.preventDefault();
+          img.style.left = touch.clientX - (img.offsetWidth / 2) + "px";
+          img.style.top = touch.clientY - (img.offsetHeight / 2) + "px";
+        }
+      });
+
+      img.addEventListener("touchend", (e) => {
+        clearTimeout(longPressTimer);
+        
+        if (img.classList.contains("dragging")) {
+          const touch = e.changedTouches[0];
+          const elementBelow = document.elementFromPoint(touch.clientX, touch.clientY);
+          
+          img.style.position = "";
+          img.style.zIndex = "";
+          img.style.pointerEvents = "";
+          img.classList.remove("dragging");
+
+          // Find the target container
+          let target = elementBelow;
+          while (target && !target.classList.contains("items") && target !== document.body) {
+            target = target.parentElement;
+          }
+
+          const mode = sessionStorage.getItem('tierlistMode');
+          if (target && target.classList.contains("items")) {
+            if (mode === 'buildchampion' && target.children.length >= 1 && !target.contains(img)) {
+              // In buildchampion mode, replace existing item
+              if (target.children[0]) {
+                cardsContainer.appendChild(target.children[0]);
+              }
+            }
+            target.appendChild(img);
+          }
+        } else if (!touchMoved) {
+          // Single tap - show popup
+          showImagePopup(img.src, imgData.name, imgData.type || 'icon');
+        }
+      });
+
       img.addEventListener("click", (e) => {
         e.stopPropagation();
         showImagePopup(img.src, imgData.name, imgData.type || 'icon');

@@ -272,6 +272,15 @@ button {
     min-height: calc(var(--card-size) * 2);
     width: 100%;
     overflow-x: auto;
+    z-index: 100;
+  }
+
+  .site-footer {
+    margin-bottom: calc(var(--card-size) * 2 + 2rem);
+  }
+
+  body {
+    padding-bottom: calc(var(--card-size) * 2);
   }
 }
 
