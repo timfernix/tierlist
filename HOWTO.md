@@ -15,7 +15,7 @@ Chose your preferred display type, champion scope and additional options based o
 - **Click tier settings** (gear icon) to customize colors and labels
 - **Add/remove tiers** by clicking on the title or using tier controls
 - **Reorder tiers** using the up/down arrows
-- **Hover over images** for 1-2 seconds to see a larger preview
+- **Click images** for 1-2 seconds to see a larger preview
 
 ## 4. Export Your Tier List
 

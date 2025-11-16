@@ -19,6 +19,7 @@ const tiersContainer = document.querySelector(".tiers");
 const cardsContainer = document.querySelector(".cards");
 
 let activeTier;
+let autoScrollInterval = null;
 
 const resetTierImages = (tier) => {
   const images = tier.querySelectorAll(".items img");
@@ -174,9 +175,27 @@ const initDraggables = () => {
     img.addEventListener("dragstart", (e) => {
       e.dataTransfer.setData("text/plain", "");
       img.classList.add("dragging");
+      
+      // Start auto-scroll interval when dragging starts (desktop only)
+      if (window.innerWidth > 480) {
+        autoScrollInterval = setInterval(() => {
+          const draggedElement = document.querySelector('.dragging');
+          if (!draggedElement) {
+            clearInterval(autoScrollInterval);
+            return;
+          }
+        }, 50);
+      }
     });
 
-    img.addEventListener("dragend", () => img.classList.remove("dragging"));
+    img.addEventListener("dragend", () => {
+      img.classList.remove("dragging");
+      // Clear auto-scroll interval when dragging ends
+      if (autoScrollInterval) {
+        clearInterval(autoScrollInterval);
+        autoScrollInterval = null;
+      }
+    });
 
     img.addEventListener("dblclick", () => {
       if (img.parentElement !== cardsContainer) {
@@ -381,6 +400,22 @@ cardsContainer.addEventListener("dragover", (event) => {
   const draggedImage = document.querySelector(".dragging");
   if (draggedImage) {
     cardsContainer.appendChild(draggedImage);
+  }
+  
+  // Auto-scroll when dragging near the edges (desktop only)
+  if (window.innerWidth > 480) {
+    const rect = cardsContainer.getBoundingClientRect();
+    const scrollZone = 50; // pixels from edge to trigger scroll
+    const scrollSpeed = 10;
+    const mouseY = event.clientY - rect.top;
+    
+    if (mouseY < scrollZone && cardsContainer.scrollTop > 0) {
+      // Scroll up
+      cardsContainer.scrollTop -= scrollSpeed;
+    } else if (mouseY > rect.height - scrollZone) {
+      // Scroll down
+      cardsContainer.scrollTop += scrollSpeed;
+    }
   }
 });
 

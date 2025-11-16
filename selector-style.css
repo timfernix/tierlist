@@ -560,6 +560,18 @@ header p {
   gap: 0.5rem;
 }
 
+.position-icon,
+.role-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 0.5rem;
+  opacity: 0.9;
+}
+
+.role-icon {
+  filter: none;
+}
+
 @media (max-width: 768px) {
   header h1 {
     font-size: 2rem;

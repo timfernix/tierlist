@@ -46,6 +46,14 @@
           <p>Rank your favorite skins by champion or across all skins</p>
         </div>
 
+        <div class="category-card" data-category="profileicons">
+          <div class="category-icon">
+            <i class="bi bi-person-circle"></i>
+          </div>
+          <h2>Profile Icons</h2>
+          <p>Rank champion-themed profile icons</p>
+        </div>
+
         <div class="category-card" data-category="abilities">
           <div class="category-icon">
             <i class="bi bi-lightning-charge-fill"></i>
@@ -116,6 +124,14 @@
                   <span>Icons</span>
                 </label>
                 <label class="radio-option">
+                  <input type="radio" name="champions-type" value="illustration" />
+                  <span>Illustration Icons</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="champions-type" value="chibi" />
+                  <span>Champie Icons</span>
+                </label>
+                <label class="radio-option">
                   <input type="radio" name="champions-type" value="loading" />
                   <span>Loading Screens</span>
                 </label>
@@ -124,8 +140,71 @@
                   <span>Splash Arts</span>
                 </label>
               </div>
-            </div>
 
+              <label class="option-label">Filter by Lane or Role</label>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="champions-filter" value="all" checked />
+                  <img src="https://timfernix.github.io/skillchart/assets/lanes/every.png" alt="Top" class="position-icon">
+                  <span>All Champions</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="champions-filter" value="lane-top" />
+                  <img src="https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/svg/position-top.svg" alt="Top" class="position-icon">
+                  <span>Top</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="champions-filter" value="lane-jungle" />
+                  <img src="https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/svg/position-jungle.svg" alt="Jungle" class="position-icon">
+                  <span>Jungle</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="champions-filter" value="lane-middle" />
+                  <img src="https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/svg/position-middle.svg" alt="Middle" class="position-icon">
+                  <span>Middle</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="champions-filter" value="lane-bottom" />
+                  <img src="https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/svg/position-bottom.svg" alt="Bottom" class="position-icon">
+                  <span>Bottom</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="champions-filter" value="lane-support" />
+                  <img src="https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/svg/position-utility.svg" alt="Support" class="position-icon">
+                  <span>Support</span>
+                </label>
+                  <label class="radio-option">
+                  <input type="radio" name="champions-filter" value="role-tank" />
+                  <img src="https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/npe-ft-role-icon-tank.png" alt="Tank" class="role-icon">
+                  <span>Tank</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="champions-filter" value="role-assassin" />
+                  <img src="https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/npe-ft-role-icon-assassin.png" alt="Assassin" class="role-icon">
+                  <span>Assassin</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="champions-filter" value="role-fighter" />
+                  <img src="https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/npe-ft-role-icon-fighter.png" alt="Fighter" class="role-icon">
+                  <span>Fighter</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="champions-filter" value="role-mage" />
+                  <img src="https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/npe-ft-role-icon-mage.png" alt="Mage" class="role-icon">
+                  <span>Mage</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="champions-filter" value="role-marksman" />
+                  <img src="https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/npe-ft-role-icon-marksman.png" alt="Marksman" class="role-icon">
+                  <span>Marksman</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="champions-filter" value="role-support" />
+                  <img src="https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/npe-ft-role-icon-support.png" alt="Support" class="role-icon">
+                  <span>Support</span>
+                </label>
+              </div>
+            </div>
             <div class="options-group" data-category="skins" style="display: none;">
               <label class="option-label">Champion Scope:</label>
               <div class="radio-group">
@@ -206,6 +285,31 @@
                                 </label>
                               </div>
                             </div>
+              </div>
+            </div>
+
+            <div class="options-group" data-category="profileicons" style="display: none;">
+              <label class="option-label">Champion Scope:</label>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="profileicons-scope" value="all" checked />
+                  <span>All Champions</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="profileicons-scope" value="select" />
+                  <span>Select Champion</span>
+                </label>
+              </div>
+
+              <div class="champion-select" id="profileIconsChampionSelect" style="display: none;">
+                <label class="option-label">Champion:</label>
+                <input
+                  type="text"
+                  id="profileIconsChampionInput"
+                  placeholder="Start typing champion name..."
+                  autocomplete="off"
+                />
+                <div class="champion-suggestions" id="profileIconsSuggestions"></div>
               </div>
             </div>
 

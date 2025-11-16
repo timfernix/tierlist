@@ -108,13 +108,69 @@ async function fetchRarityData() {
   }
 }
 
-function generateImageUrls(category, options) {
+async function fetchRolesData() {
+  try {
+    const response = await fetch('roles.json');
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching roles data:', error);
+    return null;
+  }
+}
+
+async function fetchLanesData() {
+  try {
+    const response = await fetch('lanes.json');
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching lanes data:', error);
+    return null;
+  }
+}
+
+async function fetchIconsData() {
+  try {
+    const response = await fetch('icons.json');
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching icons data:', error);
+    return null;
+  }
+}
+
+async function generateImageUrls(category, options) {
   const images = [];
 
   switch (category) {
     case 'champions':
+      // Filter champions based on lane/role selection
+      let filteredChampions = allChampions;
+      
+      if (options.filter && options.filter !== 'all') {
+        if (options.filter.startsWith('lane-')) {
+          const lane = options.filter.replace('lane-', '');
+          const lanesData = await fetchLanesData();
+          if (lanesData && lanesData[lane]) {
+            filteredChampions = allChampions.filter(champ => 
+              lanesData[lane].includes(champ.name)
+            );
+          }
+        } else if (options.filter.startsWith('role-')) {
+          const role = options.filter.replace('role-', '');
+          const rolesData = await fetchRolesData();
+          if (rolesData && rolesData[role]) {
+            filteredChampions = allChampions.filter(champ => 
+              rolesData[role].includes(champ.name)
+            );
+          }
+        }
+      }
+
       if (options.type === 'icons') {
-        allChampions.forEach((champ) => {
+        filteredChampions.forEach((champ) => {
           images.push({
             url: `${API_BASE}/cdn/${latestVersion}/img/champion/${champ.id}.png`,
             name: champ.name,
@@ -122,8 +178,32 @@ function generateImageUrls(category, options) {
             type: 'icon'
           });
         });
+      } else if (options.type === 'illustration') {
+        const iconsData = await fetchIconsData();
+        filteredChampions.forEach((champ) => {
+          if (iconsData && iconsData[champ.name] && iconsData[champ.name].illustration) {
+            images.push({
+              url: `${API_BASE}/cdn/${latestVersion}/img/profileicon/${iconsData[champ.name].illustration}.png`,
+              name: champ.name,
+              id: champ.id,
+              type: 'icon'
+            });
+          }
+        });
+      } else if (options.type === 'chibi') {
+        const iconsData = await fetchIconsData();
+        filteredChampions.forEach((champ) => {
+          if (iconsData && iconsData[champ.name] && iconsData[champ.name].chibi) {
+            images.push({
+              url: `${API_BASE}/cdn/${latestVersion}/img/profileicon/${iconsData[champ.name].chibi}.png`,
+              name: champ.name,
+              id: champ.id,
+              type: 'icon'
+            });
+          }
+        });
       } else if (options.type === 'loading') {
-        allChampions.forEach((champ) => {
+        filteredChampions.forEach((champ) => {
           images.push({
             url: `${API_BASE}/cdn/img/champion/loading/${champ.id}_0.jpg`,
             name: champ.name,
@@ -132,7 +212,7 @@ function generateImageUrls(category, options) {
           });
         });
       } else if (options.type === 'splash') {
-        allChampions.forEach((champ) => {
+        filteredChampions.forEach((champ) => {
           images.push({
             url: `${API_BASE}/cdn/img/champion/splash/${champ.id}_0.jpg`,
             name: champ.name,
@@ -141,6 +221,52 @@ function generateImageUrls(category, options) {
           });
         });
       }
+      break;
+
+    case 'profileicons':
+      const iconsData = await fetchIconsData();
+      let championsForIcons = allChampions;
+      
+      if (options.championScope === 'select' && options.selectedChampion) {
+        championsForIcons = allChampions.filter(champ => champ.name === options.selectedChampion);
+      }
+      
+      championsForIcons.forEach((champ) => {
+        const championIcons = iconsData[champ.name];
+        if (!championIcons) return;
+        
+        // Add illustration icon
+        if (championIcons.illustration) {
+          images.push({
+            url: `${API_BASE}/cdn/${latestVersion}/img/profileicon/${championIcons.illustration}.png`,
+            name: `${champ.name} (Illustration)`,
+            id: champ.id,
+            type: 'icon'
+          });
+        }
+        
+        // Add champie (chibi) icon
+        if (championIcons.chibi) {
+          images.push({
+            url: `${API_BASE}/cdn/${latestVersion}/img/profileicon/${championIcons.chibi}.png`,
+            name: `${champ.name} (Champie)`,
+            id: champ.id,
+            type: 'icon'
+          });
+        }
+        
+        // Add other icons
+        if (championIcons.other && championIcons.other.length > 0) {
+          championIcons.other.forEach((iconId, index) => {
+            images.push({
+              url: `${API_BASE}/cdn/${latestVersion}/img/profileicon/${iconId}.png`,
+              name: `${champ.name} (Icon ${index + 1})`,
+              id: champ.id,
+              type: 'icon'
+            });
+          });
+        }
+      });
       break;
 
     case 'skins':
@@ -478,6 +604,8 @@ function hideLoading() {
   document.getElementById('loadingOverlay').style.display = 'none';
 }
 
+
+
 function storeDataForTierlist(images) {
   sessionStorage.setItem('tierlistImages', JSON.stringify(images));
 }
@@ -557,6 +685,14 @@ function resetModalForm() {
     cb.disabled = true;
   });
   
+  document.querySelector('input[name="profileicons-scope"][value="all"]').checked = true;
+  document.getElementById('profileIconsChampionSelect').style.display = 'none';
+  document.getElementById('profileIconsChampionInput').value = '';
+  document.getElementById('profileIconsChampionInput').dataset.championId = '';
+  const profileIconsSug = document.getElementById('profileIconsSuggestions');
+  profileIconsSug.classList.remove('active');
+  profileIconsSug.innerHTML = '';
+  
   document.querySelector('input[name="abilities-scope"][value="all"]').checked = true;
   document.getElementById('abilitiesChampionSelect').style.display = 'none';
   document.getElementById('spellSelect').style.display = 'block';
@@ -597,6 +733,21 @@ async function init() {
   
   const modal = document.getElementById('optionsModal');
   const generateBtn = document.getElementById('generateBtn');
+  
+  // Check if page needs reset after back navigation
+  if (sessionStorage.getItem('selectorNeedsReset') === 'true') {
+    sessionStorage.removeItem('selectorNeedsReset');
+    if (modal && modal.open) {
+      modal.close();
+    }
+    if (generateBtn) {
+      generateBtn.disabled = false;
+      generateBtn.innerHTML = '<i class="bi bi-arrow-right-circle-fill"></i> Generate Tierlist';
+    }
+    resetModalForm();
+    selectedCategory = null;
+  }
+  
   if (modal && modal.open) {
     modal.close();
   }
@@ -614,6 +765,7 @@ function setupEventListeners() {
   const generateBtn = document.getElementById('generateBtn');
 
   const getSkinsChampion = setupChampionAutocomplete('skinsChampionInput', 'skinsSuggestions');
+  const getProfileIconsChampion = setupChampionAutocomplete('profileIconsChampionInput', 'profileIconsSuggestions');
   const getAbilitiesChampion = setupChampionAutocomplete('abilitiesChampionInput', 'abilitiesSuggestions');
 
   document.querySelectorAll('.category-card').forEach((card) => {
@@ -680,6 +832,23 @@ function setupEventListeners() {
     });
   });
 
+  document.querySelectorAll('input[name="profileicons-scope"]').forEach((radio) => {
+    radio.addEventListener('change', (e) => {
+      const selectDiv = document.getElementById('profileIconsChampionSelect');
+      
+      if (e.target.value === 'select') {
+        selectDiv.style.display = 'block';
+      } else {
+        selectDiv.style.display = 'none';
+        document.getElementById('profileIconsChampionInput').value = '';
+        document.getElementById('profileIconsChampionInput').dataset.championId = '';
+        const profileIconsSug = document.getElementById('profileIconsSuggestions');
+        profileIconsSug.classList.remove('active');
+        profileIconsSug.innerHTML = '';
+      }
+    });
+  });
+
   document.querySelectorAll('input[name="abilities-scope"]').forEach((radio) => {
     radio.addEventListener('change', (e) => {
       const selectDiv = document.getElementById('abilitiesChampionSelect');
@@ -741,7 +910,9 @@ function setupEventListeners() {
       switch (selectedCategory) {
         case 'champions':
           options.type = document.querySelector('input[name="champions-type"]:checked').value;
-          images = generateImageUrls('champions', options);
+          const filterRadio = document.querySelector('input[name="champions-filter"]:checked');
+          options.filter = filterRadio ? filterRadio.value : 'all';
+          images = await generateImageUrls('champions', options);
           break;
 
         case 'skins':
@@ -759,6 +930,18 @@ function setupEventListeners() {
           options.rarities = selectedRarities.length > 0 ? selectedRarities : ['all'];
           
           images = await loadSkins(options);
+          break;
+
+        case 'profileicons':
+          options.championScope = document.querySelector('input[name="profileicons-scope"]:checked').value;
+          options.selectedChampion = getProfileIconsChampion();
+          
+          if (options.championScope === 'select' && !options.selectedChampion) {
+            alert('Please select a champion');
+            return;
+          }
+          
+          images = await generateImageUrls('profileicons', options);
           break;
 
         case 'abilities':
@@ -809,6 +992,9 @@ function setupEventListeners() {
       if (images && images.length > 0) {
         storeDataForTierlist(images);
         hideLoading();
+        
+        // Reset the page state before navigation
+        sessionStorage.setItem('selectorNeedsReset', 'true');
         window.location.href = 'tierlist.html';
       } else {
         hideLoading();
