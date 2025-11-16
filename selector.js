@@ -594,6 +594,17 @@ async function init() {
   
   hideLoading();
   setupEventListeners();
+  
+  const modal = document.getElementById('optionsModal');
+  const generateBtn = document.getElementById('generateBtn');
+  if (modal && modal.open) {
+    modal.close();
+  }
+  if (generateBtn) {
+    generateBtn.disabled = false;
+    generateBtn.innerHTML = '<i class="bi bi-arrow-right-circle-fill"></i> Generate Tierlist';
+  }
+  resetModalForm();
 }
 
 function setupEventListeners() {
