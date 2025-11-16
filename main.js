@@ -262,11 +262,11 @@ const loadImagesFromStorage = () => {
 
       img.addEventListener("dragend", () => img.classList.remove("dragging"));
 
-      // Touch support for mobile
       let touchStartX, touchStartY, touchMoved = false;
       let longPressTimer;
 
       img.addEventListener("touchstart", (e) => {
+        e.preventDefault(); // Prevent context menu
         touchMoved = false;
         const touch = e.touches[0];
         touchStartX = touch.clientX;
@@ -323,6 +323,8 @@ const loadImagesFromStorage = () => {
               }
             }
             target.appendChild(img);
+          } else {
+            cardsContainer.appendChild(img);
           }
         } else if (!touchMoved) {
           showImagePopup(img.src, imgData.name, imgData.type || 'icon');
