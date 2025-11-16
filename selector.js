@@ -235,7 +235,6 @@ async function generateImageUrls(category, options) {
         const championIcons = iconsData[champ.name];
         if (!championIcons) return;
         
-        // Add illustration icon
         if (championIcons.illustration) {
           images.push({
             url: `${API_BASE}/cdn/${latestVersion}/img/profileicon/${championIcons.illustration}.png`,
@@ -245,7 +244,6 @@ async function generateImageUrls(category, options) {
           });
         }
         
-        // Add champie (chibi) icon
         if (championIcons.chibi) {
           images.push({
             url: `${API_BASE}/cdn/${latestVersion}/img/profileicon/${championIcons.chibi}.png`,
@@ -255,7 +253,6 @@ async function generateImageUrls(category, options) {
           });
         }
         
-        // Add other icons
         if (championIcons.other && championIcons.other.length > 0) {
           championIcons.other.forEach((iconId, index) => {
             images.push({
@@ -283,7 +280,6 @@ async function generateImageUrls(category, options) {
   return images;
 }
 
-// Static mapping for maps
 const MAPS_DEFINITION = {
   arena: {
     label: 'Arena',

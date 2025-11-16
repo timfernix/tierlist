@@ -310,7 +310,6 @@ const loadImagesFromStorage = () => {
           img.style.pointerEvents = "";
           img.classList.remove("dragging");
 
-          // Find the target container
           let target = elementBelow;
           while (target && !target.classList.contains("items") && target !== document.body) {
             target = target.parentElement;
@@ -319,7 +318,6 @@ const loadImagesFromStorage = () => {
           const mode = sessionStorage.getItem('tierlistMode');
           if (target && target.classList.contains("items")) {
             if (mode === 'buildchampion' && target.children.length >= 1 && !target.contains(img)) {
-              // In buildchampion mode, replace existing item
               if (target.children[0]) {
                 cardsContainer.appendChild(target.children[0]);
               }
@@ -327,7 +325,6 @@ const loadImagesFromStorage = () => {
             target.appendChild(img);
           }
         } else if (!touchMoved) {
-          // Single tap - show popup
           showImagePopup(img.src, imgData.name, imgData.type || 'icon');
         }
       });
@@ -402,7 +399,6 @@ cardsContainer.addEventListener("dragover", (event) => {
     cardsContainer.appendChild(draggedImage);
   }
   
-  // Auto-scroll when dragging near the edges (desktop only)
   if (window.innerWidth > 480) {
     const rect = cardsContainer.getBoundingClientRect();
     const scrollZone = 50; // pixels from edge to trigger scroll
@@ -410,10 +406,8 @@ cardsContainer.addEventListener("dragover", (event) => {
     const mouseY = event.clientY - rect.top;
     
     if (mouseY < scrollZone && cardsContainer.scrollTop > 0) {
-      // Scroll up
       cardsContainer.scrollTop -= scrollSpeed;
     } else if (mouseY > rect.height - scrollZone) {
-      // Scroll down
       cardsContainer.scrollTop += scrollSpeed;
     }
   }

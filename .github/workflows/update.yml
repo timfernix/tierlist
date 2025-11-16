@@ -25,10 +25,13 @@ jobs:
       - name: Run icons processing script
         run: python process_icons.py
         
+      - name: Run lanes processing script
+        run: python process_lanes.py
+        
       - name: Check for changes
         id: check_changes
         run: |
-          if git diff --quiet rarity.json icons.json; then
+          if git diff --quiet rarity.json icons.json lanes.json; then
             echo "changed=false" >> $GITHUB_OUTPUT
           else
             echo "changed=true" >> $GITHUB_OUTPUT
@@ -39,6 +42,6 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add rarity.json icons.json
-          git commit -m "Update game data (rarity and icons) [automated]"
+          git add rarity.json icons.json lanes.json
+          git commit -m "Update game data (rarity, icons, and lanes) [automated]"
           git push
