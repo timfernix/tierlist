@@ -28,13 +28,21 @@
   },
   "30": {
     "name": "Arena",
-    "minimap": [],
+    "minimap": [
+      { "id": "arena_woods_minimap", "name": "Ancestral Woods", "url": "./maps/Arena_Ancestral_Woods_Minimap.png" },
+      { "id": "arena_desert_minimap", "name": "Desert Oasis", "url": "./maps/Arena_Desert_Oasis_Minimap.png" },
+      { "id": "arena_frostbite_minimap", "name": "Frostbite Thicket", "url": "./maps/Arena_Frostbite_Thicket_Minimap.png" },
+      { "id": "arena_magma_minimap", "name": "Magma Chamber", "url": "./maps/Arena_Magma_Chamber_Minimap.png" },
+      { "id": "arena_reckoner_minimap", "name": "Reckoner Arena", "url": "./maps/Arena_Reckoner_Arena_Minimap.png" },
+      { "id": "arena_koipond_minimap", "name": "Koi Pond", "url": "./maps/Arena_Koi_Pond_Minimap.png" }
+    ],
     "full": [
       { "id": "arena_woods_full", "name": "Ancestral Woods", "url": "./maps/Arena_Ancestral_Woods.png" },
       { "id": "arena_desert_full", "name": "Desert Oasis", "url": "./maps/Arena_Desert_Oasis.png" },
       { "id": "arena_frostbite_full", "name": "Frostbite Thicket", "url": "./maps/Arena_Frostbite_Thicket.png" },
       { "id": "arena_magma_full", "name": "Magma Chamber", "url": "./maps/Arena_Magma_Chamber.png" },
-      { "id": "arena_reckoner_full", "name": "Reckoner Arena", "url": "./maps/Arena_Reckoner_Arena.png" }
+      { "id": "arena_reckoner_full", "name": "Reckoner Arena", "url": "./maps/Arena_Reckoner_Arena.png" },
+      { "id": "arena_koipond_full", "name": "Koi Pond", "url": "./maps/Arena_Koi_Pond.png" }
     ]
   },
   "21": {
