@@ -64,17 +64,24 @@
       { "id": "special_swarmbeachhead_full", "name": "Swarm The Beachhead (Full)", "url": "./maps/Swarm_The_Beachhead.png" }
     ]
   },
+  "35": {
+    "name": "Brawl",
+    "minimap": [
+        { "id": "special_bandlewood_minimap", "name": "The Bandlewood (Minimap)", "url": "./maps/The_Bandlewood_Minimap.png" }
+    ],
+    "full": [
+      { "id": "special_bandlewood_full", "name": "The Bandlewood (Full)", "url": "./maps/The_Bandlewood.png" }
+    ]
+  },
   "special": {
     "name": "Event / Special Maps",
     "minimap": [
-      { "id": "special_bandlewood_minimap", "name": "The Bandlewood (Minimap)", "url": "./maps/The_Bandlewood_Minimap.png" },
       { "id": "special_treeline_minimap", "name": "Twisted Treeline (Minimap)", "url": "./maps/Twisted_Treeline_Minimap.png" },
       { "id": "special_provinggrounds_minimap", "name": "Proving Grounds (Minimap)", "url": "./maps/Proving_Grounds_Minimap.png" },
       { "id": "special_crystalscar_minimap", "name": "Crystal Scar (Minimap)", "url": "./maps/Crystal_Scar_Minimap.png" }
     ],
     "full": [
       { "id": "special_magma_full", "name": "Magma Chamber (Concept)", "url": "./maps/Magma_Chamber_Concept.jpg" },
-      { "id": "special_bandlewood_full", "name": "The Bandlewood (Full)", "url": "./maps/The_Bandlewood.png" },
       { "id": "special_treeline_full", "name": "Twisted Treeline (Full)", "url": "./maps/Twisted_Treeline.jpg" },
       { "id": "special_valoran_full", "name": "Valoran City Park (Full)", "url": "./maps/Valoran_City_Park.jpg" },
       { "id": "special_substructure_full", "name": "Substructure 43 (Full)", "url": "./maps/Substructure_43.png"},

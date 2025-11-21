@@ -455,6 +455,17 @@ document.getElementById('downloadBtn').addEventListener('click', async () => {
     tiersClone.style.border = '2px solid var(--border-color)';
 
     tiersClone.querySelectorAll('.controls').forEach((el) => el.remove());
+
+    // Fix for text vertical alignment in html2canvas
+    tiersClone.querySelectorAll('.label span').forEach(span => {
+      span.style.overflow = 'visible';
+      span.style.lineHeight = '1.2';
+      span.style.wordBreak = 'break-word';
+      span.style.whiteSpace = 'normal';
+      span.style.position = 'relative';
+      span.style.top = '-5px';
+    });
+
     downloadContainer.appendChild(tiersClone);
 
     const footer = document.createElement('div');

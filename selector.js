@@ -21,19 +21,6 @@ const ITEM_NAME_BLOCK_PATTERNS = [
   /placeholder/i
 ];
 
-const EVENT_ITEM_GROUPS = {
-  swarm: [
-    '9171', '9172', '9173', '9174', '9175', '9176', '9177', '9178', '9179',
-    '9180', '9181', '9182', '9183', '9184', '9185', '9186', '9187', '9188',
-    '9189', '9190', '9191', '9192', '9193' ,
-    '9271', '9272', '9273', '9274', '9275', '9276', '9277', '9278', '9279',
-    '9280', '9281', '9282', '9283', '9284', '9285', '9286', '9287', '9288',
-    '9289', '9290', '9291', '9292', '9293',
-    '9300', '9301', '9302', '9303', '9304', '9305', '9306', '9307', '9308',
-    '9400', '9401', '9402', '9403', '9404', '9405', '9406', '9407', '9408'
-  ],
-};
-
 async function getLatestVersion() {
   try {
     const response = await fetch(`${API_BASE}/api/versions.json`);
@@ -41,7 +28,7 @@ async function getLatestVersion() {
     return versions[0]; 
   } catch (error) {
     console.error('Error fetching version:', error);
-    return '15.22.1'; // Fallback version
+    return '15.23.1'; // Fallback version
   }
 }
 
@@ -309,36 +296,26 @@ async function loadMaps(options) {
   const images = [];
   const seen = new Set();
   const type = options.type || 'minimap';
-  const scopes = options.scopes && options.scopes.length ? options.scopes : ['aram', 'sr'];
+  // scopes now contains direct map IDs from the checkboxes
+  const scopes = options.scopes && options.scopes.length ? options.scopes : ['11', '12'];
   
   const mapsData = await fetchMapsData();
   if (!mapsData) return [];
 
-  // Map scopes to IDs in maps.json
-  const scopeToIds = {
-    'sr': ['11'],
-    'aram': ['12'],
-    'arena': ['30'],
-    'special': ['21', '33', 'special'] // Nexus Blitz, Anima Squad, and other specials
-  };
-
-  scopes.forEach(scope => {
-    const ids = scopeToIds[scope] || [];
-    ids.forEach(id => {
-      const def = mapsData[id];
-      if (!def) return;
-      
-      const list = def[type] || [];
-      list.forEach(entry => {
-        if (!entry.url) return;
-        if (seen.has(entry.id)) return;
-        seen.add(entry.id);
-        images.push({
-          url: entry.url,
-          name: entry.name,
-          id: entry.id,
-          type: 'map'
-        });
+  scopes.forEach(mapId => {
+    const def = mapsData[mapId];
+    if (!def) return;
+    
+    const list = def[type] || [];
+    list.forEach(entry => {
+      if (!entry.url) return;
+      if (seen.has(entry.id)) return;
+      seen.add(entry.id);
+      images.push({
+        url: entry.url,
+        name: entry.name,
+        id: entry.id,
+        type: 'map'
       });
     });
   });
@@ -440,14 +417,13 @@ async function loadAbilities(options) {
 async function loadItems(options = {}) {
   showLoading();
   const items = await fetchAllItems();
+  const itemsMapData = await fetchItemsMapData();
   const images = [];
 
-  const scopes = Array.isArray(options.scopes) && options.scopes.length
-    ? options.scopes
-    : ['normal'];
-
-  const allEventIds = new Set(Object.values(EVENT_ITEM_GROUPS).flat());
-  const swarmIds = new Set(EVENT_ITEM_GROUPS.swarm || []);
+  // options.scope should be a single map ID string now
+  const scopeId = options.scope || '11'; // Default to SR if not provided
+  
+  const allowedItemIds = new Set(itemsMapData[scopeId] || []);
 
   const entries = Object.entries(items)
     .sort((a, b) => {
@@ -460,16 +436,21 @@ async function loadItems(options = {}) {
 
   for (const [id, item] of entries) {
     if (!item) continue;
-    if (!item.gold || item.gold.purchasable === false) continue;
+    // Basic checks
+    if (!item.gold && scopeId !== '33') continue; // Swarm items might not have gold?
+    // Actually, let's check if we should enforce gold check. 
+    // If it's in the allowed list, we should probably show it.
+    // But standard items usually have gold.
+    // Let's trust the allowedItemIds list primarily.
+    
     if (ITEM_ID_BLACKLIST.includes(id)) continue;
+    
     const name = (item.name || '').trim();
     if (!name) continue;
     if (ITEM_NAME_BLOCK_PATTERNS.some((re) => re.test(name))) continue;
 
-    let include = false;
-    if (scopes.includes('normal') && !allEventIds.has(id)) include = true;
-    if (scopes.includes('swarm') && swarmIds.has(id)) include = true;
-    if (!include) continue;
+    // Check if item is allowed in the selected map
+    if (!allowedItemIds.has(id)) continue;
 
     const key = name.toLowerCase();
     if (seenNames.has(key)) continue;
@@ -482,9 +463,6 @@ async function loadItems(options = {}) {
       type: 'item'
     });
   }
-
-  // Sort A-Z
-  //images.sort((a, b) => a.name.localeCompare(b.name));
 
   return images;
 }
@@ -688,17 +666,10 @@ function resetModalForm() {
 let selectedCategory = '';
 
 async function init() {
-  showLoading();
   latestVersion = await getLatestVersion();
   allChampions = await fetchAllChampions();
-  
-  const versionInfo = document.getElementById('versionInfo');
-  if (versionInfo) {
-    versionInfo.textContent = `Patch Version: ${latestVersion}`;
-  }
-  
-  hideLoading();
-  setupEventListeners();
+  await populateItemScopes();
+  await populateMapScopes();
   
   const modal = document.getElementById('optionsModal');
   const generateBtn = document.getElementById('generateBtn');
@@ -725,6 +696,7 @@ async function init() {
     generateBtn.innerHTML = '<i class="bi bi-arrow-right-circle-fill"></i> Generate Tierlist';
   }
   resetModalForm();
+  setupEventListeners();
 }
 
 function setupEventListeners() {
@@ -931,8 +903,8 @@ function setupEventListeners() {
 
         case 'items':
           {
-            const selectedItemScopes = Array.from(document.querySelectorAll('input[name="items-scope"]:checked')).map(cb => cb.value);
-            options.scopes = selectedItemScopes.length ? selectedItemScopes : ['normal'];
+            const selectedScope = document.querySelector('input[name="items-scope"]:checked')?.value;
+            options.scope = selectedScope || '11';
             images = await loadItems(options);
           }
           break;
@@ -944,7 +916,7 @@ function setupEventListeners() {
         case 'maps':
           options.type = document.querySelector('input[name="maps-type"]:checked')?.value || 'minimap';
           const selectedScopes = Array.from(document.querySelectorAll('input[name="maps-scope"]:checked')).map(cb => cb.value);
-          options.scopes = selectedScopes.length ? selectedScopes : ['aram','sr'];
+          options.scopes = selectedScopes.length ? selectedScopes : ['11', '12'];
           images = await loadMaps(options);
           break;
 
@@ -984,6 +956,121 @@ function setupEventListeners() {
     if (e.target === modal) {
       modal.close();
     }
+  });
+}
+
+async function fetchItemsMapData() {
+  try {
+    const response = await fetch('items.json');
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching items map data:', error);
+    return {};
+  }
+}
+
+async function populateItemScopes() {
+  const container = document.getElementById('items-scope-container');
+  if (!container) return;
+
+  const mapsData = await fetchMapsData();
+  const itemsMapData = await fetchItemsMapData();
+  
+  if (!mapsData || !itemsMapData) return;
+
+  container.innerHTML = ''; // Clear existing
+
+  // Get all map IDs that have items
+  const availableMapIds = Object.keys(itemsMapData);
+
+  // Create options based on maps.json, but only if they have items
+  // We also want to group them or just list them?
+  // maps.json has IDs. items.json has IDs.
+  
+  // Let's iterate availableMapIds and find name in maps.json
+  // Or iterate maps.json and check if in items.json
+  
+  // We want a specific order? Maybe SR first.
+  const priority = ['11', '12', '30', '21', '33', '35', 'special']; // SR, ARAM, Arena, NB, Swarm, Brawl, Special
+  
+  const sortedIds = availableMapIds.sort((a, b) => {
+    const idxA = priority.indexOf(a);
+    const idxB = priority.indexOf(b);
+    if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+    if (idxA !== -1) return -1;
+    if (idxB !== -1) return 1;
+    return a.localeCompare(b);
+  });
+
+  sortedIds.forEach((mapId, index) => {
+    const mapDef = mapsData[mapId];
+    const mapName = mapDef ? mapDef.name : `Map ${mapId}`;
+    
+    const label = document.createElement('label');
+    label.className = 'radio-option';
+    
+    const input = document.createElement('input');
+    input.type = 'radio';
+    input.name = 'items-scope';
+    input.value = mapId;
+    if (index === 0) input.checked = true; // Select first by default
+    
+    const span = document.createElement('span');
+    span.textContent = mapName;
+    
+    label.appendChild(input);
+    label.appendChild(span);
+    container.appendChild(label);
+  });
+}
+
+async function populateMapScopes() {
+  const container = document.getElementById('maps-scope-container');
+  if (!container) return;
+
+  const mapsData = await fetchMapsData();
+  if (!mapsData) return;
+
+  container.innerHTML = ''; // Clear existing
+
+  // Define priority order for display
+  const priority = ['11', '12', '30', '21', '33', '35', 'special'];
+  
+  const availableMapIds = Object.keys(mapsData);
+  
+  const sortedIds = availableMapIds.sort((a, b) => {
+    const idxA = priority.indexOf(a);
+    const idxB = priority.indexOf(b);
+    if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+    if (idxA !== -1) return -1;
+    if (idxB !== -1) return 1;
+    return a.localeCompare(b);
+  });
+
+  sortedIds.forEach((mapId) => {
+    const mapDef = mapsData[mapId];
+    const mapName = mapDef ? mapDef.name : `Map ${mapId}`;
+    
+    const label = document.createElement('label');
+    label.className = 'checkbox-option';
+    
+    const input = document.createElement('input');
+    input.type = 'checkbox';
+    input.name = 'maps-scope';
+    input.value = mapId;
+    
+    // Default checked for SR and ARAM
+    if (mapId === '11' || mapId === '12') {
+      input.checked = true;
+    }
+    
+    const span = document.createElement('span');
+    span.textContent = mapName;
+    
+    label.appendChild(input);
+    label.appendChild(span);
+    container.appendChild(label);
   });
 }
 

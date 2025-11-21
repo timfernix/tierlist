@@ -1,9 +1,11 @@
 import json
 import urllib.request
 import re
+from common import get_latest_version
 
+# URLs
 SUMMONER_ICONS_URL = "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/summoner-icons.json"
-CHAMPION_DATA_URL = "https://ddragon.leagueoflegends.com/cdn/15.22.1/data/en_US/champion.json"
+CHAMPION_DATA_URL_TEMPLATE = "https://ddragon.leagueoflegends.com/cdn/{version}/data/en_US/champion.json"
 
 def download_summoner_icons():
     """Download the summoner icons JSON from CommunityDragon."""
@@ -11,10 +13,11 @@ def download_summoner_icons():
     with urllib.request.urlopen(SUMMONER_ICONS_URL) as response:
         return json.loads(response.read().decode('utf-8'))
 
-def download_champion_data():
+def download_champion_data(version):
     """Download champion data from Data Dragon."""
-    print("Downloading champion data from Data Dragon...")
-    with urllib.request.urlopen(CHAMPION_DATA_URL) as response:
+    url = CHAMPION_DATA_URL_TEMPLATE.format(version=version)
+    print(f"Downloading champion data from Data Dragon ({version})...")
+    with urllib.request.urlopen(url) as response:
         data = json.loads(response.read().decode('utf-8'))
         return {champ['name']: champ for champ in data['data'].values()}
 
@@ -32,7 +35,7 @@ def process_icons(summoner_icons, champion_data):
         icons_by_champion[champ_name] = {
             'illustration': None,
             'chibi': None,
-            'chibi_candidates': [],  # Track all champie icons
+            'chibi_candidates': [],  # Champie icons
             'other': []
         }
     
@@ -132,8 +135,9 @@ def save_icons_json(icons_data, output_file='icons.json'):
 
 def main():
     try:
+        version = get_latest_version()
         summoner_icons = download_summoner_icons()
-        champion_data = download_champion_data()
+        champion_data = download_champion_data(version)
         
         print(f"\nProcessing {len(summoner_icons)} summoner icons...")
         print(f"Processing {len(champion_data)} champions...\n")

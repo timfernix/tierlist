@@ -369,18 +369,11 @@
             </div>
 
             <div class="options-group" data-category="items" style="display: none;">
-              <label class="option-label">Item Scope (multi-select):</label>
-              <div class="checkbox-group">
-                <label class="checkbox-option">
-                  <input type="checkbox" name="items-scope" value="normal" checked />
-                  <span>Normal Items (Incl. Event Items)</span>
-                </label>
-                <label class="checkbox-option">
-                  <input type="checkbox" name="items-scope" value="swarm" />
-                  <span>Swarm Items</span>
-                </label>
+              <label class="option-label">Map Scope (single-select):</label>
+              <div class="radio-group" id="items-scope-container">
+                <!-- Populated by JS -->
               </div>
-              <p class="info-text">Items are fetched from Riot API & Data Dragon. Manual sorting was applied.</p>
+              <p class="info-text">Items are fetched from Riot API & Data Dragon.</p>
             </div>
 
             <div class="options-group" data-category="maps" style="display: none;">
@@ -397,23 +390,8 @@
               </div>
 
               <label class="option-label">Gamemode/Map Scope (multi-select):</label>
-              <div class="checkbox-group">
-                <label class="checkbox-option">
-                  <input type="checkbox" name="maps-scope" value="arena" />
-                  <span>Arena</span>
-                </label>
-                <label class="checkbox-option">
-                  <input type="checkbox" name="maps-scope" value="aram" checked />
-                  <span>ARAM</span>
-                </label>
-                <label class="checkbox-option">
-                  <input type="checkbox" name="maps-scope" value="sr" checked />
-                  <span>Summoner's Rift</span>
-                </label>
-                <label class="checkbox-option">
-                  <input type="checkbox" name="maps-scope" value="special" />
-                  <span>Special Modes</span>
-                </label>
+              <div class="checkbox-group" id="maps-scope-container">
+                <!-- Populated by JS -->
               </div>
               <p class="info-text">Note: Maps are not retrieved from Riot API or Data Dragon.</p>
             </div>
