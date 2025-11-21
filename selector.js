@@ -294,92 +294,51 @@ async function generateImageUrls(category, options) {
   return images;
 }
 
-const MAPS_DEFINITION = {
-  arena: {
-    label: 'Arena',
-    minimap: [],
-    full: [
-      { id: 'arena_woods_full', name: 'Ancestral Woods', url: './maps/Arena_Ancestral_Woods.png' },
-      { id: 'arena_desert_full', name: 'Desert Oasis', url: './maps/Arena_Desert_Oasis.png' },
-      { id: 'arena_frostbite_full', name: 'Frostbite Thicket', url: './maps/Arena_Frostbite_Thicket.png' },
-      { id: 'arena_magma_full', name: 'Magma Chamber', url: './maps/Arena_Magma_Chamber.png' },
-      { id: 'arena_reckoner_full', name: 'Reckoner Arena', url: './maps/Arena_Reckoner_Arena.png' },
-    ]
-  },
-  aram: {
-    label: 'ARAM',
-    minimap: [
-      { id: 'aram_normal_minimap', name: 'Howling Abyss – Normal (Minimap)', url: './maps/Howling_Abyss_Minimap.png' },
-      { id: 'aram_butchers_minimap', name: "Butcher's Bridge (Minimap)", url: './maps/Butchers_Bridge_Minimap.png' },
-      { id: 'aram_progress_minimap', name: 'Bridge of Progress (Minimap)', url: './maps/Bridge_of_Progress_Minimap.png' },
-      { id: 'aram_crossing_minimap', name: "Koeshin's Crossing (Minimap)", url: './maps/Koeshins_Crossing_Minimap.png' },
-    ],
-    full: [
-      { id: 'aram_normal_full', name: 'Howling Abyss – Normal (Full)', url: './maps/Howling_Abyss.png' },
-      { id: 'aram_butchers_full', name: "Butcher's Bridge (Full)", url: './maps/Butchers_Bridge.png' },
-      { id: 'aram_progress_full', name: 'Bridge of Progress (Full)', url: './maps/Bridge_of_Progress.png' },
-      { id: 'aram_crossing_full', name: "Koeshin's Crossing (Full)", url: './maps/Koeshins_Crossing.png' },
-    ]
-  },
-  sr: {
-    label: "Summoner's Rift",
-    minimap: [
-      { id: 'sr_current_minimap', name: "Summoner's Rift – Current (Minimap)", url: './maps/Summoners_Rift_Minimap.png' },
-    ],
-    full: [
-      { id: 'sr_current_full', name: "Summoner's Rift – Current (Full)", url: './maps/Summoners_Rift.png' },
-      { id: 'sr_winter_full', name: "Summoner's Rift – Winter (Full)", url: './maps/Summoners_Rift_Winter.webp' },
-      { id: 'sr_arcade_full', name: "Summoner's Rift – Arcade (Full)", url: './maps/Summoners_Rift_Arcade.png' },
-      { id: 'sr_bloodmoon_full', name: "Summoner's Rift – Blood Moon (Full)", url: './maps/Summoners_Rift_Bloodmoon.png' },
-    ]
-  },
-  special: {
-    label: 'Event / Special Maps',
-    minimap: [
-      { id: 'special_bandlewood_minimap', name: 'The Bandlewood (Minimap)', url: './maps/The_Bandlewood_Minimap.png' },
-      { id: 'special_treeline_minimap', name: 'Twisted Treeline (Minimap)', url: './maps/Twisted_Treeline_Minimap.png' },
-      { id: 'special_blitz_minimap', name: 'Temple of Lily and Lotus (Minimap)', url: './maps/Temple_of_Lily_and_Lotus_Minimap.png' },
-      { id: 'special_provinggrounds_minimap', name: 'Proving Grounds (Minimap)', url: './maps/Proving_Grounds_Minimap.png' },
-      { id: 'special_crystalscar_minimap', name: 'Crystal Scar (Minimap)', url: './maps/Crystal_Scar_Minimap.png' }
-    ],
-    full: [
-      { id: 'special_magma_full', name: 'Magma Chamber (Concept)', url: './maps/Magma_Chamber_Concept.jpg' },
-      { id: 'special_bandlewood_full', name: 'The Bandlewood (Full)', url: './maps/The_Bandlewood.png' },
-      { id: 'special_treeline_full', name: 'Twisted Treeline (Full)', url: './maps/Twisted_Treeline.jpg' },
-      { id: 'special_valoran_full', name: 'Valoran City Park (Full)', url: './maps/Valoran_City_Park.jpg' },
-      { id: 'special_blitz_full', name: 'Temple of Lily and Lotus (Full)', url: './maps/Temple_of_Lily_and_Lotus.jpg' },
-      { id: 'special_substructure_full', name: 'Substructure 43 (Full)', url: './maps/Substructure_43.png'},
-      { id: 'special_provinggrounds_full', name: 'Proving Grounds (Full)', url: './maps/Proving_Grounds.png' },
-      { id: 'special_crystalscar_full', name: 'Crystal Scar (Full)', url: './maps/Crystal_Scar.jpg' },
-      { id: 'special_cosmicruins_full', name: 'Cosmic Ruins (Full)', url: './maps/Cosmic_Ruins.jpg' },
-      { id: 'special_odyssey_full', name: 'Odyssey Crash Site (Full)', url: './maps/Odyssey_Crash_Site.jpg' },
-      { id: 'special_swarmdistrict_full', name: 'Swarm Warehouse District (Full)', url: './maps/Swarm_Warehouse_District.png' },
-      { id: 'special_swarmoutskirts_full', name: 'Swarm The Outskirts (Full)', url: './maps/Swarm_The_Outskirts.png' },
-      { id: 'special_swarmlab_full', name: 'Swarm Subterranean Lab (Full)', url: './maps/Swarm_Subterranean_Lab.png' },
-      { id: 'special_swarmbeachhead_full', name: 'Swarm The Beachhead (Full)', url: './maps/Swarm_The_Beachhead.png' }
-    ]
+async function fetchMapsData() {
+  try {
+    const response = await fetch('maps.json');
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching maps data:', error);
+    return null;
   }
-};
+}
 
 async function loadMaps(options) {
   const images = [];
   const seen = new Set();
   const type = options.type || 'minimap';
   const scopes = options.scopes && options.scopes.length ? options.scopes : ['aram', 'sr'];
+  
+  const mapsData = await fetchMapsData();
+  if (!mapsData) return [];
+
+  // Map scopes to IDs in maps.json
+  const scopeToIds = {
+    'sr': ['11'],
+    'aram': ['12'],
+    'arena': ['30'],
+    'special': ['21', '33', 'special'] // Nexus Blitz, Anima Squad, and other specials
+  };
 
   scopes.forEach(scope => {
-    const def = MAPS_DEFINITION[scope];
-    if (!def) return;
-    const list = def[type] || [];
-    list.forEach(entry => {
-      if (!entry.url) return;
-      if (seen.has(entry.id)) return;
-      seen.add(entry.id);
-      images.push({
-        url: entry.url,
-        name: entry.name,
-        id: entry.id,
-        type: 'map'
+    const ids = scopeToIds[scope] || [];
+    ids.forEach(id => {
+      const def = mapsData[id];
+      if (!def) return;
+      
+      const list = def[type] || [];
+      list.forEach(entry => {
+        if (!entry.url) return;
+        if (seen.has(entry.id)) return;
+        seen.add(entry.id);
+        images.push({
+          url: entry.url,
+          name: entry.name,
+          id: entry.id,
+          type: 'map'
+        });
       });
     });
   });
