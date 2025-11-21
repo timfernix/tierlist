@@ -182,9 +182,12 @@ async function generateImageUrls(category, options) {
         const iconsData = await fetchIconsData();
         filteredChampions.forEach((champ) => {
           if (iconsData && iconsData[champ.name] && iconsData[champ.name].illustration) {
+            const iconData = iconsData[champ.name].illustration;
+            const iconId = typeof iconData === 'object' ? iconData.id : iconData;
+            const iconTitle = typeof iconData === 'object' ? iconData.title : '';
             images.push({
-              url: `${API_BASE}/cdn/${latestVersion}/img/profileicon/${iconsData[champ.name].illustration}.png`,
-              name: champ.name,
+              url: `${API_BASE}/cdn/${latestVersion}/img/profileicon/${iconId}.png`,
+              name: iconTitle ? `${champ.name} (${iconTitle})` : champ.name,
               id: champ.id,
               type: 'icon'
             });
@@ -194,9 +197,12 @@ async function generateImageUrls(category, options) {
         const iconsData = await fetchIconsData();
         filteredChampions.forEach((champ) => {
           if (iconsData && iconsData[champ.name] && iconsData[champ.name].chibi) {
+            const iconData = iconsData[champ.name].chibi;
+            const iconId = typeof iconData === 'object' ? iconData.id : iconData;
+            const iconTitle = typeof iconData === 'object' ? iconData.title : '';
             images.push({
-              url: `${API_BASE}/cdn/${latestVersion}/img/profileicon/${iconsData[champ.name].chibi}.png`,
-              name: champ.name,
+              url: `${API_BASE}/cdn/${latestVersion}/img/profileicon/${iconId}.png`,
+              name: iconTitle ? `${champ.name} (${iconTitle})` : champ.name,
               id: champ.id,
               type: 'icon'
             });
@@ -236,28 +242,36 @@ async function generateImageUrls(category, options) {
         if (!championIcons) return;
         
         if (championIcons.illustration) {
+          const iconData = championIcons.illustration;
+          const iconId = typeof iconData === 'object' ? iconData.id : iconData;
+          const iconTitle = typeof iconData === 'object' ? iconData.title : 'Illustration';
           images.push({
-            url: `${API_BASE}/cdn/${latestVersion}/img/profileicon/${championIcons.illustration}.png`,
-            name: `${champ.name} (Illustration)`,
+            url: `${API_BASE}/cdn/${latestVersion}/img/profileicon/${iconId}.png`,
+            name: `${champ.name} (${iconTitle})`,
             id: champ.id,
             type: 'icon'
           });
         }
         
         if (championIcons.chibi) {
+          const iconData = championIcons.chibi;
+          const iconId = typeof iconData === 'object' ? iconData.id : iconData;
+          const iconTitle = typeof iconData === 'object' ? iconData.title : 'Champie';
           images.push({
-            url: `${API_BASE}/cdn/${latestVersion}/img/profileicon/${championIcons.chibi}.png`,
-            name: `${champ.name} (Champie)`,
+            url: `${API_BASE}/cdn/${latestVersion}/img/profileicon/${iconId}.png`,
+            name: `${champ.name} (${iconTitle})`,
             id: champ.id,
             type: 'icon'
           });
         }
         
         if (championIcons.other && championIcons.other.length > 0) {
-          championIcons.other.forEach((iconId, index) => {
+          championIcons.other.forEach((iconData, index) => {
+            const iconId = typeof iconData === 'object' ? iconData.id : iconData;
+            const iconTitle = typeof iconData === 'object' ? iconData.title : `Icon ${index + 1}`;
             images.push({
               url: `${API_BASE}/cdn/${latestVersion}/img/profileicon/${iconId}.png`,
-              name: `${champ.name} (Icon ${index + 1})`,
+              name: `${champ.name} (${iconTitle})`,
               id: champ.id,
               type: 'icon'
             });
