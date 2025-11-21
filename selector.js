@@ -1114,8 +1114,8 @@ async function loadEmotes(options = {}) {
     }
 
     emotes.forEach(emote => {
-      // Ignore ID 1 and 10
-      if (emote.id === 1 || emote.id === 10) return;
+      // Ignore IDs
+      if (emote.id >= 1 && emote.id <= 10) return;
       
       if (selectedChampionKey !== null) {
         if (!emote.taggedChampionsIds || !emote.taggedChampionsIds.includes(selectedChampionKey)) {
