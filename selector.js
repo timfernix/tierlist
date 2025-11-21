@@ -133,7 +133,6 @@ async function generateImageUrls(category, options) {
 
   switch (category) {
     case 'champions':
-      // Filter champions based on lane/role selection
       let filteredChampions = allChampions;
       
       if (options.filter && options.filter !== 'all') {
@@ -296,7 +295,6 @@ async function loadMaps(options) {
   const images = [];
   const seen = new Set();
   const type = options.type || 'minimap';
-  // scopes now contains direct map IDs from the checkboxes
   const scopes = options.scopes && options.scopes.length ? options.scopes : ['11', '12'];
   
   const mapsData = await fetchMapsData();
@@ -420,8 +418,7 @@ async function loadItems(options = {}) {
   const itemsMapData = await fetchItemsMapData();
   const images = [];
 
-  // options.scope should be a single map ID string now
-  const scopeId = options.scope || '11'; // Default to SR if not provided
+  const scopeId = options.scope || '11';
   
   const allowedItemIds = new Set(itemsMapData[scopeId] || []);
 
@@ -436,20 +433,13 @@ async function loadItems(options = {}) {
 
   for (const [id, item] of entries) {
     if (!item) continue;
-    // Basic checks
-    if (!item.gold && scopeId !== '33') continue; // Swarm items might not have gold?
-    // Actually, let's check if we should enforce gold check. 
-    // If it's in the allowed list, we should probably show it.
-    // But standard items usually have gold.
-    // Let's trust the allowedItemIds list primarily.
-    
+    if (!item.gold && scopeId !== '33') continue;
     if (ITEM_ID_BLACKLIST.includes(id)) continue;
     
     const name = (item.name || '').trim();
     if (!name) continue;
     if (ITEM_NAME_BLOCK_PATTERNS.some((re) => re.test(name))) continue;
 
-    // Check if item is allowed in the selected map
     if (!allowedItemIds.has(id)) continue;
 
     const key = name.toLowerCase();
@@ -661,6 +651,14 @@ function resetModalForm() {
   });
   
   document.querySelector('input[name="champions-type"][value="icons"]').checked = true;
+  
+  document.querySelector('input[name="emotes-scope"][value="all"]').checked = true;
+  document.getElementById('emotesChampionSelect').style.display = 'none';
+  document.getElementById('emotesChampionInput').value = '';
+  document.getElementById('emotesChampionInput').dataset.championId = '';
+  const emotesSug = document.getElementById('emotesSuggestions');
+  emotesSug.classList.remove('active');
+  emotesSug.innerHTML = '';
 }
 
 let selectedCategory = '';
@@ -716,6 +714,7 @@ function setupEventListeners() {
   const getSkinsChampion = setupChampionAutocomplete('skinsChampionInput', 'skinsSuggestions');
   const getProfileIconsChampion = setupChampionAutocomplete('profileIconsChampionInput', 'profileIconsSuggestions');
   const getAbilitiesChampion = setupChampionAutocomplete('abilitiesChampionInput', 'abilitiesSuggestions');
+  const getEmotesChampion = setupChampionAutocomplete('emotesChampionInput', 'emotesSuggestions');
 
   document.querySelectorAll('.category-card').forEach((card) => {
     card.addEventListener('click', () => {
@@ -819,6 +818,23 @@ function setupEventListeners() {
           cb.disabled = false;
           cb.checked = false;
         });
+      }
+    });
+  });
+
+  document.querySelectorAll('input[name="emotes-scope"]').forEach((radio) => {
+    radio.addEventListener('change', (e) => {
+      const selectDiv = document.getElementById('emotesChampionSelect');
+      
+      if (e.target.value === 'select') {
+        selectDiv.style.display = 'block';
+      } else {
+        selectDiv.style.display = 'none';
+        document.getElementById('emotesChampionInput').value = '';
+        document.getElementById('emotesChampionInput').dataset.championId = '';
+        const emotesSug = document.getElementById('emotesSuggestions');
+        emotesSug.classList.remove('active');
+        emotesSug.innerHTML = '';
       }
     });
   });
@@ -936,6 +952,17 @@ function setupEventListeners() {
         case 'prestige':
           images = await loadPrestigeSkins();
           break;
+
+        case 'emotes':
+          options.championScope = document.querySelector('input[name="emotes-scope"]:checked').value;
+          options.selectedChampion = getEmotesChampion();
+          
+          if (options.championScope === 'select' && !options.selectedChampion) {
+            alert('Please select a champion');
+            return;
+          }
+          images = await loadEmotes(options);
+          break;
       }
 
       if (images && images.length > 0) {
@@ -987,19 +1014,9 @@ async function populateItemScopes() {
   
   if (!mapsData || !itemsMapData) return;
 
-  container.innerHTML = ''; // Clear existing
+  container.innerHTML = '';
 
-  // Get all map IDs that have items
   const availableMapIds = Object.keys(itemsMapData);
-
-  // Create options based on maps.json, but only if they have items
-  // We also want to group them or just list them?
-  // maps.json has IDs. items.json has IDs.
-  
-  // Let's iterate availableMapIds and find name in maps.json
-  // Or iterate maps.json and check if in items.json
-  
-  // We want a specific order? Maybe SR first.
   const priority = ['11', '12', '30', '21', '33', '35', 'special']; // SR, ARAM, Arena, NB, Swarm, Brawl, Special
   
   const sortedIds = availableMapIds.sort((a, b) => {
@@ -1022,7 +1039,7 @@ async function populateItemScopes() {
     input.type = 'radio';
     input.name = 'items-scope';
     input.value = mapId;
-    if (index === 0) input.checked = true; // Select first by default
+    if (index === 0) input.checked = true;
     
     const span = document.createElement('span');
     span.textContent = mapName;
@@ -1040,9 +1057,8 @@ async function populateMapScopes() {
   const mapsData = await fetchMapsData();
   if (!mapsData) return;
 
-  container.innerHTML = ''; // Clear existing
+  container.innerHTML = '';
 
-  // Define priority order for display
   const priority = ['11', '12', '30', '21', '33', '35', 'special'];
   
   const availableMapIds = Object.keys(mapsData);
@@ -1068,7 +1084,6 @@ async function populateMapScopes() {
     input.name = 'maps-scope';
     input.value = mapId;
     
-    // Default checked for SR and ARAM
     if (mapId === '11' || mapId === '12') {
       input.checked = true;
     }
@@ -1080,6 +1095,56 @@ async function populateMapScopes() {
     label.appendChild(span);
     container.appendChild(label);
   });
+}
+
+async function loadEmotes(options = {}) {
+  showLoading();
+  const images = [];
+  
+  try {
+    const response = await fetch('https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/summoner-emotes.json');
+    const emotes = await response.json();
+    
+    let selectedChampionKey = null;
+    if (options.championScope === 'select' && options.selectedChampion) {
+      const champ = allChampions.find(c => c.id === options.selectedChampion);
+      if (champ) {
+        selectedChampionKey = parseInt(champ.key);
+      }
+    }
+
+    emotes.forEach(emote => {
+      // Ignore ID 1 and 10
+      if (emote.id === 1 || emote.id === 10) return;
+      
+      if (selectedChampionKey !== null) {
+        if (!emote.taggedChampionsIds || !emote.taggedChampionsIds.includes(selectedChampionKey)) {
+          return;
+        }
+      }
+  
+      let iconPath = emote.inventoryIcon;
+      if (!iconPath) return;
+      
+      iconPath = iconPath.toLowerCase();
+      iconPath = iconPath.replace('/lol-game-data/assets/assets/', '/lol-game-data/assets/');
+      
+      const url = iconPath.replace('/lol-game-data/', 'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/');
+      
+      images.push({
+        url: url,
+        name: emote.name || `Emote ${emote.id}`,
+        id: emote.id,
+        type: 'emote'
+      });
+    });
+    
+  } catch (error) {
+    console.error('Error loading emotes:', error);
+    alert('Failed to load emotes.');
+  }
+  
+  return images;
 }
 
 init();
