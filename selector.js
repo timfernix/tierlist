@@ -674,20 +674,6 @@ async function init() {
   const modal = document.getElementById('optionsModal');
   const generateBtn = document.getElementById('generateBtn');
   
-  // Check if page needs reset after back navigation
-  if (sessionStorage.getItem('selectorNeedsReset') === 'true') {
-    sessionStorage.removeItem('selectorNeedsReset');
-    if (modal && modal.open) {
-      modal.close();
-    }
-    if (generateBtn) {
-      generateBtn.disabled = false;
-      generateBtn.innerHTML = '<i class="bi bi-arrow-right-circle-fill"></i> Generate Tierlist';
-    }
-    resetModalForm();
-    selectedCategory = null;
-  }
-  
   if (modal && modal.open) {
     modal.close();
   }
@@ -698,6 +684,28 @@ async function init() {
   resetModalForm();
   setupEventListeners();
 }
+
+window.addEventListener('pageshow', (event) => {
+  const modal = document.getElementById('optionsModal');
+  const generateBtn = document.getElementById('generateBtn');
+  
+  if (modal && modal.open) {
+    modal.close();
+  }
+  
+  if (generateBtn) {
+    generateBtn.disabled = false;
+    generateBtn.innerHTML = '<i class="bi bi-arrow-right-circle-fill"></i> Generate Tierlist';
+  }
+  
+  if (typeof resetModalForm === 'function') {
+    resetModalForm();
+  }
+  selectedCategory = null;
+  
+  // Clear any session flags
+  sessionStorage.removeItem('selectorNeedsReset');
+});
 
 function setupEventListeners() {
   const modal = document.getElementById('optionsModal');
