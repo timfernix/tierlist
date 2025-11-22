@@ -21,6 +21,48 @@ const ITEM_NAME_BLOCK_PATTERNS = [
   /placeholder/i
 ];
 
+const COLOR_PALETTE_NAMES = [
+    "Red", "Ruby", "Maroon", "Rose", "Pink",
+    "Orange", "Brown", "Gold", "Catseye", "Yellow",
+    "Olive", "Emerald", "Green", "Teal",
+    "Aquamarine", "Turquoise", "Cyan", "Sapphire", "Blue", "Navy",
+    "Tanzanite", "Amethyst", "Purple", "Magenta",
+    "White", "Pearl", "Silver", "Grey", "Obsidian", "Black"
+];
+
+const COLOR_PALETTE_HEX = {
+    "Red": "#FF0000",
+    "Green": "#00FF00",
+    "Blue": "#0000FF",
+    "Yellow": "#FFFF00",
+    "Cyan": "#00FFFF",
+    "Magenta": "#FF00FF",
+    "White": "#FFFFFF",
+    "Black": "#000000",
+    "Orange": "#FFA500",
+    "Purple": "#800080",
+    "Pink": "#FFC0CB",
+    "Brown": "#A52A2A",
+    "Grey": "#808080",
+    "Teal": "#008080",
+    "Navy": "#000080",
+    "Maroon": "#800000",
+    "Olive": "#808000",
+    "Gold": "#FFD700",
+    "Silver": "#C0C0C0",
+    "Ruby": "#E0115F",
+    "Sapphire": "#0F52BA",
+    "Emerald": "#50C878",
+    "Amethyst": "#9966CC",
+    "Pearl": "#EAE0C8",
+    "Obsidian": "#141414",
+    "Rose": "#FF007F",
+    "Catseye": "#E0E000",
+    "Tanzanite": "#490080",
+    "Aquamarine": "#7FFFD4",
+    "Turquoise": "#40E0D0"
+};
+
 async function getLatestVersion() {
   try {
     const response = await fetch(`${API_BASE}/api/versions.json`);
@@ -124,6 +166,17 @@ async function fetchIconsData() {
     return data;
   } catch (error) {
     console.error('Error fetching icons data:', error);
+    return null;
+  }
+}
+
+async function fetchChromasData() {
+  try {
+    const response = await fetch('chromas.json');
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching chromas data:', error);
     return null;
   }
 }
@@ -659,15 +712,102 @@ function resetModalForm() {
   const emotesSug = document.getElementById('emotesSuggestions');
   emotesSug.classList.remove('active');
   emotesSug.innerHTML = '';
+
+  document.querySelector('input[name="chromas-scope"][value="all"]').checked = true;
+  document.getElementById('chromasChampionSelect').style.display = 'none';
+  document.getElementById('chromasChampionInput').value = '';
+  document.getElementById('chromasChampionInput').dataset.championId = '';
+  const chromasSug = document.getElementById('chromasSuggestions');
+  chromasSug.classList.remove('active');
+  chromasSug.innerHTML = '';
+  document.getElementById('chromasColorSelect').style.display = 'block';
+  // Reset color checkboxes
+  const allColorCb = document.querySelector('#chromas-color-container input[value="all"]');
+  if (allColorCb) allColorCb.checked = true;
+  document.querySelectorAll('#chromas-color-container input:not([value="all"])').forEach(cb => {
+    cb.checked = false;
+    cb.disabled = true;
+  });
+}
+
+function populateChromaColors() {
+  const container = document.getElementById('chromas-color-container');
+  if (!container) return;
+  container.innerHTML = '';
+  
+  // Add "All" option
+  const allLabel = document.createElement('label');
+  allLabel.className = 'checkbox-option';
+  const allInput = document.createElement('input');
+  allInput.type = 'checkbox';
+  allInput.name = 'chromas-color';
+  allInput.value = 'all';
+  allInput.checked = true;
+  const allSpan = document.createElement('span');
+  allSpan.textContent = 'All Colors';
+  allLabel.appendChild(allInput);
+  allLabel.appendChild(allSpan);
+  container.appendChild(allLabel);
+  
+  COLOR_PALETTE_NAMES.forEach(color => {
+    const label = document.createElement('label');
+    label.className = 'checkbox-option';
+    const input = document.createElement('input');
+    input.type = 'checkbox';
+    input.name = 'chromas-color';
+    input.value = color;
+    input.disabled = true; // Disabled because "All" is checked
+    
+    const colorIndicator = document.createElement('div');
+    colorIndicator.className = 'color-indicator';
+    colorIndicator.style.backgroundColor = COLOR_PALETTE_HEX[color] || '#ccc';
+    
+    const span = document.createElement('span');
+    span.textContent = color;
+    
+    label.appendChild(input);
+    label.appendChild(colorIndicator);
+    label.appendChild(span);
+    container.appendChild(label);
+  });
+  
+  // Add listeners
+  allInput.addEventListener('change', (e) => {
+    const otherCbs = container.querySelectorAll('input:not([value="all"])');
+    if (e.target.checked) {
+      otherCbs.forEach(cb => {
+        cb.checked = false;
+        cb.disabled = true;
+      });
+    } else {
+      otherCbs.forEach(cb => cb.disabled = false);
+    }
+  });
+  
+  container.querySelectorAll('input:not([value="all"])').forEach(cb => {
+    cb.addEventListener('change', () => {
+      const anyChecked = Array.from(container.querySelectorAll('input:not([value="all"])')).some(c => c.checked);
+      if (anyChecked) {
+        allInput.checked = false;
+      }
+    });
+  });
 }
 
 let selectedCategory = '';
 
 async function init() {
   latestVersion = await getLatestVersion();
+  
+  const versionInfo = document.getElementById('versionInfo');
+  if (versionInfo) {
+    versionInfo.textContent = `Current Patch: ${latestVersion}`;
+  }
+
   allChampions = await fetchAllChampions();
   await populateItemScopes();
   await populateMapScopes();
+  populateChromaColors();
   
   const modal = document.getElementById('optionsModal');
   const generateBtn = document.getElementById('generateBtn');
@@ -715,6 +855,7 @@ function setupEventListeners() {
   const getProfileIconsChampion = setupChampionAutocomplete('profileIconsChampionInput', 'profileIconsSuggestions');
   const getAbilitiesChampion = setupChampionAutocomplete('abilitiesChampionInput', 'abilitiesSuggestions');
   const getEmotesChampion = setupChampionAutocomplete('emotesChampionInput', 'emotesSuggestions');
+  const getChromasChampion = setupChampionAutocomplete('chromasChampionInput', 'chromasSuggestions');
 
   document.querySelectorAll('.category-card').forEach((card) => {
     card.addEventListener('click', () => {
@@ -835,6 +976,26 @@ function setupEventListeners() {
         const emotesSug = document.getElementById('emotesSuggestions');
         emotesSug.classList.remove('active');
         emotesSug.innerHTML = '';
+      }
+    });
+  });
+
+  document.querySelectorAll('input[name="chromas-scope"]').forEach((radio) => {
+    radio.addEventListener('change', (e) => {
+      const selectDiv = document.getElementById('chromasChampionSelect');
+      const colorDiv = document.getElementById('chromasColorSelect');
+      
+      if (e.target.value === 'select') {
+        selectDiv.style.display = 'block';
+        colorDiv.style.display = 'none';
+      } else {
+        selectDiv.style.display = 'none';
+        colorDiv.style.display = 'block';
+        document.getElementById('chromasChampionInput').value = '';
+        document.getElementById('chromasChampionInput').dataset.championId = '';
+        const chromasSug = document.getElementById('chromasSuggestions');
+        chromasSug.classList.remove('active');
+        chromasSug.innerHTML = '';
       }
     });
   });
@@ -962,6 +1123,24 @@ function setupEventListeners() {
             return;
           }
           images = await loadEmotes(options);
+          break;
+
+        case 'chromas':
+          options.championScope = document.querySelector('input[name="chromas-scope"]:checked').value;
+          options.selectedChampion = getChromasChampion();
+          
+          if (options.championScope === 'select' && !options.selectedChampion) {
+            alert('Please select a champion');
+            return;
+          }
+          
+          if (options.championScope === 'all') {
+             const selectedColors = Array.from(document.querySelectorAll('input[name="chromas-color"]:checked'))
+                .map(cb => cb.value);
+             options.colors = selectedColors.length > 0 ? selectedColors : ['all'];
+          }
+          
+          images = await loadChromas(options);
           break;
       }
 
@@ -1142,6 +1321,61 @@ async function loadEmotes(options = {}) {
   } catch (error) {
     console.error('Error loading emotes:', error);
     alert('Failed to load emotes.');
+  }
+  
+  return images;
+}
+
+async function loadChromas(options = {}) {
+  showLoading();
+  const images = [];
+  const chromasData = await fetchChromasData();
+  
+  if (!chromasData) {
+    alert('Failed to load chromas data.');
+    return [];
+  }
+  
+  const selectedColors = options.colors || [];
+  const filterColors = selectedColors.length > 0 && !selectedColors.includes('all');
+  
+  let selectedChampionKey = null;
+  if (options.championScope === 'select' && options.selectedChampion) {
+    const champ = allChampions.find(c => c.id === options.selectedChampion);
+    if (champ) {
+      selectedChampionKey = champ.key;
+    }
+  }
+  
+  // Iterate over champions
+  for (const champId in chromasData) {
+    const champData = chromasData[champId];
+    
+    // Filter by champion scope
+    if (selectedChampionKey && String(champData.id) !== String(selectedChampionKey)) {
+      continue;
+    }
+    
+    // Iterate over chromas
+    champData.chromas.forEach(chroma => {
+      // Filter by color
+      if (filterColors) {
+        const hasColor = chroma.colorNames && chroma.colorNames.some(c => selectedColors.includes(c));
+        if (!hasColor) return;
+      }
+      
+      let url = chroma.chromaPath;
+      if (url) {
+        url = url.replace('/lol-game-data/assets/', 'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/');
+        
+        images.push({
+          url: url,
+          name: chroma.name,
+          id: chroma.id,
+          type: 'chroma'
+        });
+      }
+    });
   }
   
   return images;

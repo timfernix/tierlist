@@ -20,6 +20,11 @@ A web-based tierlist maker for League of Legends with support for champions, ski
 - **Items**: Rank items including event items and Swarm mode items
 - **Maps**: Create tierlists for different gamemodes and maps
 - **Summoner Spells**: Rank summoner spells
+- **Emotes**: Rank all available emotes
+  - Filter by champion or view all
+- **Chromas**: Rank chromas by champion or color
+  - Filter by champion
+  - Filter by color (Red, Blue, Green, etc.) when viewing all champions
 
 ### Special Tierlists
 
@@ -55,7 +60,7 @@ A web-based tierlist maker for League of Legends with support for champions, ski
 
 This project uses GitHub Actions to automatically update game data daily:
 
-- **Skins & Rarity**: Fetches latest skin data and rarity classifications from Community Dragon
+- **Skins, Chromas & Rarity**: Fetches latest skin data, chromas, and rarity classifications from Community Dragon
 - **Icons**: Updates champion profile icons (illustration, champie, and other variants)
 - **Lanes**: Validates champion lane assignments against current patch data
 - **Roles**: Champion role classifications (manually maintained)
