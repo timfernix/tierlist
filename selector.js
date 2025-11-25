@@ -1381,4 +1381,21 @@ async function loadChromas(options = {}) {
   return images;
 }
 
+async function fetchModesData() {
+  try {
+    const response = await fetch('modes.json');
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching modes data:', error);
+    return [];
+  }
+}
+
+async function loadGamemodes() {
+  showLoading();
+  const modes = await fetchModesData();
+  return modes;
+}
+
 init();
