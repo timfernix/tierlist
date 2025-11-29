@@ -216,7 +216,7 @@ const showImagePopup = (imgSrc, imgName, imageType) => {
   let sizeClass = '';
   if (['item', 'icon', 'summoner'].includes(imageType)) {
     sizeClass = 'scale-2x';
-  } else if (['splash', 'map'].includes(imageType)) {
+  } else if (['splash', 'map', 'gamemode'].includes(imageType)) {
     sizeClass = 'scale-2x-large';
   }
 

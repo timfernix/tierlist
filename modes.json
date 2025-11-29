@@ -1,1 +1,224 @@
-[]
+[
+  {
+    "id": "ARAM",
+    "name": "ARAM",
+    "url": "modes/ARAM.png",
+    "type": "gamemode"
+  },
+  {
+    "id": "ARAM Clash",
+    "name": "ARAM Clash",
+    "url": "modes/ARAM Clash.png",
+    "type": "gamemode"
+  },
+  {
+    "id": "ARAM Mayhem",
+    "name": "ARAM Mayhem",
+    "url": "modes/ARAM Mayhem.png",
+    "type": "gamemode"
+  },
+  {
+    "id": "ARSR",
+    "name": "ARSR",
+    "url": "modes/ARSR.png",
+    "type": "gamemode"
+  },
+  {
+    "id": "ARURF",
+    "name": "ARURF",
+    "url": "modes/ARURF.png",
+    "type": "gamemode"
+  },
+  {
+    "id": "Arena",
+    "name": "Arena",
+    "url": "modes/Arena.png",
+    "type": "gamemode"
+  },
+  {
+    "id": "Ascension",
+    "name": "Ascension",
+    "url": "modes/Ascension.png",
+    "type": "gamemode"
+  },
+  {
+    "id": "Black Market Brawlers",
+    "name": "Black Market Brawlers",
+    "url": "modes/Black Market Brawlers.png",
+    "type": "gamemode"
+  },
+  {
+    "id": "Brawl",
+    "name": "Brawl",
+    "url": "modes/Brawl.png",
+    "type": "gamemode"
+  },
+  {
+    "id": "Dark Star Singularity",
+    "name": "Dark Star Singularity",
+    "url": "modes/Dark Star Singularity.png",
+    "type": "gamemode"
+  },
+  {
+    "id": "Definitely Not Dominion",
+    "name": "Definitely Not Dominion",
+    "url": "modes/Definitely Not Dominion.png",
+    "type": "gamemode"
+  },
+  {
+    "id": "Dominion",
+    "name": "Dominion",
+    "url": "modes/Dominion.png",
+    "type": "gamemode"
+  },
+  {
+    "id": "Doom Bots",
+    "name": "Doom Bots",
+    "url": "modes/Doom Bots.png",
+    "type": "gamemode"
+  },
+  {
+    "id": "Doom Bots 2025",
+    "name": "Doom Bots 2025",
+    "url": "modes/Doom Bots 2025.png",
+    "type": "gamemode"
+  },
+  {
+    "id": "Hexakill",
+    "name": "Hexakill",
+    "url": "modes/Hexakill.png",
+    "type": "gamemode"
+  },
+  {
+    "id": "Hunt of the Blood Moon",
+    "name": "Hunt of the Blood Moon",
+    "url": "modes/Hunt of the Blood Moon.png",
+    "type": "gamemode"
+  },
+  {
+    "id": "Invasion",
+    "name": "Invasion",
+    "url": "modes/Invasion.png",
+    "type": "gamemode"
+  },
+  {
+    "id": "Legend of the Poro King",
+    "name": "Legend of the Poro King",
+    "url": "modes/Legend of the Poro King.png",
+    "type": "gamemode"
+  },
+  {
+    "id": "Nemesis Draft",
+    "name": "Nemesis Draft",
+    "url": "modes/Nemesis Draft.png",
+    "type": "gamemode"
+  },
+  {
+    "id": "Nexus Blitz",
+    "name": "Nexus Blitz",
+    "url": "modes/Nexus Blitz.png",
+    "type": "gamemode"
+  },
+  {
+    "id": "Nexus Siege",
+    "name": "Nexus Siege",
+    "url": "modes/Nexus Siege.png",
+    "type": "gamemode"
+  },
+  {
+    "id": "OVERCHARGE",
+    "name": "OVERCHARGE",
+    "url": "modes/OVERCHARGE.png",
+    "type": "gamemode"
+  },
+  {
+    "id": "Odyssey Extraction",
+    "name": "Odyssey Extraction",
+    "url": "modes/Odyssey Extraction.png",
+    "type": "gamemode"
+  },
+  {
+    "id": "One For All",
+    "name": "One For All",
+    "url": "modes/One For All.png",
+    "type": "gamemode"
+  },
+  {
+    "id": "Quickplay",
+    "name": "Quickplay",
+    "url": "modes/Quickplay.png",
+    "type": "gamemode"
+  },
+  {
+    "id": "SR Clash",
+    "name": "SR Clash",
+    "url": "modes/SR Clash.png",
+    "type": "gamemode"
+  },
+  {
+    "id": "SR Normal",
+    "name": "SR Normal",
+    "url": "modes/SR Normal.png",
+    "type": "gamemode"
+  },
+  {
+    "id": "SR_Ranked",
+    "name": "SR Ranked",
+    "url": "modes/SR_Ranked.png",
+    "type": "gamemode"
+  },
+  {
+    "id": "Snowdown Showdown",
+    "name": "Snowdown Showdown",
+    "url": "modes/Snowdown Showdown.png",
+    "type": "gamemode"
+  },
+  {
+    "id": "Swarm",
+    "name": "Swarm",
+    "url": "modes/Swarm.png",
+    "type": "gamemode"
+  },
+  {
+    "id": "Switplay",
+    "name": "Switplay",
+    "url": "modes/Switplay.png",
+    "type": "gamemode"
+  },
+  {
+    "id": "TFT",
+    "name": "TFT",
+    "url": "modes/TFT.png",
+    "type": "gamemode"
+  },
+  {
+    "id": "TT",
+    "name": "TT",
+    "url": "modes/TT.png",
+    "type": "gamemode"
+  },
+  {
+    "id": "TT Hexakill",
+    "name": "TT Hexakill",
+    "url": "modes/TT Hexakill.png",
+    "type": "gamemode"
+  },
+  {
+    "id": "Tutorial",
+    "name": "Tutorial",
+    "url": "modes/Tutorial.png",
+    "type": "gamemode"
+  },
+  {
+    "id": "URF",
+    "name": "URF",
+    "url": "modes/URF.png",
+    "type": "gamemode"
+  },
+  {
+    "id": "Ultimate Spellbook",
+    "name": "Ultimate Spellbook",
+    "url": "modes/Ultimate Spellbook.png",
+    "type": "gamemode"
+  }
+]

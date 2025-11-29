@@ -122,7 +122,8 @@ img {
   display: block;
 }
 
-img[data-type="splash"] {
+img[data-type="splash"],
+img[data-type="gamemode"] {
   height: calc(var(--card-size) * 1.2);
   width: calc((16 / 9) * (var(--card-size) * 1.2));
 }

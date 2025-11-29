@@ -1142,6 +1142,10 @@ function setupEventListeners() {
           
           images = await loadChromas(options);
           break;
+
+        case 'gamemodes':
+          images = await loadGamemodes();
+          break;
       }
 
       if (images && images.length > 0) {
