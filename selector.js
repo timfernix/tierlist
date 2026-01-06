@@ -1154,6 +1154,7 @@ function setupEventListeners() {
 
       if (images && images.length > 0) {
         storeDataForTierlist(images);
+        sessionStorage.setItem('tierlistMode', selectedCategory);
         hideLoading();
         
         // Reset the page state before navigation

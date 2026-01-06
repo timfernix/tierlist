@@ -206,7 +206,7 @@ const initDraggables = () => {
   });
 };
 
-const showImagePopup = (imgSrc, imgName, imageType) => {
+const showImagePopup = (imgSrc, imgName, imageType, description) => {
   const existingPopup = document.querySelector('.image-popup');
   if (existingPopup) {
     existingPopup.remove();
@@ -222,10 +222,18 @@ const showImagePopup = (imgSrc, imgName, imageType) => {
 
   const popup = document.createElement('div');
   popup.className = 'image-popup';
+  
+  let descHtml = '';
+  const mode = sessionStorage.getItem('tierlistMode');
+  if (mode === 'aramaugments' && description) {
+    descHtml = `<div class="image-popup-description" style="margin-top: 10px; max-width: 300px; max-height: 200px; overflow-y: auto; text-align: center; color: #fff; font-size: 0.9em;">${description}</div>`;
+  }
+
   popup.innerHTML = `
     <div class="image-popup-content">
       <img src="${imgSrc}" alt="${imgName}" class="${sizeClass}">
       <div class="image-popup-name">${imgName}</div>
+      ${descHtml}
     </div>
   `;
 
@@ -327,13 +335,13 @@ const loadImagesFromStorage = () => {
             cardsContainer.appendChild(img);
           }
         } else if (!touchMoved) {
-          showImagePopup(img.src, imgData.name, imgData.type || 'icon');
+          showImagePopup(img.src, imgData.name, imgData.type || 'icon', imgData.description);
         }
       });
 
       img.addEventListener("click", (e) => {
         e.stopPropagation();
-        showImagePopup(img.src, imgData.name, imgData.type || 'icon');
+        showImagePopup(img.src, imgData.name, imgData.type || 'icon', imgData.description);
       });
 
       img.addEventListener("dblclick", () => {
