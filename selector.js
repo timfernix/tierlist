@@ -1146,6 +1146,10 @@ function setupEventListeners() {
         case 'gamemodes':
           images = await loadGamemodes();
           break;
+
+        case 'aramaugments':
+          images = await loadAramAugments();
+          break;
       }
 
       if (images && images.length > 0) {
@@ -1400,6 +1404,22 @@ async function loadGamemodes() {
   showLoading();
   const modes = await fetchModesData();
   return modes;
+}
+
+async function fetchAramAugments() {
+  try {
+    const response = await fetch('aram_augments.json');
+    return await response.json();
+  } catch (error) {
+    console.error('Error fetching aram augments:', error);
+    return [];
+  }
+}
+
+async function loadAramAugments() {
+  showLoading();
+  const augments = await fetchAramAugments();
+  return augments;
 }
 
 init();

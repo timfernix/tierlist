@@ -453,6 +453,9 @@ document.getElementById('downloadBtn').addEventListener('click', async () => {
 
     const tiersClone = tiersContainer.cloneNode(true);
     tiersClone.style.border = '2px solid var(--border-color)';
+    tiersClone.style.width = '1200px';
+    tiersClone.style.margin = '0';
+    tiersClone.classList.remove('container');
 
     tiersClone.querySelectorAll('.controls').forEach((el) => el.remove());
 

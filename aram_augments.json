@@ -1,0 +1,612 @@
+[
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_LegDay",
+    "name": "Leg Day",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/legday_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_ItsKillingTime",
+    "name": "Its Killing Time",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/itskillingtime_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_SpinToWin",
+    "name": "Spin To Win",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/spintowin_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_SonicBoom",
+    "name": "Sonic Boom",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/sonicboom_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_LightningStrikes",
+    "name": "Lightning Strikes",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/lightningstrikes_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_ShadowRunner",
+    "name": "Shadow Runner",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/shadowrunner_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_ScopierWeapons",
+    "name": "Scopier Weapons",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/scopierweapons_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Tormentor",
+    "name": "Tormentor",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/tormentor_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_TankItOrLeaveIt",
+    "name": "Tank It Or Leave It",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/tankitorleaveit_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_ScopedWeapons",
+    "name": "Scoped Weapons",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/scopedweapons_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Quest_SteelYourHeart",
+    "name": "Quest: Steel Your Heart",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/quest_steelyourheart_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_QuantumComputing",
+    "name": "Quantum Computing",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/quantumcomputing_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_SoulSiphon",
+    "name": "Soul Siphon",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/soulsiphon_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_DrawYourSword",
+    "name": "Draw Your Sword",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/drawyoursword_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Recursion",
+    "name": "Recursion",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/recursion_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Flashbang",
+    "name": "Flashbang",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/flashbang_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_FrostWraith",
+    "name": "Frost Wraith",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/frostwraith_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Impassable",
+    "name": "Impassable",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/impassable_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_BreadAndButter",
+    "name": "Bread And Butter",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/breadandbutter_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_MadScientist",
+    "name": "Mad Scientist",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/madscientist_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_SymphonyofWar",
+    "name": "Symphony of War",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/symphonyofwar_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_HolyFire",
+    "name": "Holy Fire",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/holyfire_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Dashing",
+    "name": "Dashing",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/dashing_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_TransmuteGold",
+    "name": "Transmute Gold",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/transmutegold_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_OkBoomerang",
+    "name": "Ok Boomerang",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/okboomerang_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Typhoon",
+    "name": "Typhoon",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/typhoon_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Overflow",
+    "name": "Overflow",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/overflow_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_SlowCooker",
+    "name": "Slow Cooker",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/slowcooker_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_FeyMagic",
+    "name": "Fey Magic",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/feymagic_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_MagicMissile",
+    "name": "Magic Missile",
+    "url": "https://raw.communitydragon.org/latest/game/assets/maps/particles/kiwi/magicmissile_large.kiwi.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_ADAPt",
+    "name": "ADAPt",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/adapt_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Perseverance",
+    "name": "Perseverance",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/perseverance_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_FromBeginningToEnd",
+    "name": "From Beginning To End",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/frombeginningtoend_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Upgrade_IE",
+    "name": "Upgrade Infinity Edge",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/upgradeie_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_DivineIntervention",
+    "name": "Divine Intervention",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/slowactingpainkillers_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_AllForYou",
+    "name": "All For You",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/allforyou_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Vulnerability",
+    "name": "Vulnerability",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/vulnerability_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_OutlawsGrit",
+    "name": "Outlaws Grit",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/outlawsgrit_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Flashy",
+    "name": "Flashy",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/flashy_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_CourageoftheColossus",
+    "name": "Courage of the Colossus",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/courageofthecolossus_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_DualWield",
+    "name": "Dual Wield",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/dualwield_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Upgrade_Cutlass",
+    "name": "Upgrade Cutlass",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/upgradecutlass_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Upgrade_Immolate",
+    "name": "Upgrade Immolate",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/upgradeimmolate_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_ScopiestWeapons",
+    "name": "Scopiest Weapons",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/scopiestweapons_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_MindtoMatter",
+    "name": "Mind to Matter",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/mindtomatter_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Upgrade_Hubris",
+    "name": "Upgrade Hubris",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/upgradehubris_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_MasterofDuality",
+    "name": "Master of Duality",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/masterofduality_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_CircleofDeath",
+    "name": "Circle of Death",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/circleofdeath_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_DemonsDance",
+    "name": "Demons Dance",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/demonsdance_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_GiantSlayer",
+    "name": "Giant Slayer",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/giantslayer_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_ProteinShake",
+    "name": "Protein Shake",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/proteinshake_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_WindspeakersBlessing",
+    "name": "Windspeakers Blessing",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/windspeakersblessing_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Firebrand",
+    "name": "Firebrand",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/firebrand_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_MysticPunch",
+    "name": "Mystic Punch",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/mysticpunch_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_CriticalHealing",
+    "name": "Critical Healing",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/criticalhealing_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_DawnbringersResolve",
+    "name": "Dawnbringers Resolve",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/dawnbringersresolve_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Marksmage",
+    "name": "Marksmage",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/marksmage_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_KeystoneConjurer",
+    "name": "Keystone Conjurer",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/keystoneconjurer_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_UltimateUnstoppable",
+    "name": "Ultimate Unstoppable",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/ultimateunstoppable_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_SearingDawn",
+    "name": "Searing Dawn",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/searingdawn_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_BigBrain",
+    "name": "Big Brain",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/bigbrain_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_CantTouchThis",
+    "name": "Cant Touch This",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/canttouchthis_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_TankEngine",
+    "name": "Tank Engine",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/tank_engine_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_CelestialBody",
+    "name": "Celestial Body",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/celestialbody_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Repulsor",
+    "name": "Repulsor",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/repulsor_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_ApexInventor",
+    "name": "Apex Inventor",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/apexinventor_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_FanTheHammer",
+    "name": "Fan The Hammer",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/fanthehammer_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_SelfDestruct",
+    "name": "Self Destruct",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/selfdestruct_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_MountainSoul",
+    "name": "Mountain Soul",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/mountainsoul_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_WitchfulThinking",
+    "name": "Witchful Thinking",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/witchfulthinking_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_LightemUp",
+    "name": "Light em Up",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/lightemup_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Goliath",
+    "name": "Goliath",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/goliath_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Minionmancer",
+    "name": "Minionmancer",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/minionmancer_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_SkilledSniper",
+    "name": "Skilled Sniper",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/skilledsniper_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Erosion",
+    "name": "Erosion",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/erosion_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_VirtuousCycle",
+    "name": "Virtuous Cycle",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/virtuouscycle_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_GetExcited",
+    "name": "Get Excited",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/getexcited_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_IceCold",
+    "name": "Ice Cold",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/icecold_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Cruelty",
+    "name": "Cruelty",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/cruelty_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_TwiceThrice",
+    "name": "Twice Thrice",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/twicethrice_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_DiveBomber",
+    "name": "Dive Bomber",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/divebomber_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Eureka",
+    "name": "Eureka",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/eureka_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_HeavyHitter",
+    "name": "Heavy Hitter",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/heavyhitter_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Quest_WoogletsWitchcap",
+    "name": "Quest: Wooglets Witchcap",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/quest_woogletswitchcap_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_SpiritualPurification",
+    "name": "Spiritual Purification",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/spiritualpurification_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_RabbleRousing",
+    "name": "Rabble Rousing",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/rabblerousing_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_ClownCollege",
+    "name": "Clown College",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/clowncollege_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_TapDancer",
+    "name": "Tap Dancer",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/tapdancer_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Upgrade_Collector",
+    "name": "Upgrade Collector",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/upgradecollector_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_JeweledGauntlet",
+    "name": "Jeweled Gauntlet",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/jeweledgauntlet_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_SlowAndSteady",
+    "name": "Slow And Steady",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/slowandsteady_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_RestlessRestoration",
+    "name": "Restless Restoration",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/restlessrestoration_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Quest_UrfsChampion",
+    "name": "Quest: Urfs Champion",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/quest_urfschampion_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Executioner",
+    "name": "Executioner",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/spiritualpurification_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_ShrinkRay",
+    "name": "Shrink Ray",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/shrinkray_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_WithHaste",
+    "name": "With Haste",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/withhaste_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_OmniSoul",
+    "name": "Omni Soul",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/omnisoul_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_ItsCritical",
+    "name": "Its Critical",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/itscritical_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_InfernalSoul",
+    "name": "Infernal Soul",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/infernalsoul_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_BreadAndCheese",
+    "name": "Bread And Cheese",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/breadandcheese_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Homeguard",
+    "name": "Homeguard",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/homeguard_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Upgrade_ZH",
+    "name": "Upgrade Hourglass",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/upgradezh_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Upgrade_Sheen",
+    "name": "Upgrade Sheen",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/upgradesheen_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_GuiltyPleasure",
+    "name": "Guilty Pleasure",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/guiltypleasure_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_BacktoBasics",
+    "name": "Back to Basics",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/backtobasics_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_InfernalConduit",
+    "name": "Infernal Conduit",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/infernalconduit_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_TransmuteChaos",
+    "name": "Transmute Chaos",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/transmutechaos_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Deft",
+    "name": "Deft",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/deft_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_OceanSoul",
+    "name": "Ocean Soul",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/oceansoul_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_EtherealWeapon",
+    "name": "Ethereal Weapon",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/etherealweapon_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_TransmutePrismatic",
+    "name": "Transmute Prismatic",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/transmuteprismatic_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Goredrink",
+    "name": "Goredrink",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/goredrink_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_DontBlink",
+    "name": "Dont Blink",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/dontblink_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_UltimateRevolution",
+    "name": "Ultimate Revolution",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/ultimaterevolution_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_BuffBuddies",
+    "name": "Buff Buddies",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/buffbuddies_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_FirstAidKit",
+    "name": "First Aid Kit",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/firstaidkit_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_ThreadtheNeedle",
+    "name": "Thread the Needle",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/threadtheneedle_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_BreadAndJam",
+    "name": "Bread And Jam",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/breadandjam_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_BluntForce",
+    "name": "Blunt Force",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/bluntforce_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_escAPADe",
+    "name": "escAPADe",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/escapade_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_TheBrutalizer",
+    "name": "The Brutalizer",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/thebrutalizer_large.png"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_SlapAround",
+    "name": "Slap Around",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/slaparound_large.png"
+  }
+]
