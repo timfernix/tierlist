@@ -6,6 +6,48 @@
     "description": "Gain 50 Movement Speed and 40% Slow Resist."
   },
   {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_GiantSlayer",
+    "name": "Giant Slayer",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/giantslayer_large.png",
+    "description": "Become tiny, gain Move Speed, and bonus damage to champions based on how much larger they are than you."
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_GiantSlayer/Particles/Kiwi_GiantSlayer_AdditiveHit_Level_3",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_GiantSlayer/Particles/Kiwi_GiantSlayer_AdditiveHit_Level_4",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_GiantSlayer/Particles/Kiwi_GiantSlayer_AdditiveHit_Level_1",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_GiantSlayer/Particles/Kiwi_GiantSlayer_AdditiveHit_Level_2",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_OkBoomerang",
+    "name": "Ok Boomerang",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/okboomerang_large.png",
+    "description": "Autocast throw a boomerang at a nearby enemy every 10s."
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_FanTheHammer",
+    "name": "Fan The Hammer",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/fanthehammer_large.png",
+    "description": "Attacks fire 5 extra bolts that deal more damage with distance. Each direction has its own cooldown."
+  },
+  {
     "id": "Maps/ModeSpecificData/Augments/ARAM_ItsKillingTime",
     "name": "Its Killing Time",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/itskillingtime_large.png",
@@ -18,10 +60,28 @@
     "description": "Your spin Abilities gain 30 Ability Haste and deal 30% more damage!"
   },
   {
-    "id": "Maps/ModeSpecificData/Augments/ARAM_SonicBoom",
-    "name": "Sonic Boom",
-    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/sonicboom_large.png",
-    "description": "Buffing, Healing, or Shielding your ally deals damage and Slows enemies surrounding them."
+    "id": "Maps/ModeSpecificData/Augments/ARAM_SearingDawn",
+    "name": "Searing Dawn",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/searingdawn_large.png",
+    "description": "Your Abilities mark enemies, causing them to take extra magic damage from your ally's next Attack or Ability."
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_DemonsDance",
+    "name": "Demons Dance",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/demonsdance_large.png",
+    "description": "Gain the Fleet Footwork and Grasp of the Undying Keystone Runes."
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_KeystoneConjurer",
+    "name": "Keystone Conjurer",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/keystoneconjurer_large.png",
+    "description": "Gain the Summon Aery and Arcane Comet Keystone Runes."
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_KeystoneConjurer/Particles/Augment_KeystoneConjurer_Meteor_AOE_Ring",
+    "name": null,
+    "url": "",
+    "description": ""
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_LightningStrikes",
@@ -48,6 +108,30 @@
     "description": "Immobilizing or Grounding enemy champions applies a Burn that deals damage over time, stacking infinitely."
   },
   {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_SelfDestruct",
+    "name": "Self Destruct",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/selfdestruct_large.png",
+    "description": "Every 25 seconds, attach a bomb to you. After 5 seconds, it explodes for true damage and Knocks Up enemies."
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_GetExcited",
+    "name": "Get Excited",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/getexcited_large.png",
+    "description": "Increase Move Speed and Attack Speed for 4 seconds on takedown."
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_GetExcited/Particles/Kiwi_GetExcited_Buff",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_GetExcited/Particles/Kiwi_GetExcited_AfterImages",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
     "id": "Maps/ModeSpecificData/Augments/ARAM_TankItOrLeaveIt",
     "name": "Tank It Or Leave It",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/tankitorleaveit_large.png",
@@ -61,9 +145,27 @@
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_Quest_SteelYourHeart",
-    "name": "Quest Steel Your Heart",
+    "name": "Quest_ Steel Your Heart",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/quest_steelyourheart_large.png",
     "description": "Requirement: Possess Heartsteel with 300+ stacks.Reward: Multiply your Heartsteel stacks by 3. "
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Upgrade_Immolate",
+    "name": "Upgrade_ Immolate",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/upgradeimmolate_large.png",
+    "description": "Hollow Radiance and Sunfire Aegis grant 10 gold per target affected with Immolate. Gain 250 gold."
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Upgrade_Immolate/Particles/Kiwi_Augment_UpgradeImmolate_GoldTick",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Upgrade_Immolate/Particles/Kiwi_Augment_UpgradeImmolate_GoldAura_Buf",
+    "name": null,
+    "url": "",
+    "description": ""
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_QuantumComputing",
@@ -78,10 +180,40 @@
     "description": "Gain 25% Crit Chance and 12% lifesteal on Critical Strikes."
   },
   {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_DiveBomber",
+    "name": "Dive Bomber",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/divebomber_large.png",
+    "description": "Explodes when you die, dealing massive true damage."
+  },
+  {
     "id": "Maps/ModeSpecificData/Augments/ARAM_DrawYourSword",
     "name": "Draw Your Sword",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/drawyoursword_large.png",
     "description": "Become melee and gain Attack Damage, Health, Attack Speed, Lifesteal, and Move Speed (scaling with the range you give up.)."
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_DrawYourSword/Particles/ARAM_Augment_DrawYourSword_Slash_Child",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_DrawYourSword/Particles/ARAM_Augment_Icon_Damage_DownSide",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_DrawYourSword/Particles/ARAM_Augment_DrawYourSword_Slash_Right",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_DrawYourSword/Particles/ARAM_Augment_DrawYourSword_Slash_Left",
+    "name": null,
+    "url": "",
+    "description": ""
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_Recursion",
@@ -102,6 +234,18 @@
     "description": "Autocast Root nearby enemies for 1.25 seconds every 6.5 seconds."
   },
   {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_MountainSoul",
+    "name": "Mountain Soul",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/mountainsoul_large.png",
+    "description": "You gain the Mountain Soul, gaining a Shield after being out of combat for a short time."
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_MountainSoul/Particles/ARAM_MountainSoul_Shield",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
     "id": "Maps/ModeSpecificData/Augments/ARAM_Impassable",
     "name": "Impassable",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/impassable_large.png",
@@ -120,12 +264,6 @@
     "description": "On each revive, you grow large (Adaptive Force and Health) or tiny (Ability Haste and Move Speed)."
   },
   {
-    "id": "Maps/ModeSpecificData/Augments/ARAM_SymphonyofWar",
-    "name": "Symphony of War",
-    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/symphonyofwar_large.png",
-    "description": "Gain the Lethal Tempo and Conqueror Keystone Runes."
-  },
-  {
     "id": "Maps/ModeSpecificData/Augments/ARAM_HolyFire",
     "name": "Holy Fire",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/holyfire_large.png",
@@ -142,18 +280,6 @@
     "name": "Transmute Gold",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/transmutegold_large.png",
     "description": "Gain a random Gold Augment."
-  },
-  {
-    "id": "Maps/ModeSpecificData/Augments/ARAM_OkBoomerang",
-    "name": "Ok Boomerang",
-    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/okboomerang_large.png",
-    "description": "Autocast throw a boomerang at a nearby enemy every 10s."
-  },
-  {
-    "id": "Maps/ModeSpecificData/Augments/ARAM_Typhoon",
-    "name": "Typhoon",
-    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/typhoon_large.png",
-    "description": "Your Attacks fire a bolt at an additional target dealing reduced damage and applying onhit effects."
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_Overflow",
@@ -181,7 +307,7 @@
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_ADAPt",
-    "name": "ADAPt",
+    "name": "A D A Pt",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/adapt_large.png",
     "description": "Convert Bonus Attack Damage to Ability Power. Gain 15% Ability Power."
   },
@@ -198,16 +324,58 @@
     "description": "Gain the First Strike and Dark Harvest Keystone Runes."
   },
   {
-    "id": "Maps/ModeSpecificData/Augments/ARAM_Upgrade_IE",
-    "name": "Upgrade IE",
-    "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/upgradeie_large.png",
-    "description": "Gain 25% %i:scaleCrit% Critical Strike Chance and 500 gold.Having Infinity Edge allows your %i:scaleCrit% Critical Strike Chance to grant random %i:scaleCritMult% Critical Strike Damage each attack."
+    "id": "Maps/ModeSpecificData/Augments/ARAM_FromBeginningToEnd/Particles/Augment_FromBeginningToEnd_SoulReaper_Soul_Idle",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_FromBeginningToEnd/Particles/Augment_FromBeginningToEnd_FirstStrike_Buff_Activated",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_FromBeginningToEnd/Particles/Augment_FromBeginningToEnd_FirstStrike_Fail",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_CourageoftheColossus",
+    "name": "Courageofthe Colossus",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/courageofthecolossus_large.png",
+    "description": "Gain @TotalShield@ Shield after Immobilizing or Grounding an enemy champion."
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_CourageoftheColossus/Particles/ARAM_Augment_CourageoftheColossus_Shield",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_CourageoftheColossus/Particles/ARAM_Augment_Icon_CourageoftheColossus",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Recall/Particles/Kiwi_Augment_Recall_Cheating_TeleportHome",
+    "name": null,
+    "url": "",
+    "description": ""
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_DivineIntervention",
     "name": "Divine Intervention",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/slowactingpainkillers_large.png",
     "description": "15 seconds into combat, call upon a protective star that slowly descends upon you. When it lands, you and nearby allies become Invulnerable for a few seconds. Then Autocast this every 35 seconds."
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_SkilledSniper",
+    "name": "Skilled Sniper",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/skilledsniper_large.png",
+    "description": "Hitting an enemy with a non-Ultimate Ability at far range refunds 80% Cooldown (65% for periodic Abilities)."
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_AllForYou",
@@ -222,22 +390,40 @@
     "description": "Your Item and damage over time effects can Critically Strike. Gain 25% Crit chance."
   },
   {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_SymphonyofWar",
+    "name": "Symphonyof War",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/symphonyofwar_large.png",
+    "description": "Gain the Lethal Tempo and Conqueror Keystone Runes."
+  },
+  {
     "id": "Maps/ModeSpecificData/Augments/ARAM_OutlawsGrit",
     "name": "Outlaws Grit",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/outlawsgrit_large.png",
     "description": "After using a dash, blink, or teleport you gain 12 Armor and Magic Resist up to 5 stacks."
   },
   {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_CircleofDeath",
+    "name": "Circleof Death",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/circleofdeath_large.png",
+    "description": "Healing and Health Regen you do also deal magic damage to the nearest enemy champion."
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_CircleofDeath/Particles/Kiwi_CircleofDeath_Target",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_CircleofDeath/Particles/Kiwi_CircleofDeath_DamageBeam",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
     "id": "Maps/ModeSpecificData/Augments/ARAM_Flashy",
     "name": "Flashy",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/flashy_large.png",
-    "description": "Your Flash has 3 Ammo and a 2 second Cooldown. Ammo has 180 seconds recharge time"
-  },
-  {
-    "id": "Maps/ModeSpecificData/Augments/ARAM_CourageoftheColossus",
-    "name": "Courage of the Colossus",
-    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/courageofthecolossus_large.png",
-    "description": "Gain @TotalShield@ Shield after Immobilizing or Grounding an enemy champion."
+    "description": "Your Flash has 3 Ammo and a 2 second Cooldown. Ammo has 120 seconds recharge time"
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_DualWield",
@@ -246,16 +432,106 @@
     "description": "Attacks fire a secondary bolt that applies onhit effects at reduced strength. Gain 20% total Attack Speed."
   },
   {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Homeguard",
+    "name": "Homeguard",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/homeguard_large.png",
+    "description": "Gain 100% Move Speed, disabled for 3 seconds after taking damage."
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Homeguard/Particles/Kiwi_Homeguard_Root",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Homeguard/Particles/Kiwi_Homeguard_Particle",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Cerberus/Particles/Perks_HailOfBlades_Buff_Warning",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Cerberus/Particles/Perks_TunnelVision_07",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Cerberus/Particles/Perks_TunnelVision_11",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Cerberus/Particles/Perks_TunnelVision_03",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Cerberus/Particles/Perks_TunnelVision_Target",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Cerberus/Particles/Perks_TunnelVision_DamageAmpTar",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Cerberus/Particles/Perks_HailOfBlades_Buff",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Cerberus/Particles/Perks_TunnelVision_Tar",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
     "id": "Maps/ModeSpecificData/Augments/ARAM_Upgrade_Cutlass",
-    "name": "Upgrade Cutlass",
+    "name": "Upgrade_ Cutlass",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/upgradecutlass_large.png",
     "description": "Reduce Spectral Cutlass and Lifeline's cooldown to 30s. When active, gain 25% damage amplification. Gain 250 gold."
   },
   {
-    "id": "Maps/ModeSpecificData/Augments/ARAM_Upgrade_Immolate",
-    "name": "Upgrade Immolate",
-    "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/upgradeimmolate_large.png",
-    "description": "Hollow Radiance and Sunfire Aegis grant 10 gold per target affected with Immolate. Gain 250 gold."
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Cruelty",
+    "name": "Cruelty",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/cruelty_large.png",
+    "description": "On Immobilizing or Grounding a champion, summon a comet that lands after a delay, dealing magic damage in the area."
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Cruelty/Particles/Kiwi_Augment_Cruelty_Warning_Ally",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Cruelty/Particles/Kiwi_Augment_Cruelty_Explosion_Ally",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Cruelty/Particles/KiwI_Augment_Cruelty_Warning_Enemy",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Cruelty/Particles/Kiwi_Augment_Cruelty_Explosion_Enemy",
+    "name": null,
+    "url": "",
+    "description": ""
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_ScopiestWeapons",
@@ -265,39 +541,51 @@
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_MindtoMatter",
-    "name": "Mind to Matter",
+    "name": "Mindto Matter",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/mindtomatter_large.png",
     "description": "Increase max Health by half of your Mana."
   },
   {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_UltimateRevolution",
+    "name": "Ultimate Revolution",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/ultimaterevolution_large.png",
+    "description": "Refresh your Ultimate Ability after casting it. (75s Cooldown or Reset on death)"
+  },
+  {
     "id": "Maps/ModeSpecificData/Augments/ARAM_Upgrade_Hubris",
-    "name": "Upgrade Hubris",
+    "name": "Upgrade_ Hubris",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/upgradehubris_large.png",
     "description": "Your Hubris now heals you on takedown and grants movement speed for the buff duration, both scaling with your stacks. Additionally, gain 250 gold."
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_MasterofDuality",
-    "name": "Master of Duality",
+    "name": "Masterof Duality",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/masterofduality_large.png",
     "description": "Your Attacks grant you stacking Ability Power and your Abilities grant you Attack Damage."
   },
   {
-    "id": "Maps/ModeSpecificData/Augments/ARAM_CircleofDeath",
-    "name": "Circle of Death",
-    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/circleofdeath_large.png",
-    "description": "Healing and Health Regen you do also deal magic damage to the nearest enemy champion."
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Upgrade_Sheen",
+    "name": "Upgrade_ Sheen",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/upgradesheen_large.png",
+    "description": "Your Spellblade effects deal additional damage and heal you for a percent of the target's health. Additionally, gain 250 gold."
   },
   {
-    "id": "Maps/ModeSpecificData/Augments/ARAM_DemonsDance",
-    "name": "Demons Dance",
-    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/demonsdance_large.png",
-    "description": "Gain the Fleet Footwork and Grasp of the Undying Keystone Runes."
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Upgrade_Sheen/Particles/Kiwi_Augment_Upgrade_Sheen_Tar",
+    "name": null,
+    "url": "",
+    "description": ""
   },
   {
-    "id": "Maps/ModeSpecificData/Augments/ARAM_GiantSlayer",
-    "name": "Giant Slayer",
-    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/giantslayer_large.png",
-    "description": "Become tiny, gain Move Speed, and bonus damage to champions based on how much larger they are than you."
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Upgrade_Sheen/Particles/Upgrade_Sheen_Temp_VFX",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Upgrade_Sheen/Particles/Kiwi_Augment_Upgrade_Sheen_HealBeam",
+    "name": null,
+    "url": "",
+    "description": ""
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_ProteinShake",
@@ -318,16 +606,34 @@
     "description": "Your Attacks apply an infinitely stacking Burn onhit, dealing damage over time."
   },
   {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Firebrand/Particles/Kiwi_Firebrand_Bleed_Stage_3",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Firebrand/Particles/Kiwi_Firebrand_Bleed_Stage_2",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Firebrand/Particles/Kiwi_Firebrand_Bleed_Stage_1",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Firebrand/Particles/Kiwi_Firebrand_Bleed",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
     "id": "Maps/ModeSpecificData/Augments/ARAM_MysticPunch",
     "name": "Mystic Punch",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/mysticpunch_large.png",
     "description": "onhit reduce the cooldown of your basic abilities by 20% of their remaining cooldown."
-  },
-  {
-    "id": "Maps/ModeSpecificData/Augments/ARAM_CriticalHealing",
-    "name": "Critical Healing",
-    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/criticalhealing_large.png",
-    "description": "Your Heals and Shields can Critically Strike for 40% bonus amount. Gain %i:scaleCrit% 25% Crit Chance. "
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_DawnbringersResolve",
@@ -336,16 +642,28 @@
     "description": "Upon dropping below 50% Health, heal for 30% max Health over 3 seconds. Refresh on death or every 45 seconds."
   },
   {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_DawnbringersResolve/Particles/ARAM_Augment_DawnbringersResolve_Heal",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
     "id": "Maps/ModeSpecificData/Augments/ARAM_Marksmage",
     "name": "Marksmage",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/marksmage_large.png",
     "description": "Your Attacks deal additional physical damage equal to 75% Ability Power."
   },
   {
-    "id": "Maps/ModeSpecificData/Augments/ARAM_KeystoneConjurer",
-    "name": "Keystone Conjurer",
-    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/keystoneconjurer_large.png",
-    "description": "Gain the Summon Aery and Arcane Comet Keystone Runes."
+    "id": "Maps/ModeSpecificData/Augments/ARAM_CriticalHealing",
+    "name": "Critical Healing",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/criticalhealing_large.png",
+    "description": "Your Heals and Shields can Critically Strike for 40% bonus amount. Gain %i:scaleCrit% 25% Crit Chance. "
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_CriticalHealing/Particles/ARAM_Augment_CriticalHealing",
+    "name": null,
+    "url": "",
+    "description": ""
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_UltimateUnstoppable",
@@ -354,10 +672,34 @@
     "description": "After using your Ultimate, you become immune to crowd control for 3 seconds. (8 second Cooldown)."
   },
   {
-    "id": "Maps/ModeSpecificData/Augments/ARAM_SearingDawn",
-    "name": "Searing Dawn",
-    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/searingdawn_large.png",
-    "description": "Your Abilities mark enemies, causing them to take extra magic damage from your ally's next Attack or Ability."
+    "id": "Maps/ModeSpecificData/Augments/ARAM_ClownCollege",
+    "name": "Clown College",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/clowncollege_large.png",
+    "description": "Gain Deceive Summoner Spell.Gain Backstab Passive.When you die, spawn an exploding box that deals a large amount of true damage and Fear nearby enemies."
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_ClownCollege/Particles/Kiwi_Augment_ClownCollege_AfterImage",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_ClownCollege/Particles/Kiwi_Augment_ClownCollege_Poof",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_FeyMagic/Particles/Kiwi_FeyMagic_Lulu_W_tar_enemy",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_FeyMagic/Particles/Kiwi_FeyMagic_ActiveVFX",
+    "name": null,
+    "url": "",
+    "description": ""
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_BigBrain",
@@ -372,6 +714,12 @@
     "description": "Casting your Ultimate makes you Invulnerable for a short duration."
   },
   {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Repulsor",
+    "name": "Repulsor",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/repulsor_large.png",
+    "description": "On dropping below 35% Health, Knocked Back nearby enemies and Slow them for 90%."
+  },
+  {
     "id": "Maps/ModeSpecificData/Augments/ARAM_TankEngine",
     "name": "Tank Engine",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/tank_engine_large.png",
@@ -384,34 +732,16 @@
     "description": "Gain 1250 Health, but you deal 10% less damage."
   },
   {
-    "id": "Maps/ModeSpecificData/Augments/ARAM_Repulsor",
-    "name": "Repulsor",
-    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/repulsor_large.png",
-    "description": "On dropping below 35% Health, Knocked Back nearby enemies and Slow them for 90%."
-  },
-  {
     "id": "Maps/ModeSpecificData/Augments/ARAM_ApexInventor",
     "name": "Apex Inventor",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/apexinventor_large.png",
     "description": "Gain 100 Item Haste (equivalent to 50% Item CDR).Item Haste reduces the cooldown %i:cooldown% of all Item Abilities."
   },
   {
-    "id": "Maps/ModeSpecificData/Augments/ARAM_FanTheHammer",
-    "name": "Fan The Hammer",
-    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/fanthehammer_large.png",
-    "description": "Attacks fire 5 extra bolts that deal more damage with distance. Each direction has its own cooldown."
-  },
-  {
-    "id": "Maps/ModeSpecificData/Augments/ARAM_SelfDestruct",
-    "name": "Self Destruct",
-    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/selfdestruct_large.png",
-    "description": "Every 25 seconds, attach a bomb to you. After 5 seconds, it explodes for true damage and Knocks Up enemies."
-  },
-  {
-    "id": "Maps/ModeSpecificData/Augments/ARAM_MountainSoul",
-    "name": "Mountain Soul",
-    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/mountainsoul_large.png",
-    "description": "You gain the Mountain Soul, gaining a Shield after being out of combat for a short time."
+    "id": "Maps/ModeSpecificData/Augments/ARAM_SonicBoom",
+    "name": "Sonic Boom",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/sonicboom_large.png",
+    "description": "Buffing, Healing, or Shielding your ally deals damage and Slows enemies surrounding them."
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_WitchfulThinking",
@@ -421,7 +751,7 @@
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_LightemUp",
-    "name": "Light em Up",
+    "name": "Lightem Up",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/lightemup_large.png",
     "description": "Every 4th Attack deals additional magic damage onhit."
   },
@@ -438,16 +768,22 @@
     "description": "Your summons gain 40% increased size, health, and damage."
   },
   {
-    "id": "Maps/ModeSpecificData/Augments/ARAM_SkilledSniper",
-    "name": "Skilled Sniper",
-    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/skilledsniper_large.png",
-    "description": "Hitting an enemy with a non-Ultimate Ability at far range refunds 80% Cooldown (65% for periodic Abilities)."
-  },
-  {
     "id": "Maps/ModeSpecificData/Augments/ARAM_Erosion",
     "name": "Erosion",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/erosion_large.png",
     "description": "Damaging enemies adds a stacking Armor and Magic Resist shred for 4s. "
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Quest_WoogletsWitchcap",
+    "name": "Quest_ Wooglets Witchcap",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/quest_woogletswitchcap_large.png",
+    "description": "Immediate: Gain Needlessly Large Rod.Requirement: Possess Rabadon's Deathcap and Zhonya's Hourglass.Reward: Gain Wooglet's Witchcap"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Quest_WoogletsWitchcap/Particles/Kiwi_Augment_Quest_UI_WoogletsWitchcap",
+    "name": null,
+    "url": "",
+    "description": ""
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_VirtuousCycle",
@@ -456,34 +792,16 @@
     "description": "Your Heals grant extra Shield and your Shields grant extra Healing."
   },
   {
-    "id": "Maps/ModeSpecificData/Augments/ARAM_GetExcited",
-    "name": "Get Excited",
-    "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/getexcited_large.png",
-    "description": "Increase Move Speed and Attack Speed for 4 seconds on takedown."
-  },
-  {
     "id": "Maps/ModeSpecificData/Augments/ARAM_IceCold",
     "name": "Ice Cold",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/icecold_large.png",
     "description": "Your Slowing effects reduce Move Speed by an extra 100."
   },
   {
-    "id": "Maps/ModeSpecificData/Augments/ARAM_Cruelty",
-    "name": "Cruelty",
-    "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/cruelty_large.png",
-    "description": "On Immobilizing or Grounding a champion, summon a comet that lands after a delay, dealing magic damage in the area."
-  },
-  {
     "id": "Maps/ModeSpecificData/Augments/ARAM_TwiceThrice",
     "name": "Twice Thrice",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/twicethrice_large.png",
     "description": "Every third Attack, your onhit effects trigger a second time."
-  },
-  {
-    "id": "Maps/ModeSpecificData/Augments/ARAM_DiveBomber",
-    "name": "Dive Bomber",
-    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/divebomber_large.png",
-    "description": "Explodes when you die, dealing massive damage true damage."
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_Eureka",
@@ -498,16 +816,22 @@
     "description": "Your Attacks deal additional physical damage equal to 3.5% of your max Health."
   },
   {
-    "id": "Maps/ModeSpecificData/Augments/ARAM_Quest_WoogletsWitchcap",
-    "name": "Quest Wooglets Witchcap",
-    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/quest_woogletswitchcap_large.png",
-    "description": "Immediate: Gain Needlessly Large Rod.Requirement: Possess Rabadon's Deathcap and Zhonya's Hourglass.Reward: Gain Wooglet's Witchcap"
-  },
-  {
     "id": "Maps/ModeSpecificData/Augments/ARAM_SpiritualPurification",
     "name": "Spiritual Purification",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/spiritualpurification_large.png",
     "description": "On takedown, creates an explosion that slows other nearby enemies by 60%, and deals damage based on their current Health."
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Upgrade_IE",
+    "name": "Upgrade_ I E",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/upgradeie_large.png",
+    "description": "Gain 25% %i:scaleCrit% Critical Strike Chance and 500 gold.Having Infinity Edge allows your %i:scaleCrit% Critical Strike Chance to grant random %i:scaleCritMult% Critical Strike Damage each attack."
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Upgrade_IE/Particles/Kiwi_Upgrade_IE_Tar",
+    "name": null,
+    "url": "",
+    "description": ""
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_RabbleRousing",
@@ -516,10 +840,28 @@
     "description": "Using an Ability restores @HealAmount@ Health."
   },
   {
-    "id": "Maps/ModeSpecificData/Augments/ARAM_ClownCollege",
-    "name": "Clown College",
-    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/clowncollege_large.png",
-    "description": "Gain Deceive Summoner Spell.Gain Backstab Passive.When you die, spawn an exploding box that deals a large amount of true damage and Fear nearby enemies."
+    "id": "Maps/ModeSpecificData/Augments/ARAM_MasterofDuality/Particles/Kiwi_MasterofDuality_VFX3",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_MasterofDuality/Particles/Kiwi_MasterofDuality_VFX2",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_MasterofDuality/Particles/Kiwi_MasterofDuality_VFX1",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_MasterofDuality/Particles/Kiwi_MasterofDuality_1_Child",
+    "name": null,
+    "url": "",
+    "description": ""
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_TapDancer",
@@ -529,7 +871,7 @@
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_Upgrade_Collector",
-    "name": "Upgrade Collector",
+    "name": "Upgrade_ Collector",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/upgradecollector_large.png",
     "description": "Executing enemies with The Collector's passive increase its execute threshold and grant bonus gold. Gain 250 gold."
   },
@@ -538,6 +880,42 @@
     "name": "Jeweled Gauntlet",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/jeweledgauntlet_large.png",
     "description": "Your Abilities can Critically Strike. Gain 25% Crit Chance."
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_JeweledGauntlet/Particles/Kiwi_JeweledGauntlet_hand_idle",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_JeweledGauntlet/Particles/Kiwi_JeweledGauntlet_tar",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_JeweledGauntlet/Particles/Kiwi_JeweledGauntlet_hand_crit",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_InfernalSoul",
+    "name": "Infernal Soul",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/infernalsoul_large.png",
+    "description": "You gain the Infernal Soul, dealing bonus damage when you hit enemies with Abilities or Attacks."
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_InfernalSoul/Particles/ARAM_InfernalSoul_Blast",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_InfernalSoul/Particles/ARAM_InfernalSoul_Impact",
+    "name": null,
+    "url": "",
+    "description": ""
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_SlowAndSteady",
@@ -552,10 +930,28 @@
     "description": "You constantly heal while moving."
   },
   {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Upgrade_Hubris/Particles/Kiwi_Augment_Upgrade_Hubris_Heal",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Upgrade_Hubris/Particles/Kiwi_Augment_Upgrade_Hubris_MoveSpeed",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
     "id": "Maps/ModeSpecificData/Augments/ARAM_Quest_UrfsChampion",
-    "name": "Quest Urfs Champion",
+    "name": "Quest_ Urfs Champion",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/quest_urfschampion_large.png",
     "description": "Requirement: Score 18 takedowns.Reward: Golden Spatula"
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Quest_UrfsChampion/Particles/Kiwi_Augment_Quest_UI_UrfsChampion",
+    "name": null,
+    "url": "",
+    "description": ""
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_Executioner",
@@ -564,10 +960,16 @@
     "description": "Deal 10% more damage to enemies below 30% health. Reset your basic abilities on takedown."
   },
   {
-    "id": "Maps/ModeSpecificData/Augments/ARAM_ShrinkRay",
-    "name": "Shrink Ray",
-    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/shrinkray_large.png",
-    "description": "Your Attacks reduce an enemy's damage by 15% for 3 seconds."
+    "id": "Maps/ModeSpecificData/Augments/ARAM_CantTouchThis/Particles/Kiwi_Augment_CantTouchThis_InvulnShield",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_CantTouchThis/Particles/Kiwi_Augment_CantTouchThis_InvulnVFX",
+    "name": null,
+    "url": "",
+    "description": ""
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_WithHaste",
@@ -582,16 +984,46 @@
     "description": "Gain 3 random Dragon Souls."
   },
   {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_OmniSoul/Particles/ARAM_OmniSoul_Hextech_Soul_Beam",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_OmniSoul/Particles/ARAM_OmniSoul_Hextech_Soul_Tar",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
     "id": "Maps/ModeSpecificData/Augments/ARAM_ItsCritical",
     "name": "Its Critical",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/itscritical_large.png",
     "description": "Gain 50% Crit Chance."
   },
   {
-    "id": "Maps/ModeSpecificData/Augments/ARAM_InfernalSoul",
-    "name": "Infernal Soul",
-    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/infernalsoul_large.png",
-    "description": "You gain the Infernal Soul, dealing bonus damage when you hit enemies with Abilities or Attacks."
+    "id": "Maps/ModeSpecificData/Augments/ARAM_Typhoon",
+    "name": "Typhoon",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/typhoon_large.png",
+    "description": "Your Attacks fire a bolt at an additional target dealing reduced damage and applying onhit effects."
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_SpiritualPurification/Particles/Kiwi_SpiritualPurification_AOE",
+    "name": null,
+    "url": "",
+    "description": ""
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_ShrinkRay",
+    "name": "Shrink Ray",
+    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/shrinkray_large.png",
+    "description": "Your Attacks reduce an enemy's damage by 15% for 3 seconds."
+  },
+  {
+    "id": "Maps/ModeSpecificData/Augments/ARAM_ShrinkRay/Particles/Kiwi_Augment_ShrinkRay_Beam",
+    "name": null,
+    "url": "",
+    "description": ""
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_BreadAndCheese",
@@ -600,22 +1032,10 @@
     "description": "Your E gains 100 Ability Haste."
   },
   {
-    "id": "Maps/ModeSpecificData/Augments/ARAM_Homeguard",
-    "name": "Homeguard",
-    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/homeguard_large.png",
-    "description": "Gain 100% Move Speed, disabled for 3 seconds after taking damage."
-  },
-  {
     "id": "Maps/ModeSpecificData/Augments/ARAM_Upgrade_ZH",
-    "name": "Upgrade ZH",
+    "name": "Upgrade_ Z H",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/upgradezh_large.png",
     "description": "Reduce Zhonya's Hourglass cooldown to 45s. You can now move when in Zhonya's Hourglass, Seeker's Armguard, or Wooglet's Witchcap stasis.Gain 250 gold."
-  },
-  {
-    "id": "Maps/ModeSpecificData/Augments/ARAM_Upgrade_Sheen",
-    "name": "Upgrade Sheen",
-    "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/upgradesheen_large.png",
-    "description": "Your Spellblade effects deal additional damage and heal you for a percent of the target's health. Additionally, gain 250 gold."
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_GuiltyPleasure",
@@ -625,7 +1045,7 @@
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_BacktoBasics",
-    "name": "Back to Basics",
+    "name": "Backto Basics",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/backtobasics_large.png",
     "description": "Gain increased Ability Damage, Healing, Shielding, and Ability Haste, but you cannot use your Ultimate Ability."
   },
@@ -678,12 +1098,6 @@
     "description": "Deal more damage to enemies the faster you are than them."
   },
   {
-    "id": "Maps/ModeSpecificData/Augments/ARAM_UltimateRevolution",
-    "name": "Ultimate Revolution",
-    "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/ultimaterevolution_large.png",
-    "description": "Refresh your Ultimate Ability after casting it. (75s Cooldown or Reset on death)"
-  },
-  {
     "id": "Maps/ModeSpecificData/Augments/ARAM_BuffBuddies",
     "name": "Buff Buddies",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/buffbuddies_large.png",
@@ -697,7 +1111,7 @@
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_ThreadtheNeedle",
-    "name": "Thread the Needle",
+    "name": "Threadthe Needle",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/threadtheneedle_large.png",
     "description": "Gain 18% Armor Penetration and Magic Penetration."
   },
@@ -715,7 +1129,7 @@
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_escAPADe",
-    "name": "escAPADe",
+    "name": "esc A P A De",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/escapade_large.png",
     "description": "Convert Ability Power to Bonus Attack Damage. Gain 15% Attack Damage."
   },
