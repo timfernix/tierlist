@@ -45,7 +45,7 @@ def process_augments(data, strings):
     augments = []
     
     for key, value in data.items():
-        if key.startswith("Maps/ModeSpecificData/Augments/ARAM_") and "/Loadable" not in key and "Augment_ARAM_" not in key:
+        if re.match(r"Maps/ModeSpecificData/Augments/[^/]+$", key):
             augment_id = value.get("AugmentNameId")
             
             icon_path = value.get("AugmentLargeIconPath", "")
