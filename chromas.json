@@ -1817,12 +1817,11 @@
         "id": 5007,
         "name": "Warring Kingdoms Xin Zhao (Ruby)",
         "colors": [
-          "#AA0000",
-          "#2956BE"
+          "#D33528",
+          "#D33528"
         ],
         "colorNames": [
-          "Maroon",
-          "Sapphire"
+          "Brown"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/5/5007.png"
       },
@@ -1830,12 +1829,11 @@
         "id": 5008,
         "name": "Warring Kingdoms Xin Zhao (Peridot)",
         "colors": [
-          "#88C162",
-          "#BEB22E"
+          "#B6E084",
+          "#B6E084"
         ],
         "colorNames": [
-          "Catseye",
-          "Emerald"
+          "Silver"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/5/5008.png"
       },
@@ -1843,12 +1841,11 @@
         "id": 5009,
         "name": "Warring Kingdoms Xin Zhao (Amethyst)",
         "colors": [
-          "#D4B124",
-          "#9098B1"
+          "#9C68D7",
+          "#9C68D7"
         ],
         "colorNames": [
-          "Grey",
-          "Orange"
+          "Amethyst"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/5/5009.png"
       },
@@ -1856,11 +1853,10 @@
         "id": 5010,
         "name": "Warring Kingdoms Xin Zhao (Aquamarine)",
         "colors": [
-          "#29B8D8",
-          "#9F4A28"
+          "#6ABBEE",
+          "#6ABBEE"
         ],
         "colorNames": [
-          "Brown",
           "Turquoise"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/5/5010.png"
@@ -1869,12 +1865,11 @@
         "id": 5011,
         "name": "Warring Kingdoms Xin Zhao (Rose Quartz)",
         "colors": [
-          "#AA007F",
-          "#AA8B0D"
+          "#E58BA5",
+          "#E58BA5"
         ],
         "colorNames": [
-          "Olive",
-          "Purple"
+          "Silver"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/5/5011.png"
       },
@@ -1882,11 +1877,10 @@
         "id": 5012,
         "name": "Warring Kingdoms Xin Zhao (Pearl)",
         "colors": [
-          "#55AAFF",
-          "#DDFFFD"
+          "#ECF9F8",
+          "#ECF9F8"
         ],
         "colorNames": [
-          "Turquoise",
           "White"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/5/5012.png"
@@ -2726,11 +2720,11 @@
         "id": 7007,
         "name": "Prestigious LeBlanc (Tanzanite)",
         "colors": [
-          "#2756CE",
-          "#2756CE"
+          "#54209B",
+          "#54209B"
         ],
         "colorNames": [
-          "Sapphire"
+          "Tanzanite"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/7/7007.png"
       },
@@ -2775,10 +2769,9 @@
         "name": "Prestigious LeBlanc (Turquoise)",
         "colors": [
           "#73BFBE",
-          "#000000"
+          "#73BFBE"
         ],
         "colorNames": [
-          "Black",
           "Turquoise"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/7/7011.png"
@@ -8265,8 +8258,8 @@
         "id": 17009,
         "name": "Cottontail Teemo (Aquamarine)",
         "colors": [
-          "#73C2DA",
-          "#73C2DA"
+          "#6ABBEE",
+          "#6ABBEE"
         ],
         "colorNames": [
           "Turquoise"
@@ -8277,11 +8270,11 @@
         "id": 17010,
         "name": "Cottontail Teemo (Rose Quartz)",
         "colors": [
-          "#FF95EC",
-          "#FF95EC"
+          "#E58BA5",
+          "#E58BA5"
         ],
         "colorNames": [
-          "Pink"
+          "Silver"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/17/17010.png"
       },
@@ -8301,11 +8294,11 @@
         "id": 17012,
         "name": "Cottontail Teemo (Turquoise)",
         "colors": [
-          "#96F4B9",
-          "#96F4B9"
+          "#73BFBE",
+          "#73BFBE"
         ],
         "colorNames": [
-          "Aquamarine"
+          "Turquoise"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/17/17012.png"
       },
@@ -8313,8 +8306,8 @@
         "id": 17013,
         "name": "Cottontail Teemo (Amethyst)",
         "colors": [
-          "#5F52BD",
-          "#5F52BD"
+          "#9C68D7",
+          "#9C68D7"
         ],
         "colorNames": [
           "Amethyst"
@@ -9393,11 +9386,11 @@
         "id": 18063,
         "name": "Faerie Court Tristana (Catseye)",
         "colors": [
-          "#DF9117",
-          "#DF9117"
+          "#FFEE59",
+          "#FFEE59"
         ],
         "colorNames": [
-          "Orange"
+          "Yellow"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/18/18063.png"
       },
@@ -9627,8 +9620,8 @@
         "id": 19012,
         "name": "Lunar Guardian Warwick (Meteorite)",
         "colors": [
-          "#9F4A25",
-          "#9F4A25"
+          "#5F432B",
+          "#5F432B"
         ],
         "colorNames": [
           "Brown"
@@ -10521,12 +10514,11 @@
         "id": 21010,
         "name": "Arcade Miss Fortune (Aquamarine)",
         "colors": [
-          "#AAFFFF",
-          "#FF55FF"
+          "#6ABBEE",
+          "#6ABBEE"
         ],
         "colorNames": [
-          "Aquamarine",
-          "Magenta"
+          "Turquoise"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/21/21010.png"
       },
@@ -10534,12 +10526,11 @@
         "id": 21011,
         "name": "Arcade Miss Fortune (Amethyst)",
         "colors": [
-          "#592AB5",
-          "#6FCAD4"
+          "#9C68D7",
+          "#9C68D7"
         ],
         "colorNames": [
-          "Tanzanite",
-          "Turquoise"
+          "Amethyst"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/21/21011.png"
       },
@@ -10547,12 +10538,11 @@
         "id": 21012,
         "name": "Arcade Miss Fortune (Citrine)",
         "colors": [
-          "#BC7E11",
-          "#2298CA"
+          "#DF9117",
+          "#DF9117"
         ],
         "colorNames": [
-          "Olive",
-          "Sapphire"
+          "Orange"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/21/21012.png"
       },
@@ -10560,12 +10550,11 @@
         "id": 21013,
         "name": "Arcade Miss Fortune (Peridot)",
         "colors": [
-          "#BDDF5D",
-          "#CA37BE"
+          "#B6E084",
+          "#B6E084"
         ],
         "colorNames": [
-          "Amethyst",
-          "Catseye"
+          "Silver"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/21/21013.png"
       },
@@ -10573,12 +10562,11 @@
         "id": 21014,
         "name": "Arcade Miss Fortune (Ruby)",
         "colors": [
-          "#B51717",
-          "#222DC8"
+          "#D33528",
+          "#D33528"
         ],
         "colorNames": [
-          "Brown",
-          "Sapphire"
+          "Brown"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/21/21014.png"
       },
@@ -10768,8 +10756,8 @@
         "id": 21039,
         "name": "Battle Bunny Miss Fortune (Nightwire)",
         "colors": [
-          "#2B7CFF",
-          "#FF930E"
+          "#F6A630",
+          "#1C61B4"
         ],
         "colorNames": [
           "Orange",
@@ -10793,11 +10781,11 @@
         "id": 21043,
         "name": "Broken Covenant Miss Fortune (Catseye)",
         "colors": [
-          "#DF9117",
-          "#DF9117"
+          "#FFEE59",
+          "#FFEE59"
         ],
         "colorNames": [
-          "Orange"
+          "Yellow"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/21/21043.png"
       },
@@ -13329,6 +13317,19 @@
           "Turquoise"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/25/25079.png"
+      },
+      {
+        "id": 25082,
+        "name": "Prestige Veiled Lady Morgana (Vivid)",
+        "colors": [
+          "#3D266C",
+          "#E89DFE"
+        ],
+        "colorNames": [
+          "Pink",
+          "Tanzanite"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/25/25082.png"
       }
     ]
   },
@@ -13744,11 +13745,11 @@
         "id": 27021,
         "name": "Astronaut Singed (Catseye)",
         "colors": [
-          "#DF9117",
-          "#DF9117"
+          "#FFEE59",
+          "#FFEE59"
         ],
         "colorNames": [
-          "Orange"
+          "Yellow"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/27/27021.png"
       },
@@ -15686,11 +15687,11 @@
         "id": 31038,
         "name": "Toy Terror Cho'Gath (Catseye)",
         "colors": [
-          "#DF9117",
-          "#DF9117"
+          "#FFEE59",
+          "#FFEE59"
         ],
         "colorNames": [
-          "Orange"
+          "Yellow"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/31/31038.png"
       },
@@ -15776,11 +15777,10 @@
         "id": 32013,
         "name": "Surprise Party Amumu (Rainbow)",
         "colors": [
-          "#C1F2E1",
+          "#C1F2FF",
           "#C1F2FF"
         ],
         "colorNames": [
-          "Pearl",
           "White"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/32/32013.png"
@@ -17985,11 +17985,11 @@
         "id": 37008,
         "name": "Guqin Sona (Golden)",
         "colors": [
-          "#FFEE59",
-          "#FFEE59"
+          "#FFC948",
+          "#FFC948"
         ],
         "colorNames": [
-          "Yellow"
+          "Gold"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/37/37008.png"
       },
@@ -19655,11 +19655,11 @@
         "id": 40019,
         "name": "Bewitching Janna (Golden)",
         "colors": [
-          "#FFEE59",
-          "#FFEE59"
+          "#FFC948",
+          "#FFC948"
         ],
         "colorNames": [
-          "Yellow"
+          "Gold"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/40/40019.png"
       },
@@ -20205,7 +20205,7 @@
         "name": "Dreadnova Gangplank (Obsidian)",
         "colors": [
           "#27211C",
-          "#272100"
+          "#27211C"
         ],
         "colorNames": [
           "Obsidian"
@@ -20512,11 +20512,11 @@
         "id": 42017,
         "name": "Dragonwing Corki (Golden)",
         "colors": [
-          "#FFEE59",
-          "#FFEE59"
+          "#FFC948",
+          "#FFC948"
         ],
         "colorNames": [
-          "Yellow"
+          "Gold"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/42/42017.png"
       },
@@ -22679,11 +22679,11 @@
         "id": 48014,
         "name": "Fright Night Trundle (Turquoise)",
         "colors": [
-          "#2756CE",
-          "#2756CE"
+          "#73BFBE",
+          "#73BFBE"
         ],
         "colorNames": [
-          "Sapphire"
+          "Turquoise"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/48/48014.png"
       },
@@ -23741,7 +23741,7 @@
         "name": "Battle Boss Blitzcrank (Citrine)",
         "colors": [
           "#DF9117",
-          "#E99117"
+          "#DF9117"
         ],
         "colorNames": [
           "Orange"
@@ -24793,11 +24793,11 @@
         "id": 55011,
         "name": "Warring Kingdoms Katarina (Golden)",
         "colors": [
-          "#FFEE59",
-          "#FFEE59"
+          "#FFC948",
+          "#FFC948"
         ],
         "colorNames": [
-          "Yellow"
+          "Gold"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/55/55011.png"
       },
@@ -25428,8 +25428,8 @@
         "id": 56010,
         "name": "Old God Nocturne (Sapphire)",
         "colors": [
-          "#2377FF",
-          "#2377FF"
+          "#2756CE",
+          "#2756CE"
         ],
         "colorNames": [
           "Sapphire"
@@ -25747,11 +25747,11 @@
         "id": 57011,
         "name": "Meowkai (Tanzanite)",
         "colors": [
-          "#2756CE",
-          "#2756CE"
+          "#54209B",
+          "#54209B"
         ],
         "colorNames": [
-          "Sapphire"
+          "Tanzanite"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/57/57011.png"
       },
@@ -27606,11 +27606,11 @@
         "id": 61037,
         "name": "Star Guardian Orianna (Rainbow)",
         "colors": [
-          "#C1F2D7",
-          "#C1F2D7"
+          "#C1F2FF",
+          "#C1F2FF"
         ],
         "colorNames": [
-          "Pearl"
+          "White"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/61/61037.png"
       },
@@ -29526,8 +29526,8 @@
         "id": 67043,
         "name": "Battle Bat Vayne (Nightwire)",
         "colors": [
-          "#2B7CFF",
-          "#FF930E"
+          "#F6A630",
+          "#1C61B4"
         ],
         "colorNames": [
           "Orange",
@@ -30781,8 +30781,8 @@
         "id": 75013,
         "name": "Lunar Guardian Nasus (Meteorite)",
         "colors": [
-          "#9F4A25",
-          "#9F4A25"
+          "#5F432B",
+          "#5F432B"
         ],
         "colorNames": [
           "Brown"
@@ -33054,7 +33054,7 @@
         "id": 80037,
         "name": "Ashen Conqueror Pantheon (Emberwoken)",
         "colors": [
-          "#9D0600",
+          "#9D0606",
           "#2B263F"
         ],
         "colorNames": [
@@ -35595,11 +35595,11 @@
         "id": 84076,
         "name": "Coven Akali (Amethyst)",
         "colors": [
-          "#54209B",
-          "#54209B"
+          "#9C68D7",
+          "#9C68D7"
         ],
         "colorNames": [
-          "Tanzanite"
+          "Amethyst"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/84/84076.png"
       },
@@ -35607,11 +35607,11 @@
         "id": 84077,
         "name": "Coven Akali (Tanzanite)",
         "colors": [
-          "#9C68D7",
-          "#9C68D7"
+          "#54209B",
+          "#54209B"
         ],
         "colorNames": [
-          "Amethyst"
+          "Tanzanite"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/84/84077.png"
       },
@@ -36085,11 +36085,11 @@
         "id": 85027,
         "name": "Astronaut Kennen (Catseye)",
         "colors": [
-          "#DF9117",
-          "#DF9117"
+          "#FFEE59",
+          "#FFEE59"
         ],
         "colorNames": [
-          "Orange"
+          "Yellow"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/85/85027.png"
       },
@@ -36214,11 +36214,11 @@
         "id": 86012,
         "name": "Warring Kingdoms Garen (Golden)",
         "colors": [
-          "#FFEE59",
-          "#FFEE59"
+          "#FFC948",
+          "#FFC948"
         ],
         "colorNames": [
-          "Yellow"
+          "Gold"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/86/86012.png"
       },
@@ -37620,11 +37620,12 @@
         "id": 90048,
         "name": "Empyrean Malzahar (Neon Facade)",
         "colors": [
-          "#000000",
-          "#000000"
+          "#E14940",
+          "#83E584"
         ],
         "colorNames": [
-          "Black"
+          "Emerald",
+          "Ruby"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/90/90048.png"
       },
@@ -38401,11 +38402,11 @@
         "id": 92017,
         "name": "Dragonblade Riven (Golden)",
         "colors": [
-          "#FFEE59",
-          "#FFEE59"
+          "#FFC948",
+          "#FFC948"
         ],
         "colorNames": [
-          "Yellow"
+          "Gold"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/92/92017.png"
       },
@@ -38426,11 +38427,11 @@
         "id": 92019,
         "name": "Reignited Worlds 2012 Riven (Golden)",
         "colors": [
-          "#FFEE59",
-          "#FFEE59"
+          "#FFC948",
+          "#FFC948"
         ],
         "colorNames": [
-          "Yellow"
+          "Gold"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/92/92019.png"
       },
@@ -38779,8 +38780,8 @@
         "id": 92054,
         "name": "Battle Bunny Prime Riven (Nightwire)",
         "colors": [
-          "#2B7CFF",
-          "#FF930E"
+          "#F6A630",
+          "#1C61B4"
         ],
         "colorNames": [
           "Orange",
@@ -39765,11 +39766,12 @@
         "id": 98031,
         "name": "Pulsefire Shen (Chrono)",
         "colors": [
-          "#000000",
-          "#000000"
+          "#162D57",
+          "#A50031"
         ],
         "colorNames": [
-          "Black"
+          "Brown",
+          "Navy"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/98/98031.png"
       },
@@ -41040,11 +41042,11 @@
         "id": 102007,
         "name": "Worlds 2014 Shyvana (Golden)",
         "colors": [
-          "#FFEE59",
-          "#FFEE59"
+          "#FFC948",
+          "#FFC948"
         ],
         "colorNames": [
-          "Yellow"
+          "Gold"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/102/102007.png"
       },
@@ -42148,8 +42150,8 @@
         "id": 104008,
         "name": "Pool Party Graves (Citrine)",
         "colors": [
-          "#E99117",
-          "#E99117"
+          "#DF9117",
+          "#DF9117"
         ],
         "colorNames": [
           "Orange"
@@ -44032,11 +44034,11 @@
         "id": 110020,
         "name": "Cosmic Hunter Varus (Amethyst)",
         "colors": [
-          "#E58BA5",
-          "#E58BA5"
+          "#9C68D7",
+          "#9C68D7"
         ],
         "colorNames": [
-          "Silver"
+          "Amethyst"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/110/110020.png"
       },
@@ -44794,6 +44796,102 @@
           "Turquoise"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/111/111037.png"
+      },
+      {
+        "id": 111040,
+        "name": "Petricite Nautilus (Ruby)",
+        "colors": [
+          "#D33528",
+          "#D33528"
+        ],
+        "colorNames": [
+          "Brown"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/111/111040.png"
+      },
+      {
+        "id": 111041,
+        "name": "Petricite Nautilus (Catseye)",
+        "colors": [
+          "#FFEE59",
+          "#FFEE59"
+        ],
+        "colorNames": [
+          "Yellow"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/111/111041.png"
+      },
+      {
+        "id": 111042,
+        "name": "Petricite Nautilus (Sapphire)",
+        "colors": [
+          "#2756CE",
+          "#2756CE"
+        ],
+        "colorNames": [
+          "Sapphire"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/111/111042.png"
+      },
+      {
+        "id": 111043,
+        "name": "Petricite Nautilus (Emerald)",
+        "colors": [
+          "#2DA130",
+          "#2DA130"
+        ],
+        "colorNames": [
+          "Emerald"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/111/111043.png"
+      },
+      {
+        "id": 111044,
+        "name": "Petricite Nautilus (Turquoise)",
+        "colors": [
+          "#73BFBE",
+          "#73BFBE"
+        ],
+        "colorNames": [
+          "Turquoise"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/111/111044.png"
+      },
+      {
+        "id": 111045,
+        "name": "Petricite Nautilus (Amethyst)",
+        "colors": [
+          "#9C68D7",
+          "#9C68D7"
+        ],
+        "colorNames": [
+          "Amethyst"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/111/111045.png"
+      },
+      {
+        "id": 111046,
+        "name": "Petricite Nautilus (Rose Quartz)",
+        "colors": [
+          "#E58BA5",
+          "#E58BA5"
+        ],
+        "colorNames": [
+          "Silver"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/111/111046.png"
+      },
+      {
+        "id": 111047,
+        "name": "Petricite Nautilus (Obsidian)",
+        "colors": [
+          "#27211C",
+          "#27211C"
+        ],
+        "colorNames": [
+          "Obsidian"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/111/111047.png"
       }
     ]
   },
@@ -48736,11 +48834,11 @@
         "id": 121012,
         "name": "Worlds 2018 Kha'Zix (Golden)",
         "colors": [
-          "#FFEE59",
-          "#FFEE59"
+          "#FFC948",
+          "#FFC948"
         ],
         "colorNames": [
-          "Yellow"
+          "Gold"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/121/121012.png"
       },
@@ -56398,12 +56496,11 @@
         "id": 157004,
         "name": "High Noon Yasuo (Sapphire)",
         "colors": [
-          "#002B83",
-          "#AA5500"
+          "#2756CE",
+          "#2756CE"
         ],
         "colorNames": [
-          "Navy",
-          "Olive"
+          "Sapphire"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/157/157004.png"
       },
@@ -56411,12 +56508,11 @@
         "id": 157005,
         "name": "High Noon Yasuo (Amethyst)",
         "colors": [
-          "#797ACF",
-          "#E6CE13"
+          "#9C68D7",
+          "#9C68D7"
         ],
         "colorNames": [
-          "Amethyst",
-          "Catseye"
+          "Amethyst"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/157/157005.png"
       },
@@ -56424,12 +56520,11 @@
         "id": 157006,
         "name": "High Noon Yasuo (Jasper)",
         "colors": [
-          "#752505",
-          "#2E9C5C"
+          "#9F4A25",
+          "#9F4A25"
         ],
         "colorNames": [
-          "Emerald",
-          "Maroon"
+          "Brown"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/157/157006.png"
       },
@@ -56437,12 +56532,11 @@
         "id": 157007,
         "name": "High Noon Yasuo (Emerald)",
         "colors": [
-          "#00AA7F",
-          "#550000"
+          "#2DA130",
+          "#2DA130"
         ],
         "colorNames": [
-          "Maroon",
-          "Teal"
+          "Emerald"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/157/157007.png"
       },
@@ -56450,12 +56544,11 @@
         "id": 157008,
         "name": "High Noon Yasuo (Obsidian)",
         "colors": [
-          "#030635",
-          "#D2D894"
+          "#27211C",
+          "#27211C"
         ],
         "colorNames": [
-          "Obsidian",
-          "Silver"
+          "Obsidian"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/157/157008.png"
       },
@@ -58737,7 +58830,7 @@
         "name": "Dragonslayer Braum (Catseye)",
         "colors": [
           "#FFEE59",
-          "#FFEF59"
+          "#FFEE59"
         ],
         "colorNames": [
           "Yellow"
@@ -59480,11 +59573,11 @@
         "id": 202031,
         "name": "Empyrean Jhin (Rainbow)",
         "colors": [
-          "#C1F2D7",
-          "#C1F2D7"
+          "#C1F2FF",
+          "#C1F2FF"
         ],
         "colorNames": [
-          "Pearl"
+          "White"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/202/202031.png"
       },
@@ -61105,8 +61198,8 @@
         "id": 222049,
         "name": "Battle Cat Jinx (Nightwire)",
         "colors": [
-          "#2B7CFF",
-          "#FF930E"
+          "#F6A630",
+          "#1C61B4"
         ],
         "colorNames": [
           "Orange",
@@ -61533,11 +61626,11 @@
         "id": 223033,
         "name": "Shan Hai Scrolls Tahm Kench (Granite)",
         "colors": [
-          "#85827F",
-          "#85827F"
+          "#27211C",
+          "#27211C"
         ],
         "colorNames": [
-          "Grey"
+          "Obsidian"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/223/223033.png"
       },
@@ -61593,11 +61686,11 @@
         "id": 223038,
         "name": "Shan Hai Scrolls Tahm Kench (Pearl)",
         "colors": [
-          "#9C68D7",
-          "#9C68D7"
+          "#ECF9F8",
+          "#ECF9F8"
         ],
         "colorNames": [
-          "Amethyst"
+          "White"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/223/223038.png"
       }
@@ -63120,7 +63213,7 @@
         "id": 236051,
         "name": "High Noon Lucian (Tenfold Triumph)",
         "colors": [
-          "#FF1502",
+          "#FF1515",
           "#E8CD6B"
         ],
         "colorNames": [
@@ -63694,12 +63787,11 @@
         "id": 238004,
         "name": "Shockblade Zed (Rose Quartz)",
         "colors": [
-          "#B768C7",
-          "#591A61"
+          "#E58BA5",
+          "#E58BA5"
         ],
         "colorNames": [
-          "Amethyst",
-          "Tanzanite"
+          "Silver"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/238/238004.png"
       },
@@ -63707,12 +63799,11 @@
         "id": 238005,
         "name": "Shockblade Zed (Catseye)",
         "colors": [
-          "#E3C425",
-          "#552121"
+          "#FFEE59",
+          "#FFEE59"
         ],
         "colorNames": [
-          "Catseye",
-          "Maroon"
+          "Yellow"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/238/238005.png"
       },
@@ -63720,11 +63811,10 @@
         "id": 238006,
         "name": "Shockblade Zed (Aquamarine)",
         "colors": [
-          "#5BBCF0",
-          "#151A61"
+          "#6ABBEE",
+          "#6ABBEE"
         ],
         "colorNames": [
-          "Navy",
           "Turquoise"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/238/238006.png"
@@ -63733,12 +63823,11 @@
         "id": 238007,
         "name": "Shockblade Zed (Ruby)",
         "colors": [
-          "#B9172C",
-          "#320808"
+          "#D33528",
+          "#D33528"
         ],
         "colorNames": [
-          "Brown",
-          "Obsidian"
+          "Brown"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/238/238007.png"
       },
@@ -63746,12 +63835,11 @@
         "id": 238008,
         "name": "Shockblade Zed (Amethyst)",
         "colors": [
-          "#5C52E5",
-          "#132151"
+          "#9C68D7",
+          "#9C68D7"
         ],
         "colorNames": [
-          "Amethyst",
-          "Navy"
+          "Amethyst"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/238/238008.png"
       },
@@ -63759,12 +63847,11 @@
         "id": 238009,
         "name": "Shockblade Zed (Emerald)",
         "colors": [
-          "#2FD482",
-          "#0C1E17"
+          "#2DA130",
+          "#2DA130"
         ],
         "colorNames": [
-          "Emerald",
-          "Obsidian"
+          "Emerald"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/238/238009.png"
       },
@@ -63798,11 +63885,11 @@
         "id": 238012,
         "name": "Worlds 2016 Zed (Golden)",
         "colors": [
-          "#FFEE59",
-          "#FFEE59"
+          "#FFC948",
+          "#FFC948"
         ],
         "colorNames": [
-          "Yellow"
+          "Gold"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/238/238012.png"
       },
@@ -64187,11 +64274,11 @@
         "id": 238051,
         "name": "Immortal Journey Zed (Catseye)",
         "colors": [
-          "#DF9117",
-          "#DF9117"
+          "#FFEE59",
+          "#FFEE59"
         ],
         "colorNames": [
-          "Orange"
+          "Yellow"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/238/238051.png"
       },
@@ -64283,11 +64370,11 @@
         "id": 238060,
         "name": "Blood Moon Zed (Catseye)",
         "colors": [
-          "#DF9117",
-          "#DF9117"
+          "#FFEE59",
+          "#FFEE59"
         ],
         "colorNames": [
-          "Orange"
+          "Yellow"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/238/238060.png"
       },
@@ -64446,11 +64533,11 @@
         "id": 240008,
         "name": "Count Kledula (Golden)",
         "colors": [
-          "#FFEE59",
-          "#FFEE59"
+          "#FFC948",
+          "#FFC948"
         ],
         "colorNames": [
-          "Yellow"
+          "Gold"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/240/240008.png"
       },
@@ -64800,11 +64887,11 @@
         "id": 245018,
         "name": "Trick or Treat Ekko (Golden)",
         "colors": [
-          "#FFEE59",
-          "#FFEE59"
+          "#FFC948",
+          "#FFC948"
         ],
         "colorNames": [
-          "Yellow"
+          "Gold"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/245/245018.png"
       },
@@ -68464,11 +68551,11 @@
         "id": 412012,
         "name": "Worlds 2013 Thresh (Golden)",
         "colors": [
-          "#FFEE59",
-          "#FFEE59"
+          "#FFC948",
+          "#FFC948"
         ],
         "colorNames": [
-          "Yellow"
+          "Gold"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/412/412012.png"
       },
@@ -70039,11 +70126,11 @@
         "id": 427022,
         "name": "Astronaut Ivern (Catseye)",
         "colors": [
-          "#DF9117",
-          "#DF9117"
+          "#FFEE59",
+          "#FFEE59"
         ],
         "colorNames": [
-          "Orange"
+          "Yellow"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/427/427022.png"
       },
@@ -70129,11 +70216,11 @@
         "id": 429004,
         "name": "Worlds 2015 Kalista (Golden)",
         "colors": [
-          "#FFEE59",
-          "#FFEE59"
+          "#FFC948",
+          "#FFC948"
         ],
         "colorNames": [
-          "Yellow"
+          "Gold"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/429/429004.png"
       },
@@ -71169,11 +71256,11 @@
         "id": 497029,
         "name": "Broken Covenant Rakan (Catseye)",
         "colors": [
-          "#DF9117",
-          "#DF9117"
+          "#FFEE59",
+          "#FFEE59"
         ],
         "colorNames": [
-          "Orange"
+          "Yellow"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/497/497029.png"
       },
@@ -72706,8 +72793,8 @@
         "id": 517033,
         "name": "Battle Wolf Sylas (Nightwire)",
         "colors": [
-          "#2B7CFF",
-          "#FF930E"
+          "#F6A630",
+          "#1C61B4"
         ],
         "colorNames": [
           "Orange",
@@ -72944,11 +73031,11 @@
         "id": 518004,
         "name": "Winter Wonder Neeko (Emerald)",
         "colors": [
-          "#B6E084",
-          "#B6E084"
+          "#2DA130",
+          "#2DA130"
         ],
         "colorNames": [
-          "Silver"
+          "Emerald"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/518/518004.png"
       },
@@ -74134,11 +74221,11 @@
         "id": 555002,
         "name": "Sand Wraith Pyke (Catseye)",
         "colors": [
-          "#E1EE59",
-          "#E1EE59"
+          "#FFEE59",
+          "#FFEE59"
         ],
         "colorNames": [
-          "Catseye"
+          "Yellow"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/555/555002.png"
       },
@@ -75960,7 +76047,7 @@
         "id": 777064,
         "name": "High Noon Yone (Noonday)",
         "colors": [
-          "#9DB3E1",
+          "#A8BFF1",
           "#CD5867"
         ],
         "colorNames": [
@@ -76262,11 +76349,12 @@
         "id": 800011,
         "name": "Prestige Winterblessed Mel (Vivid)",
         "colors": [
-          "#000000",
-          "#000000"
+          "#F44EDB",
+          "#F3AE71"
         ],
         "colorNames": [
-          "Black"
+          "Magenta",
+          "Pink"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/800/800011.png"
       }
@@ -77060,12 +77148,12 @@
         "id": 875065,
         "name": "HEARTSTEEL Sett (Rockstar)",
         "colors": [
-          "#E1F0F5",
+          "#CDE9EF",
           "#E9628F"
         ],
         "colorNames": [
-          "Ruby",
-          "White"
+          "Pearl",
+          "Ruby"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/875/875065.png"
       },
