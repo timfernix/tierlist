@@ -79,7 +79,7 @@
   },
   {
     "id": "Maps/ModeSpecificData/Augments/Quest_Sneakerhead",
-    "name": "Quest Sneakerhead",
+    "name": "Quest_ Sneakerhead",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/sneakerhead_large.png",
     "description": "Immediate: Gain a random pair of upgraded boots. Requirement: Complete its quest to swap for another. Reward: Jarvan I's Boot"
   },
@@ -145,13 +145,13 @@
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_Quest_SteelYourHeart",
-    "name": "Quest Steel Your Heart",
+    "name": "Quest_ Steel Your Heart",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/quest_steelyourheart_large.png",
     "description": "Requirement: Possess Heartsteel with 300+ stacks.Reward: Multiply your Heartsteel stacks by 3. "
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_Upgrade_Immolate",
-    "name": "Upgrade Immolate",
+    "name": "Upgrade_ Immolate",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/upgradeimmolate_large.png",
     "description": "Hollow Radiance and Sunfire Aegis grant 10 gold per target affected with Immolate. Gain 250 gold."
   },
@@ -261,7 +261,7 @@
     "id": "Maps/ModeSpecificData/Augments/Gash",
     "name": "Gash",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/darksteeltalons_large.png",
-    "description": "Gain 50% Attack Speed. Deal True Damage onhit, scaling with your Armor."
+    "description": "Gain 50% Attack Speed. Deal True Damage %i:OnHit% On-Hit, scaling with your %i:scaleArmor% Armor."
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_TransmuteGold",
@@ -301,7 +301,7 @@
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_ADAPt",
-    "name": "ADAPt",
+    "name": "A D A Pt",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/adapt_large.png",
     "description": "Convert Bonus Attack Damage to Ability Power. Gain 15% Ability Power."
   },
@@ -325,7 +325,7 @@
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_CourageoftheColossus",
-    "name": "Courage of the Colossus",
+    "name": "Courageofthe Colossus",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/courageofthecolossus_large.png",
     "description": "Gain @TotalShield@ Shield after Immobilizing or Grounding an enemy champion."
   },
@@ -361,7 +361,7 @@
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_SymphonyofWar",
-    "name": "Symphony of War",
+    "name": "Symphonyof War",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/symphonyofwar_large.png",
     "description": "Gain the Lethal Tempo and Conqueror Keystone Runes."
   },
@@ -373,7 +373,7 @@
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_CircleofDeath",
-    "name": "Circle of Death",
+    "name": "Circleof Death",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/circleofdeath_large.png",
     "description": "Healing and Health Regen you do also deal magic damage to the nearest enemy champion."
   },
@@ -397,13 +397,13 @@
   },
   {
     "id": "Maps/ModeSpecificData/Augments/Upgrade_MikaelsBlessing",
-    "name": "Upgrade Mikaels Blessing",
+    "name": "Upgrade_ Mikaels Blessing",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/upgrademikaelsblessing_large.png",
     "description": "Gain Mikael's Blessing.  Reduce Mikael's Blessing Cooldown to 45 seconds. On item active, cleanse Disabling and Immobilizing effects and Heal allies in range."
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_Upgrade_Cutlass",
-    "name": "Upgrade Cutlass",
+    "name": "Upgrade_ Cutlass",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/upgradecutlass_large.png",
     "description": "Reduce Spectral Cutlass and Lifeline's cooldown to 30s. When active, gain 25% damage amplification. Gain 250 gold."
   },
@@ -427,7 +427,7 @@
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_MindtoMatter",
-    "name": "Mind to Matter",
+    "name": "Mindto Matter",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/mindtomatter_large.png",
     "description": "Increase max Health by half of your Mana."
   },
@@ -439,19 +439,19 @@
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_Upgrade_Hubris",
-    "name": "Upgrade Hubris",
+    "name": "Upgrade_ Hubris",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/upgradehubris_large.png",
     "description": "Your Hubris now heals you on takedown and grants movement speed for the buff duration, both scaling with your stacks. Additionally, gain 250 gold."
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_MasterofDuality",
-    "name": "Master of Duality",
+    "name": "Masterof Duality",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/masterofduality_large.png",
     "description": "Your Attacks grant you stacking Ability Power and your Abilities grant you Attack Damage."
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_Upgrade_Sheen",
-    "name": "Upgrade Sheen",
+    "name": "Upgrade_ Sheen",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/upgradesheen_large.png",
     "description": "Your Spellblade effects deal additional damage and heal you for a percent of the target's health. Additionally, gain 250 gold."
   },
@@ -601,7 +601,7 @@
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_Quest_WoogletsWitchcap",
-    "name": "Quest Wooglets Witchcap",
+    "name": "Quest_ Wooglets Witchcap",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/quest_woogletswitchcap_large.png",
     "description": "Immediate: Gain Needlessly Large Rod.Requirement: Possess Rabadon's Deathcap and Zhonya's Hourglass.Reward: Gain Wooglet's Witchcap"
   },
@@ -655,7 +655,7 @@
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_Upgrade_IE",
-    "name": "Upgrade I E",
+    "name": "Upgrade_ I E",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/upgradeie_large.png",
     "description": "Gain 25% %i:scaleCrit% Critical Strike Chance and 500 gold.Having Infinity Edge allows your %i:scaleCrit% Critical Strike Chance to grant random %i:scaleCritMult% Critical Strike Damage each attack."
   },
@@ -679,7 +679,7 @@
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_Upgrade_Collector",
-    "name": "Upgrade Collector",
+    "name": "Upgrade_ Collector",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/upgradecollector_large.png",
     "description": "Executing enemies with The Collector's passive increase its execute threshold and grant bonus gold. Gain 250 gold."
   },
@@ -709,7 +709,7 @@
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_Quest_UrfsChampion",
-    "name": "Quest Urfs Champion",
+    "name": "Quest_ Urfs Champion",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/quest_urfschampion_large.png",
     "description": "Requirement: Score 18 takedowns.Reward: Golden Spatula"
   },
@@ -763,7 +763,7 @@
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_Upgrade_ZH",
-    "name": "Upgrade Z H",
+    "name": "Upgrade_ Z H",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/upgradezh_large.png",
     "description": "Reduce Zhonya's Hourglass cooldown to 45s. You can now move when in Zhonya's Hourglass, Seeker's Armguard, or Wooglet's Witchcap stasis.Gain 250 gold."
   },
@@ -775,7 +775,7 @@
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_BacktoBasics",
-    "name": "Back to Basics",
+    "name": "Backto Basics",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/backtobasics_large.png",
     "description": "Gain increased Ability Damage, Healing, Shielding, and Ability Haste, but you cannot use your Ultimate Ability."
   },
@@ -847,7 +847,7 @@
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_ThreadtheNeedle",
-    "name": "Thread the Needle",
+    "name": "Threadthe Needle",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/threadtheneedle_large.png",
     "description": "Gain 18% Armor Penetration and Magic Penetration."
   },
@@ -865,7 +865,7 @@
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_escAPADe",
-    "name": "escAPADe",
+    "name": "esc A P A De",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/escapade_large.png",
     "description": "Convert Ability Power to Bonus Attack Damage. Gain 15% Attack Damage."
   },
