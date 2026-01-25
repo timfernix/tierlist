@@ -753,7 +753,7 @@
     "id": "Maps/ModeSpecificData/Augments/ARAM_SlowAndSteady",
     "name": "Slow And Steady",
     "url": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/slowandsteady_large.png",
-    "description": "Your Attack Speed becomes 0.625. All Bonus Attack Speed is converted to Attack Damage. (25 Plus AD per 1% AS)."
+    "description": "Your Attack Speed becomes 0.625. All Bonus Attack Speed is converted to Attack Damage. (25 Plus AD per Attack SpeedAD per 1% AS)."
   },
   {
     "id": "Maps/ModeSpecificData/Augments/ARAM_RestlessRestoration",

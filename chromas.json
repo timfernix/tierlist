@@ -1352,6 +1352,78 @@
           "Silver"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/3/3039.png"
+      },
+      {
+        "id": 3041,
+        "name": "Aegis Frame Galio (Ruby)",
+        "colors": [
+          "#D33528",
+          "#D33528"
+        ],
+        "colorNames": [
+          "Brown"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/3/3041.png"
+      },
+      {
+        "id": 3042,
+        "name": "Aegis Frame Galio (Catseye)",
+        "colors": [
+          "#FFEE59",
+          "#FFEE59"
+        ],
+        "colorNames": [
+          "Yellow"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/3/3042.png"
+      },
+      {
+        "id": 3043,
+        "name": "Aegis Frame Galio (Emerald)",
+        "colors": [
+          "#2DA130",
+          "#2DA130"
+        ],
+        "colorNames": [
+          "Emerald"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/3/3043.png"
+      },
+      {
+        "id": 3044,
+        "name": "Aegis Frame Galio (Amethyst)",
+        "colors": [
+          "#9C68D7",
+          "#9C68D7"
+        ],
+        "colorNames": [
+          "Amethyst"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/3/3044.png"
+      },
+      {
+        "id": 3045,
+        "name": "Aegis Frame Galio (Obsidian)",
+        "colors": [
+          "#27211C",
+          "#27211C"
+        ],
+        "colorNames": [
+          "Obsidian"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/3/3045.png"
+      },
+      {
+        "id": 3046,
+        "name": "Aegis Frame Galio (Rose Quartz)",
+        "colors": [
+          "#E58BA5",
+          "#E58BA5"
+        ],
+        "colorNames": [
+          "Silver"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/3/3046.png"
       }
     ]
   },
@@ -12035,6 +12107,19 @@
           "White"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/23/23026.png"
+      },
+      {
+        "id": 23046,
+        "name": "Nightbringer Tryndamere (Paragon)",
+        "colors": [
+          "#B0B3EE",
+          "#6599EF"
+        ],
+        "colorNames": [
+          "Amethyst",
+          "Silver"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/23/23046.png"
       },
       {
         "id": 23028,
@@ -39933,6 +40018,19 @@
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/98/98039.png"
       },
       {
+        "id": 98053,
+        "name": "PsyOps Shen (Paragon)",
+        "colors": [
+          "#B0B3EE",
+          "#6599EF"
+        ],
+        "colorNames": [
+          "Amethyst",
+          "Silver"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/98/98053.png"
+      },
+      {
         "id": 98041,
         "name": "Shockblade Shen (Ruby)",
         "colors": [
@@ -61904,6 +62002,102 @@
           "Silver"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/233/233019.png"
+      },
+      {
+        "id": 233021,
+        "name": "Battle Academia Briar (Ruby)",
+        "colors": [
+          "#D33528",
+          "#D33528"
+        ],
+        "colorNames": [
+          "Brown"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/233/233021.png"
+      },
+      {
+        "id": 233022,
+        "name": "Battle Academia Briar (Catseye)",
+        "colors": [
+          "#FFEE59",
+          "#FFEE59"
+        ],
+        "colorNames": [
+          "Yellow"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/233/233022.png"
+      },
+      {
+        "id": 233023,
+        "name": "Battle Academia Briar (Emerald)",
+        "colors": [
+          "#2DA130",
+          "#2DA130"
+        ],
+        "colorNames": [
+          "Emerald"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/233/233023.png"
+      },
+      {
+        "id": 233024,
+        "name": "Battle Academia Briar (Sapphire)",
+        "colors": [
+          "#2756CE",
+          "#2756CE"
+        ],
+        "colorNames": [
+          "Sapphire"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/233/233024.png"
+      },
+      {
+        "id": 233025,
+        "name": "Battle Academia Briar (Turquoise)",
+        "colors": [
+          "#73BFBE",
+          "#73BFBE"
+        ],
+        "colorNames": [
+          "Turquoise"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/233/233025.png"
+      },
+      {
+        "id": 233026,
+        "name": "Battle Academia Briar (Rose Quartz)",
+        "colors": [
+          "#E58BA5",
+          "#E58BA5"
+        ],
+        "colorNames": [
+          "Silver"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/233/233026.png"
+      },
+      {
+        "id": 233027,
+        "name": "Battle Academia Briar (Obsidian)",
+        "colors": [
+          "#27211C",
+          "#27211C"
+        ],
+        "colorNames": [
+          "Obsidian"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/233/233027.png"
+      },
+      {
+        "id": 233028,
+        "name": "Battle Academia Briar (Pearl)",
+        "colors": [
+          "#ECF9F8",
+          "#ECF9F8"
+        ],
+        "colorNames": [
+          "White"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/233/233028.png"
       }
     ]
   },
@@ -66292,6 +66486,19 @@
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/266/266006.png"
       },
       {
+        "id": 266040,
+        "name": "Blood Moon Aatrox (Paragon)",
+        "colors": [
+          "#B0B3EE",
+          "#6599EF"
+        ],
+        "colorNames": [
+          "Amethyst",
+          "Silver"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/266/266040.png"
+      },
+      {
         "id": 266010,
         "name": "Victorious Aatrox (Amber)",
         "colors": [
@@ -68540,6 +68747,102 @@
           "Silver"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/360/360034.png"
+      },
+      {
+        "id": 360036,
+        "name": "Battle Professor Samira (Ruby)",
+        "colors": [
+          "#D33528",
+          "#D33528"
+        ],
+        "colorNames": [
+          "Brown"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/360/360036.png"
+      },
+      {
+        "id": 360037,
+        "name": "Battle Professor Samira (Catseye)",
+        "colors": [
+          "#FFEE59",
+          "#FFEE59"
+        ],
+        "colorNames": [
+          "Yellow"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/360/360037.png"
+      },
+      {
+        "id": 360038,
+        "name": "Battle Professor Samira (Emerald)",
+        "colors": [
+          "#2DA130",
+          "#2DA130"
+        ],
+        "colorNames": [
+          "Emerald"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/360/360038.png"
+      },
+      {
+        "id": 360039,
+        "name": "Battle Professor Samira (Rose Quartz)",
+        "colors": [
+          "#E58BA5",
+          "#E58BA5"
+        ],
+        "colorNames": [
+          "Silver"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/360/360039.png"
+      },
+      {
+        "id": 360040,
+        "name": "Battle Professor Samira (Sapphire)",
+        "colors": [
+          "#2756CE",
+          "#2756CE"
+        ],
+        "colorNames": [
+          "Sapphire"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/360/360040.png"
+      },
+      {
+        "id": 360041,
+        "name": "Battle Professor Samira (Amethyst)",
+        "colors": [
+          "#9C68D7",
+          "#9C68D7"
+        ],
+        "colorNames": [
+          "Amethyst"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/360/360041.png"
+      },
+      {
+        "id": 360042,
+        "name": "Battle Professor Samira (Pearl)",
+        "colors": [
+          "#ECF9F8",
+          "#ECF9F8"
+        ],
+        "colorNames": [
+          "White"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/360/360042.png"
+      },
+      {
+        "id": 360043,
+        "name": "Battle Professor Samira (Obsidian)",
+        "colors": [
+          "#27211C",
+          "#27211C"
+        ],
+        "colorNames": [
+          "Obsidian"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/360/360043.png"
       }
     ]
   },
@@ -72457,6 +72760,102 @@
           "Turquoise"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/516/516028.png"
+      },
+      {
+        "id": 516030,
+        "name": "Aegis Frame Ornn (Ruby)",
+        "colors": [
+          "#D33528",
+          "#D33528"
+        ],
+        "colorNames": [
+          "Brown"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/516/516030.png"
+      },
+      {
+        "id": 516031,
+        "name": "Aegis Frame Ornn (Sapphire)",
+        "colors": [
+          "#2756CE",
+          "#2756CE"
+        ],
+        "colorNames": [
+          "Sapphire"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/516/516031.png"
+      },
+      {
+        "id": 516032,
+        "name": "Aegis Frame Ornn (Amethyst)",
+        "colors": [
+          "#9C68D7",
+          "#9C68D7"
+        ],
+        "colorNames": [
+          "Amethyst"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/516/516032.png"
+      },
+      {
+        "id": 516033,
+        "name": "Aegis Frame Ornn (Emerald)",
+        "colors": [
+          "#2DA130",
+          "#2DA130"
+        ],
+        "colorNames": [
+          "Emerald"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/516/516033.png"
+      },
+      {
+        "id": 516034,
+        "name": "Aegis Frame Ornn (Rose Quartz)",
+        "colors": [
+          "#E58BA5",
+          "#E58BA5"
+        ],
+        "colorNames": [
+          "Silver"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/516/516034.png"
+      },
+      {
+        "id": 516035,
+        "name": "Aegis Frame Ornn (Turquoise)",
+        "colors": [
+          "#73BFBE",
+          "#73BFBE"
+        ],
+        "colorNames": [
+          "Turquoise"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/516/516035.png"
+      },
+      {
+        "id": 516036,
+        "name": "Aegis Frame Ornn (Pearl)",
+        "colors": [
+          "#ECF9F8",
+          "#ECF9F8"
+        ],
+        "colorNames": [
+          "White"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/516/516036.png"
+      },
+      {
+        "id": 516037,
+        "name": "Aegis Frame Ornn (Obsidian)",
+        "colors": [
+          "#27211C",
+          "#27211C"
+        ],
+        "colorNames": [
+          "Obsidian"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/516/516037.png"
       }
     ]
   },
@@ -75873,6 +76272,19 @@
           "Silver"
         ],
         "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/777/777044.png"
+      },
+      {
+        "id": 777076,
+        "name": "Inkshadow Yone (Paragon)",
+        "colors": [
+          "#B0B3EE",
+          "#6599EF"
+        ],
+        "colorNames": [
+          "Amethyst",
+          "Silver"
+        ],
+        "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/777/777076.png"
       },
       {
         "id": 777047,
